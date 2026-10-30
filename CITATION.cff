@@ -5,7 +5,10 @@ title: >-
 message: Please cite the paper if you use this artifact.
 type: software
 authors:
-  - name: Anonymous (under double-blind review)
+  - family-names: Sau
+    given-names: Priyadip
+  - family-names: Das
+    given-names: Debasis
 abstract: >-
   Reference implementation and analysis pipeline for a re-analysis of 3922
   structured-pruning runs across fully connected, convolutional and Transformer

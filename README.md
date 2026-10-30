@@ -335,10 +335,10 @@ bit-deterministic. Contrasts should match, accuracies may not.
 ## 9. Citation
 
 ```bibtex
-@inproceedings{anonymous2027structured,
+@inproceedings{sau2027structured,
   title     = {What Structured Pruning Actually Buys: Why Selection
                Criteria Stop Mattering},
-  author    = {Anonymous},
+  author    = {Priyadip Sau and Debasis Das},
   booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
   year      = {2027},
   note      = {Under review}
