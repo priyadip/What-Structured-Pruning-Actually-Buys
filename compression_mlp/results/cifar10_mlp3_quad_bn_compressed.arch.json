@@ -1,0 +1,29 @@
+{
+  "in_dim": 3072,
+  "hidden_dims": [
+    299,
+    309,
+    194
+  ],
+  "num_classes": 10,
+  "activation": "relu",
+  "batch_norm": false,
+  "source_checkpoint": "cifar10_mlp3_quad_bn.safetensors",
+  "strategy": "N07_fwdbwd_omp",
+  "multiplier": 13.5,
+  "gride_dims": [
+    22.146091921734577,
+    22.92308331778218,
+    14.3800250588652
+  ],
+  "id_space": "neuron",
+  "original_widths": [
+    1024,
+    512,
+    256
+  ],
+  "original_acc": 65.45,
+  "compressed_acc": 63.11,
+  "params": 1073617,
+  "target_hit": true
+}

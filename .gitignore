@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+env/
+
+# Data and weights are not distributed with this artifact.
+data/
+trainer/checkpoint/*.safetensors
+*.pt
+*.pth
+
+# LaTeX build products
+*.aux
+*.log
+!**/results/**/*.log
+!**/logs/**/*.log
+*.blg
+*.out
+*.synctex.gz

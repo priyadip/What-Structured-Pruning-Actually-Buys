@@ -1,0 +1,29 @@
+{
+  "in_dim": 784,
+  "hidden_dims": [
+    86,
+    87,
+    61
+  ],
+  "num_classes": 10,
+  "activation": "relu",
+  "batch_norm": false,
+  "source_checkpoint": "fashionmnist_mlp3_bn.safetensors",
+  "strategy": "N04_bias_calibrated_omp",
+  "multiplier": 5.34,
+  "gride_dims": [
+    16.070375633315546,
+    16.356888616822353,
+    11.473852762718778
+  ],
+  "id_space": "neuron",
+  "original_widths": [
+    256,
+    128,
+    64
+  ],
+  "original_acc": 90.12,
+  "compressed_acc": 87.84,
+  "params": 81067,
+  "target_hit": true
+}

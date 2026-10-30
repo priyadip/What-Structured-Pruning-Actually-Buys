@@ -1,0 +1,42 @@
+{
+  "alpha": 12.0,
+  "seed": 0,
+  "per_layer": [
+    {
+      "layer": 0,
+      "write_ratio": 0.5429863333702087,
+      "drift_rel": 0.0,
+      "drift_reachable_frac": NaN
+    },
+    {
+      "layer": 1,
+      "write_ratio": 1.496380090713501,
+      "drift_rel": 0.13277769088745117,
+      "drift_reachable_frac": 0.08215156126038832
+    },
+    {
+      "layer": 2,
+      "write_ratio": 1.6935139894485474,
+      "drift_rel": 0.1701774299144745,
+      "drift_reachable_frac": 0.0977335810082654
+    },
+    {
+      "layer": 3,
+      "write_ratio": 0.43623024225234985,
+      "drift_rel": 0.2408636212348938,
+      "drift_reachable_frac": 0.12278226024775561
+    },
+    {
+      "layer": 4,
+      "write_ratio": 3.2567107677459717,
+      "drift_rel": 0.3384194076061249,
+      "drift_reachable_frac": 0.11928433072839824
+    },
+    {
+      "layer": 5,
+      "write_ratio": 0.7252696752548218,
+      "drift_rel": 0.40513572096824646,
+      "drift_reachable_frac": 0.13522488062563792
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+
+=== cifar100_resnet18: S4_omp_ls x6.5 (paper: 76.94%, 79.44% dense)
+[02:57:08] AIM: cifar100_resnet18 79.44% -> within [76.94, 81.94] with zero fine-tuning
+[02:57:08]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[02:57:08]   params 11,224,932 (folded 11,215,332), MACs 555.5M, calib 1153 images
+[02:57:17]   GRIDE (filter_proj) in 9s: layer1.0.conv1=11.9, layer1.1.conv1=15.6, layer2.0.conv1=21.0, layer2.1.conv1=20.0, layer3.0.conv1=35.0, layer3.1.conv1=52.8, layer4.0.conv1=58.3, layer4.1.conv1=28.0
+[02:57:17]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0]
+[02:57:21]     S4_omp_ls              x6.50    76.94%  (-2.50)  params -36.3%  MACs -12.6%  HIT
+  seed 0:  76.94%  (-2.50)  params -36.3%  widths [64, 64, 128, 128, 227, 256, 379, 182]
+[02:57:25] AIM: cifar100_resnet18 79.44% -> within [76.94, 81.94] with zero fine-tuning
+[02:57:25]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[02:57:25]   params 11,224,932 (folded 11,215,332), MACs 555.5M, calib 1153 images
+[02:57:34]   GRIDE (filter_proj) in 9s: layer1.0.conv1=11.9, layer1.1.conv1=15.6, layer2.0.conv1=21.0, layer2.1.conv1=20.0, layer3.0.conv1=35.0, layer3.1.conv1=51.9, layer4.0.conv1=58.6, layer4.1.conv1=34.0
+[02:57:34]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[02:57:38]     S4_omp_ls              x6.50    77.48%  (-1.96)  params -32.9%  MACs -11.5%  HIT
+  seed 1:  77.48%  (-1.96)  params -32.9%  widths [64, 64, 128, 128, 227, 256, 381, 221]
+[02:57:41] AIM: cifar100_resnet18 79.44% -> within [76.94, 81.94] with zero fine-tuning
+[02:57:41]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[02:57:41]   params 11,224,932 (folded 11,215,332), MACs 555.5M, calib 1153 images
+[02:57:51]   GRIDE (filter_proj) in 9s: layer1.0.conv1=11.9, layer1.1.conv1=15.6, layer2.0.conv1=21.0, layer2.1.conv1=20.0, layer3.0.conv1=35.0, layer3.1.conv1=50.8, layer4.0.conv1=58.8, layer4.1.conv1=24.0
+[02:57:51]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[02:57:54]     S4_omp_ls              x6.50    76.69%  (-2.75)  params -38.2%  MACs -13.2%  
+  seed 2:  76.69%  (-2.75)  params -38.2%  widths [64, 64, 128, 128, 227, 256, 382, 156]
+
+=== cifar100_resnet34: S4_omp_ls x6.5 (paper: 77.27%, 79.37% dense)
+[02:57:58] AIM: cifar100_resnet34 79.37% -> within [76.87, 81.87] with zero fine-tuning
+[02:57:58]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[02:57:58]   params 21,336,804 (folded 21,319,780), MACs 1159.4M, calib 1153 images
+[02:58:18]   GRIDE (filter_proj) in 19s: layer1.0.conv1=10.6, layer1.1.conv1=12.1, layer1.2.conv1=11.8, layer2.0.conv1=20.0, layer2.1.conv1=19.8, layer2.2.conv1=16.2, layer2.3.conv1=15.5, layer3.0.conv1=37.9, layer3.1.conv1=19.4, layer3.2.conv1=16.2, layer3.3.conv1=11.6, layer3.4.conv1=8.7, layer3.5.conv1=39.3, layer4.0.conv1=56.9, layer4.1.conv1=38.4, layer4.2.conv1=40.5
+[02:58:18]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[02:58:29]     S4_omp_ls              x6.50    77.27%  (-2.10)  params -41.8%  MACs -27.4%  HIT
+  seed 0:  77.27%  (-2.10)  params -41.8%  widths [64, 64, 64, 128, 128, 106, 101, 246, 126, 106, 75, 56, 256, 370, 249, 263]
+[02:58:33] AIM: cifar100_resnet34 79.37% -> within [76.87, 81.87] with zero fine-tuning
+[02:58:33]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[02:58:33]   params 21,336,804 (folded 21,319,780), MACs 1159.4M, calib 1153 images
+[02:58:52]   GRIDE (filter_proj) in 19s: layer1.0.conv1=10.6, layer1.1.conv1=12.1, layer1.2.conv1=11.8, layer2.0.conv1=20.0, layer2.1.conv1=19.8, layer2.2.conv1=16.2, layer2.3.conv1=15.5, layer3.0.conv1=37.9, layer3.1.conv1=19.5, layer3.2.conv1=15.4, layer3.3.conv1=11.5, layer3.4.conv1=8.7, layer3.5.conv1=39.9, layer4.0.conv1=59.3, layer4.1.conv1=39.4, layer4.2.conv1=37.6
+[02:58:52]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[02:59:04]     S4_omp_ls              x6.50    77.43%  (-1.94)  params -41.9%  MACs -27.5%  HIT
+  seed 1:  77.43%  (-1.94)  params -41.9%  widths [64, 64, 64, 128, 128, 106, 101, 246, 127, 100, 75, 57, 256, 385, 256, 244]
+[02:59:08] AIM: cifar100_resnet34 79.37% -> within [76.87, 81.87] with zero fine-tuning
+[02:59:08]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[02:59:08]   params 21,336,804 (folded 21,319,780), MACs 1159.4M, calib 1153 images
+[02:59:28]   GRIDE (filter_proj) in 21s: layer1.0.conv1=10.6, layer1.1.conv1=12.1, layer1.2.conv1=11.8, layer2.0.conv1=20.0, layer2.1.conv1=19.8, layer2.2.conv1=16.2, layer2.3.conv1=15.5, layer3.0.conv1=37.9, layer3.1.conv1=20.3, layer3.2.conv1=15.9, layer3.3.conv1=11.6, layer3.4.conv1=8.7, layer3.5.conv1=39.4, layer4.0.conv1=58.6, layer4.1.conv1=35.9, layer4.2.conv1=37.5
+[02:59:28]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[02:59:40]     S4_omp_ls              x6.50    77.19%  (-2.18)  params -42.8%  MACs -27.6%  HIT
+  seed 2:  77.19%  (-2.18)  params -42.8%  widths [64, 64, 64, 128, 128, 106, 101, 246, 132, 103, 75, 56, 256, 381, 234, 244]
+
+=== cifar100_vgg11_bn: S3_span_ls x6.75 (paper: 70.53%, 72.94% dense)
+[02:59:44] AIM: cifar100_vgg11_bn 72.94% -> within [70.44, 75.44] with zero fine-tuning
+[02:59:44]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[02:59:44]   params 9,277,284 (folded 9,271,780), MACs 152.8M, calib 4609 images
+[02:59:56]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.4, 8=38.8, 11=47.4, 15=53.0, 18=90.2, 22=40.4, 25=53.4
+[02:59:56]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:00:00]     S3_span_ls             x6.75    70.53%  (-2.41)  params -39.6%  MACs -19.2%  HIT
+  seed 0:  70.53%  (-2.41)  params -39.6%  widths [58, 128, 256, 256, 357, 512, 273, 361]
+[03:00:04] AIM: cifar100_vgg11_bn 72.94% -> within [70.44, 75.44] with zero fine-tuning
+[03:00:04]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:00:04]   params 9,277,284 (folded 9,271,780), MACs 152.8M, calib 4609 images
+[03:00:16]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.4, 8=38.8, 11=48.3, 15=53.5, 18=78.0, 22=44.9, 25=54.6
+[03:00:16]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0]
+[03:00:21]     S3_span_ls             x6.75    71.22%  (-1.72)  params -36.5%  MACs -18.3%  HIT
+  seed 1:  71.22%  (-1.72)  params -36.5%  widths [58, 128, 256, 256, 361, 512, 303, 369]
+[03:00:25] AIM: cifar100_vgg11_bn 72.94% -> within [70.44, 75.44] with zero fine-tuning
+[03:00:25]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:00:25]   params 9,277,284 (folded 9,271,780), MACs 152.8M, calib 4609 images
+[03:00:37]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.4, 8=38.8, 11=52.3, 15=54.3, 18=77.1, 22=39.8, 25=55.7
+[03:00:37]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:00:42]     S3_span_ls             x6.75    70.68%  (-2.26)  params -38.8%  MACs -18.5%  HIT
+  seed 2:  70.68%  (-2.26)  params -38.8%  widths [58, 128, 256, 256, 367, 512, 269, 376]
+
+=== cifar100_vgg16_bn: S4_omp_ls x7.75 (paper: 73.05%, 75.18% dense)
+[03:00:46] AIM: cifar100_vgg16_bn 75.18% -> within [72.68, 77.68] with zero fine-tuning
+[03:00:46]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:00:46]   params 14,774,436 (folded 14,765,988), MACs 313.2M, calib 4609 images
+[03:01:06]   GRIDE (filter_proj) in 20s: 0=2.6, 3=18.8, 7=22.5, 10=34.1, 14=40.5, 17=54.1, 20=49.5, 24=56.4, 27=37.0, 30=56.4, 34=37.8, 37=45.7, 40=38.3
+[03:01:06]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:01:15]     S4_omp_ls              x7.75    73.05%  (-2.13)  params -45.6%  MACs -27.3%  HIT
+  seed 0:  73.05%  (-2.13)  params -45.6%  widths [20, 64, 128, 128, 256, 256, 256, 437, 287, 437, 293, 354, 297]
+[03:01:19] AIM: cifar100_vgg16_bn 75.18% -> within [72.68, 77.68] with zero fine-tuning
+[03:01:19]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:01:19]   params 14,774,436 (folded 14,765,988), MACs 313.2M, calib 4609 images
+[03:01:39]   GRIDE (filter_proj) in 20s: 0=2.6, 3=18.8, 7=22.5, 10=34.1, 14=40.5, 17=51.4, 20=51.8, 24=54.4, 27=36.2, 30=62.5, 34=41.0, 37=44.9, 40=41.3
+[03:01:39]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:01:48]     S4_omp_ls              x7.75    72.77%  (-2.41)  params -43.2%  MACs -26.9%  HIT
+  seed 1:  72.77%  (-2.41)  params -43.2%  widths [20, 64, 128, 128, 256, 256, 256, 421, 281, 485, 318, 348, 320]
+[03:01:53] AIM: cifar100_vgg16_bn 75.18% -> within [72.68, 77.68] with zero fine-tuning
+[03:01:53]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:01:53]   params 14,774,436 (folded 14,765,988), MACs 313.2M, calib 4609 images
+[03:02:12]   GRIDE (filter_proj) in 20s: 0=2.6, 3=18.8, 7=22.5, 10=34.1, 14=40.5, 17=55.0, 20=52.5, 24=55.7, 27=37.4, 30=54.7, 34=42.1, 37=47.4, 40=39.3
+[03:02:12]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:02:21]     S4_omp_ls              x7.75    73.35%  (-1.83)  params -43.8%  MACs -27.1%  HIT
+  seed 2:  73.35%  (-1.83)  params -43.8%  widths [20, 64, 128, 128, 256, 256, 256, 432, 290, 424, 326, 368, 304]
+
+=== cifar10_resnet18: S4_omp_ls x2.62 (paper: 93.16%, 95.43% dense)
+[03:02:26] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:02:26]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:02:26]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:02:36]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=44.2, layer4.0.conv1=30.6, layer4.1.conv1=20.4
+[03:02:36]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:02:44]     S4_omp_ls              x2.62    93.16%  (-2.27)  params -78.3%  MACs -61.4%  HIT
+  seed 0:  93.16%  (-2.27)  params -78.3%  widths [29, 34, 50, 60, 106, 116, 80, 53]
+[03:02:49] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:02:49]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:02:49]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:02:58]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=46.3, layer4.0.conv1=30.7, layer4.1.conv1=19.7
+[03:02:58]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:03:06]     S4_omp_ls              x2.62    92.95%  (-2.48)  params -78.2%  MACs -61.2%  HIT
+  seed 1:  92.95%  (-2.48)  params -78.2%  widths [29, 34, 50, 60, 106, 121, 80, 52]
+[03:03:11] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:03:11]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:03:11]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:03:21]   GRIDE (filter_proj) in 9s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=46.4, layer4.0.conv1=30.7, layer4.1.conv1=20.4
+[03:03:21]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:03:29]     S4_omp_ls              x2.62    93.25%  (-2.18)  params -78.1%  MACs -61.1%  HIT
+  seed 2:  93.25%  (-2.18)  params -78.1%  widths [29, 34, 50, 60, 106, 122, 80, 53]
+
+=== cifar10_resnet34: S4_omp_ls x2.81 (paper: 93.06%, 95.53% dense)
+[03:03:35] AIM: cifar10_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:03:35]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:03:35]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:03:54]   GRIDE (filter_proj) in 19s: layer1.0.conv1=11.2, layer1.1.conv1=12.6, layer1.2.conv1=10.4, layer2.0.conv1=19.1, layer2.1.conv1=17.8, layer2.2.conv1=17.7, layer2.3.conv1=7.1, layer3.0.conv1=33.8, layer3.1.conv1=24.7, layer3.2.conv1=30.3, layer3.3.conv1=25.5, layer3.4.conv1=25.4, layer3.5.conv1=14.0, layer4.0.conv1=19.8, layer4.1.conv1=8.2, layer4.2.conv1=3.9
+[03:03:54]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0, 48.0]
+[03:04:10]     S4_omp_ls              x2.81    93.06%  (-2.47)  params -84.8%  MACs -70.0%  HIT
+  seed 0:  93.06%  (-2.47)  params -84.8%  widths [32, 35, 29, 54, 50, 50, 20, 95, 69, 85, 72, 71, 39, 56, 23, 11]
+[03:04:16] AIM: cifar10_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:04:16]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:04:16]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:04:38]   GRIDE (filter_proj) in 23s: layer1.0.conv1=11.2, layer1.1.conv1=12.6, layer1.2.conv1=10.4, layer2.0.conv1=19.1, layer2.1.conv1=17.8, layer2.2.conv1=17.7, layer2.3.conv1=7.1, layer3.0.conv1=33.8, layer3.1.conv1=23.9, layer3.2.conv1=30.7, layer3.3.conv1=25.3, layer3.4.conv1=25.4, layer3.5.conv1=14.0, layer4.0.conv1=19.3, layer4.1.conv1=8.3, layer4.2.conv1=3.9
+[03:04:38]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0, 48.0]
+[03:04:55]     S4_omp_ls              x2.81    93.00%  (-2.53)  params -84.9%  MACs -70.1%  
+  seed 1:  93.00%  (-2.53)  params -84.9%  widths [32, 35, 29, 54, 50, 50, 20, 95, 67, 86, 71, 71, 39, 54, 23, 11]
+[03:05:00] AIM: cifar10_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:05:00]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:05:00]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:05:20]   GRIDE (filter_proj) in 20s: layer1.0.conv1=11.2, layer1.1.conv1=12.6, layer1.2.conv1=10.4, layer2.0.conv1=19.1, layer2.1.conv1=17.8, layer2.2.conv1=17.7, layer2.3.conv1=7.1, layer3.0.conv1=33.8, layer3.1.conv1=24.5, layer3.2.conv1=30.0, layer3.3.conv1=25.7, layer3.4.conv1=25.3, layer3.5.conv1=13.8, layer4.0.conv1=19.1, layer4.1.conv1=8.3, layer4.2.conv1=3.9
+[03:05:20]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0, 48.0]
+[03:05:36]     S4_omp_ls              x2.81    92.93%  (-2.60)  params -84.9%  MACs -70.1%  
+  seed 2:  92.93%  (-2.60)  params -84.9%  widths [32, 35, 29, 54, 50, 50, 20, 95, 69, 84, 72, 71, 39, 54, 23, 11]
+
+=== cifar10_vgg11_bn: S4_omp_ls x7.0 (paper: 90.27%, 92.64% dense)
+[03:05:42] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:05:42]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:05:42]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:05:55]   GRIDE (filter_proj) in 13s: 0=8.5, 4=24.2, 8=40.4, 11=34.4, 15=17.7, 18=16.2, 22=25.4, 25=16.2
+[03:05:55]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:06:01]     S4_omp_ls              x7.00    90.27%  (-2.37)  params -81.8%  MACs -46.8%  HIT
+  seed 0:  90.27%  (-2.37)  params -81.8%  widths [59, 128, 256, 241, 124, 113, 178, 114]
+[03:06:06] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:06:06]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:06:06]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:06:19]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.2, 8=40.4, 11=36.3, 15=18.6, 18=16.3, 22=27.1, 25=16.8
+[03:06:19]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:06:25]     S4_omp_ls              x7.00    90.33%  (-2.31)  params -80.7%  MACs -45.1%  HIT
+  seed 1:  90.33%  (-2.31)  params -80.7%  widths [59, 128, 256, 254, 130, 114, 189, 118]
+[03:06:30] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:06:30]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:06:30]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:06:42]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.2, 8=40.4, 11=35.5, 15=19.3, 18=16.2, 22=26.6, 25=16.3
+[03:06:42]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:06:49]     S4_omp_ls              x7.00    90.47%  (-2.17)  params -80.9%  MACs -45.6%  HIT
+  seed 2:  90.47%  (-2.17)  params -80.9%  widths [59, 128, 256, 249, 135, 113, 186, 114]
+
+=== cifar10_vgg16_bn: S4_omp_ls x4.0 (paper: 91.71%, 94.05% dense)
+[03:06:55] AIM: cifar10_vgg16_bn 94.05% -> within [91.55, 96.55] with zero fine-tuning
+[03:06:55]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:06:55]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:07:16]   GRIDE (filter_proj) in 21s: 0=2.4, 3=20.7, 7=25.7, 10=37.1, 14=46.8, 17=44.3, 20=38.3, 24=34.1, 27=15.8, 30=23.1, 34=15.6, 37=18.1, 40=11.9
+[03:07:16]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:07:27]     S4_omp_ls              x4.00    91.71%  (-2.34)  params -90.6%  MACs -66.2%  HIT
+  seed 0:  91.71%  (-2.34)  params -90.6%  widths [10, 64, 103, 128, 187, 177, 153, 136, 63, 92, 62, 72, 48]
+[03:07:33] AIM: cifar10_vgg16_bn 94.05% -> within [91.55, 96.55] with zero fine-tuning
+[03:07:33]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:07:33]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:07:52]   GRIDE (filter_proj) in 19s: 0=2.4, 3=20.7, 7=25.7, 10=37.1, 14=46.8, 17=45.4, 20=38.6, 24=33.0, 27=15.1, 30=24.5, 34=15.7, 37=18.1, 40=11.9
+[03:07:52]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:08:03]     S4_omp_ls              x4.00    91.80%  (-2.25)  params -90.5%  MACs -65.9%  HIT
+  seed 1:  91.80%  (-2.25)  params -90.5%  widths [10, 64, 103, 128, 187, 182, 155, 132, 61, 98, 63, 72, 48]
+[03:08:09] AIM: cifar10_vgg16_bn 94.05% -> within [91.55, 96.55] with zero fine-tuning
+[03:08:09]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:08:09]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:08:29]   GRIDE (filter_proj) in 19s: 0=2.4, 3=20.7, 7=25.7, 10=37.1, 14=46.8, 17=46.9, 20=36.9, 24=32.3, 27=15.4, 30=26.0, 34=15.1, 37=18.1, 40=11.9
+[03:08:29]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:08:40]     S4_omp_ls              x4.00    91.49%  (-2.56)  params -90.6%  MACs -65.9%  
+  seed 2:  91.49%  (-2.56)  params -90.5%  widths [10, 64, 103, 128, 187, 187, 147, 129, 62, 104, 61, 72, 48]
+
+=== fashionmnist_resnet18: S4_omp_ls x1.94 (paper: 93.09%, 95.49% dense)
+[03:08:45] AIM: fashionmnist_resnet18 95.49% -> within [92.99, 97.99] with zero fine-tuning
+[03:08:45]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:08:45]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:08:54]   GRIDE (filter_proj) in 9s: layer1.0.conv1=4.0, layer1.1.conv1=5.6, layer2.0.conv1=16.0, layer2.1.conv1=15.5, layer3.0.conv1=24.0, layer3.1.conv1=25.8, layer4.0.conv1=24.9, layer4.1.conv1=28.6
+[03:08:54]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:09:03]     S4_omp_ls              x1.94    93.09%  (-2.40)  params -86.1%  MACs -81.9%  HIT
+  seed 0:  93.09%  (-2.40)  params -86.1%  widths [8, 11, 31, 30, 47, 50, 48, 55]
+[03:09:08] AIM: fashionmnist_resnet18 95.49% -> within [92.99, 97.99] with zero fine-tuning
+[03:09:08]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:09:08]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:09:17]   GRIDE (filter_proj) in 10s: layer1.0.conv1=4.0, layer1.1.conv1=5.6, layer2.0.conv1=16.0, layer2.1.conv1=15.5, layer3.0.conv1=24.0, layer3.1.conv1=25.7, layer4.0.conv1=24.5, layer4.1.conv1=27.9
+[03:09:17]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:09:25]     S4_omp_ls              x1.94    93.19%  (-2.30)  params -86.1%  MACs -81.9%  HIT
+  seed 1:  93.19%  (-2.30)  params -86.1%  widths [8, 11, 31, 30, 47, 50, 48, 54]
+[03:09:30] AIM: fashionmnist_resnet18 95.49% -> within [92.99, 97.99] with zero fine-tuning
+[03:09:30]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:09:30]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:09:39]   GRIDE (filter_proj) in 9s: layer1.0.conv1=4.0, layer1.1.conv1=5.6, layer2.0.conv1=16.0, layer2.1.conv1=15.5, layer3.0.conv1=24.0, layer3.1.conv1=25.7, layer4.0.conv1=24.7, layer4.1.conv1=27.6
+[03:09:39]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:09:48]     S4_omp_ls              x1.94    93.21%  (-2.28)  params -86.1%  MACs -81.9%  HIT
+  seed 2:  93.21%  (-2.28)  params -86.1%  widths [8, 11, 31, 30, 47, 50, 48, 54]
+
+=== fashionmnist_resnet34: S4_omp_ls x1.56 (paper: 93.03%, 95.53% dense)
+[03:09:53] AIM: fashionmnist_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:09:53]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:09:53]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:10:12]   GRIDE (filter_proj) in 19s: layer1.0.conv1=4.3, layer1.1.conv1=2.2, layer1.2.conv1=2.4, layer2.0.conv1=13.9, layer2.1.conv1=16.0, layer2.2.conv1=22.2, layer2.3.conv1=17.8, layer3.0.conv1=21.3, layer3.1.conv1=29.1, layer3.2.conv1=26.9, layer3.3.conv1=23.2, layer3.4.conv1=21.8, layer3.5.conv1=22.2, layer4.0.conv1=20.8, layer4.1.conv1=17.5, layer4.2.conv1=10.7
+[03:10:12]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:10:28]     S4_omp_ls              x1.56    93.03%  (-2.50)  params -90.3%  MACs -86.1%  HIT
+  seed 0:  93.03%  (-2.50)  params -90.3%  widths [7, 4, 4, 22, 25, 35, 28, 33, 45, 42, 36, 34, 35, 32, 27, 17]
+[03:10:33] AIM: fashionmnist_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:10:33]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:10:33]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:10:53]   GRIDE (filter_proj) in 20s: layer1.0.conv1=4.3, layer1.1.conv1=2.2, layer1.2.conv1=2.4, layer2.0.conv1=13.9, layer2.1.conv1=16.0, layer2.2.conv1=22.2, layer2.3.conv1=17.8, layer3.0.conv1=21.3, layer3.1.conv1=29.2, layer3.2.conv1=26.5, layer3.3.conv1=23.0, layer3.4.conv1=21.6, layer3.5.conv1=21.7, layer4.0.conv1=20.3, layer4.1.conv1=17.2, layer4.2.conv1=10.1
+[03:10:53]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0, 48.0]
+[03:11:09]     S4_omp_ls              x1.56    93.16%  (-2.37)  params -90.4%  MACs -86.1%  HIT
+  seed 1:  93.16%  (-2.37)  params -90.4%  widths [7, 4, 4, 22, 25, 35, 28, 33, 46, 41, 36, 34, 34, 32, 27, 16]
+[03:11:14] AIM: fashionmnist_resnet34 95.53% -> within [93.03, 98.03] with zero fine-tuning
+[03:11:14]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:11:14]   params 21,290,634 (folded 21,273,610), MACs 1159.4M, calib 1153 images
+[03:11:33]   GRIDE (filter_proj) in 19s: layer1.0.conv1=4.3, layer1.1.conv1=2.2, layer1.2.conv1=2.4, layer2.0.conv1=13.9, layer2.1.conv1=16.0, layer2.2.conv1=22.2, layer2.3.conv1=17.8, layer3.0.conv1=21.3, layer3.1.conv1=29.2, layer3.2.conv1=26.9, layer3.3.conv1=23.0, layer3.4.conv1=21.8, layer3.5.conv1=21.7, layer4.0.conv1=20.5, layer4.1.conv1=17.1, layer4.2.conv1=9.5
+[03:11:33]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0, 48.0]
+[03:11:49]     S4_omp_ls              x1.56    93.17%  (-2.36)  params -90.4%  MACs -86.1%  HIT
+  seed 2:  93.17%  (-2.36)  params -90.4%  widths [7, 4, 4, 22, 25, 35, 28, 33, 46, 42, 36, 34, 34, 32, 27, 15]
+
+=== fashionmnist_vgg11_bn: S4_omp_ls x9.25 (paper: 92.13%, 94.57% dense)
+[03:11:54] AIM: fashionmnist_vgg11_bn 94.57% -> within [92.07, 97.07] with zero fine-tuning
+[03:11:54]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:11:54]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:12:06]   GRIDE (filter_proj) in 12s: 0=3.5, 4=4.0, 8=12.3, 11=5.6, 15=31.8, 18=15.6, 22=30.7, 25=15.9
+[03:12:06]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:12:15]     S4_omp_ls              x9.25    92.13%  (-2.44)  params -85.1%  MACs -86.3%  HIT
+  seed 0:  92.13%  (-2.44)  params -85.1%  widths [33, 37, 114, 52, 294, 145, 284, 147]
+[03:12:20] AIM: fashionmnist_vgg11_bn 94.57% -> within [92.07, 97.07] with zero fine-tuning
+[03:12:20]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:12:20]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:12:32]   GRIDE (filter_proj) in 13s: 0=3.5, 4=4.0, 8=12.3, 11=5.6, 15=31.3, 18=15.6, 22=30.2, 25=16.4
+[03:12:32]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:12:55]     S4_omp_ls              x9.25    92.03%  (-2.54)  params -85.3%  MACs -86.4%  
+  seed 1:  92.03%  (-2.54)  params -85.3%  widths [33, 37, 114, 52, 289, 144, 280, 152]
+[03:13:00] AIM: fashionmnist_vgg11_bn 94.57% -> within [92.07, 97.07] with zero fine-tuning
+[03:13:00]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:13:00]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:13:28]   GRIDE (filter_proj) in 28s: 0=3.5, 4=4.0, 8=12.3, 11=5.6, 15=32.0, 18=15.9, 22=30.6, 25=15.9
+[03:13:28]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:13:57]     S4_omp_ls              x9.25    92.23%  (-2.34)  params -85.0%  MACs -86.2%  HIT
+  seed 2:  92.23%  (-2.34)  params -85.0%  widths [33, 37, 114, 52, 296, 147, 283, 147]
+
+=== fashionmnist_vgg16_bn: S4_omp_ls x2.88 (paper: 92.52%, 94.91% dense)
+[03:14:01] AIM: fashionmnist_vgg16_bn 94.91% -> within [92.41, 97.41] with zero fine-tuning
+[03:14:01]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:14:01]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:14:35]   GRIDE (filter_proj) in 34s: 0=2.6, 3=8.9, 7=9.5, 10=26.7, 14=25.6, 17=30.1, 20=26.4, 24=30.7, 27=28.8, 30=27.0, 34=16.3, 37=18.2, 40=12.5
+[03:14:35]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:14:48]     S4_omp_ls              x2.88    92.52%  (-2.39)  params -96.9%  MACs -92.9%  HIT
+  seed 0:  92.52%  (-2.39)  params -96.9%  widths [7, 26, 27, 77, 74, 87, 76, 88, 83, 78, 47, 52, 36]
+[03:14:53] AIM: fashionmnist_vgg16_bn 94.91% -> within [92.41, 97.41] with zero fine-tuning
+[03:14:53]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:14:53]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:15:13]   GRIDE (filter_proj) in 20s: 0=2.6, 3=8.9, 7=9.5, 10=26.7, 14=25.6, 17=30.3, 20=26.0, 24=30.4, 27=28.8, 30=26.8, 34=16.2, 37=19.7, 40=12.5
+[03:15:13]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:15:26]     S4_omp_ls              x2.88    92.55%  (-2.36)  params -96.9%  MACs -92.9%  HIT
+  seed 1:  92.55%  (-2.36)  params -96.9%  widths [7, 26, 27, 77, 74, 87, 75, 87, 83, 77, 47, 57, 36]
+[03:15:31] AIM: fashionmnist_vgg16_bn 94.91% -> within [92.41, 97.41] with zero fine-tuning
+[03:15:31]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:15:31]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:15:50]   GRIDE (filter_proj) in 19s: 0=2.6, 3=8.9, 7=9.5, 10=26.7, 14=25.6, 17=30.4, 20=25.0, 24=30.6, 27=28.8, 30=28.5, 34=16.6, 37=17.7, 40=12.5
+[03:15:50]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:16:03]     S4_omp_ls              x2.88    92.45%  (-2.46)  params -96.9%  MACs -92.9%  HIT
+  seed 2:  92.45%  (-2.46)  params -96.9%  widths [7, 26, 27, 77, 74, 87, 72, 88, 83, 82, 48, 51, 36]
+
+=== imagenet32_resnet34: S4_omp_ls x10.0 (paper: 56.05%, 58.55% dense)
+[03:16:25] AIM: imagenet32_resnet34 58.55% -> within [56.05, 61.05] with zero fine-tuning
+[03:16:25]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:16:25]   params 21,798,504 (folded 21,781,480), MACs 1159.9M, calib 1153 images
+[03:16:45]   GRIDE (filter_proj) in 20s: layer1.0.conv1=15.1, layer1.1.conv1=24.2, layer1.2.conv1=24.5, layer2.0.conv1=32.5, layer2.1.conv1=39.5, layer2.2.conv1=44.2, layer2.3.conv1=33.4, layer3.0.conv1=41.7, layer3.1.conv1=38.8, layer3.2.conv1=36.6, layer3.3.conv1=55.9, layer3.4.conv1=57.1, layer3.5.conv1=22.8, layer4.0.conv1=82.6, layer4.1.conv1=32.8, layer4.2.conv1=43.4
+[03:16:45]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:16:52]     S4_omp_ls              x10.00   56.05%  (-2.50)  params -11.7%  MACs  -4.0%  HIT
+  seed 0:  56.05%  (-2.50)  params -11.7%  widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 228, 512, 328, 434]
+[03:17:13] AIM: imagenet32_resnet34 58.55% -> within [56.05, 61.05] with zero fine-tuning
+[03:17:13]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:17:13]   params 21,798,504 (folded 21,781,480), MACs 1159.9M, calib 1153 images
+[03:17:33]   GRIDE (filter_proj) in 19s: layer1.0.conv1=15.1, layer1.1.conv1=24.2, layer1.2.conv1=24.5, layer2.0.conv1=32.5, layer2.1.conv1=39.5, layer2.2.conv1=44.2, layer2.3.conv1=33.4, layer3.0.conv1=41.7, layer3.1.conv1=39.9, layer3.2.conv1=36.5, layer3.3.conv1=53.2, layer3.4.conv1=60.5, layer3.5.conv1=22.3, layer4.0.conv1=82.2, layer4.1.conv1=32.7, layer4.2.conv1=44.5
+[03:17:33]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:17:40]     S4_omp_ls              x10.00   56.31%  (-2.24)  params -11.4%  MACs  -4.0%  HIT
+  seed 1:  56.31%  (-2.24)  params -11.4%  widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 223, 512, 327, 445]
+[03:18:01] AIM: imagenet32_resnet34 58.55% -> within [56.05, 61.05] with zero fine-tuning
+[03:18:01]   16 compressible units, widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 512, 512, 512]
+[03:18:01]   params 21,798,504 (folded 21,781,480), MACs 1159.9M, calib 1153 images
+[03:18:21]   GRIDE (filter_proj) in 20s: layer1.0.conv1=15.1, layer1.1.conv1=24.2, layer1.2.conv1=24.5, layer2.0.conv1=32.5, layer2.1.conv1=39.5, layer2.2.conv1=44.2, layer2.3.conv1=33.4, layer3.0.conv1=41.7, layer3.1.conv1=39.9, layer3.2.conv1=36.8, layer3.3.conv1=54.4, layer3.4.conv1=59.0, layer3.5.conv1=23.3, layer4.0.conv1=80.4, layer4.1.conv1=41.3, layer4.2.conv1=33.2
+[03:18:21]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:18:28]     S4_omp_ls              x10.00   55.89%  (-2.66)  params -12.4%  MACs  -4.1%  
+  seed 2:  55.89%  (-2.66)  params -12.4%  widths [64, 64, 64, 128, 128, 128, 128, 256, 256, 256, 256, 256, 233, 512, 413, 332]
+
+=== imagenet32_resnet50: S4_omp_ls x14.5 (paper: 59.96%, 62.24% dense)
+[03:19:02] AIM: imagenet32_resnet50 62.24% -> within [59.74, 64.74] with zero fine-tuning
+[03:19:02]   32 compressible units, widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:19:02]   params 25,575,912 (folded 25,522,792), MACs 1299.9M, calib 1153 images
+[03:19:39]   GRIDE (filter_proj) in 38s: layer1.0.conv1=11.2, layer1.0.conv2=19.6, layer1.1.conv1=17.3, layer1.1.conv2=25.1, layer1.2.conv1=19.1, layer1.2.conv2=31.3, layer2.0.conv1=25.4, layer2.0.conv2=26.9, layer2.1.conv1=23.7, layer2.1.conv2=30.2, layer2.2.conv1=29.4, layer2.2.conv2=39.2, layer2.3.conv1=29.6, layer2.3.conv2=37.2, layer3.0.conv1=39.4, layer3.0.conv2=36.3, layer3.1.conv1=31.9, layer3.1.conv2=37.5, layer3.2.conv1=40.8, layer3.2.conv2=42.6, layer3.3.conv1=41.3, layer3.3.conv2=42.8, layer3.4.conv1=38.6, layer3.4.conv2=42.9, layer3.5.conv1=32.8, layer3.5.conv2=51.6, layer4.0.conv1=57.9, layer4.0.conv2=49.3, layer4.1.conv1=46.3, layer4.1.conv2=31.5, layer4.2.conv1=24.7, layer4.2.conv2=59.5
+[03:19:39]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:19:50]     S4_omp_ls              x14.50   59.96%  (-2.28)  params  -5.6%  MACs  -1.7%  HIT
+  seed 0:  59.96%  (-2.28)  params -5.6%  widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 457, 359, 512]
+[03:20:23] AIM: imagenet32_resnet50 62.24% -> within [59.74, 64.74] with zero fine-tuning
+[03:20:23]   32 compressible units, widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:20:23]   params 25,575,912 (folded 25,522,792), MACs 1299.9M, calib 1153 images
+[03:20:58]   GRIDE (filter_proj) in 35s: layer1.0.conv1=11.2, layer1.0.conv2=19.6, layer1.1.conv1=17.3, layer1.1.conv2=25.1, layer1.2.conv1=19.1, layer1.2.conv2=31.3, layer2.0.conv1=25.4, layer2.0.conv2=26.9, layer2.1.conv1=23.7, layer2.1.conv2=30.2, layer2.2.conv1=29.4, layer2.2.conv2=39.2, layer2.3.conv1=29.6, layer2.3.conv2=37.2, layer3.0.conv1=39.4, layer3.0.conv2=41.8, layer3.1.conv1=31.9, layer3.1.conv2=37.4, layer3.2.conv1=40.8, layer3.2.conv2=42.8, layer3.3.conv1=41.3, layer3.3.conv2=43.0, layer3.4.conv1=38.6, layer3.4.conv2=40.1, layer3.5.conv1=32.8, layer3.5.conv2=51.6, layer4.0.conv1=57.9, layer4.0.conv2=46.5, layer4.1.conv1=46.3, layer4.1.conv2=30.2, layer4.2.conv1=24.7, layer4.2.conv2=63.8
+[03:20:58]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:21:09]     S4_omp_ls              x14.50   59.84%  (-2.41)  params  -6.1%  MACs  -1.9%  HIT
+  seed 1:  59.84%  (-2.41)  params -6.1%  widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 438, 359, 512]
+[03:21:42] AIM: imagenet32_resnet50 62.24% -> within [59.74, 64.74] with zero fine-tuning
+[03:21:42]   32 compressible units, widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:21:42]   params 25,575,912 (folded 25,522,792), MACs 1299.9M, calib 1153 images
+[03:22:17]   GRIDE (filter_proj) in 35s: layer1.0.conv1=11.2, layer1.0.conv2=19.6, layer1.1.conv1=17.3, layer1.1.conv2=25.1, layer1.2.conv1=19.1, layer1.2.conv2=31.3, layer2.0.conv1=25.4, layer2.0.conv2=26.9, layer2.1.conv1=23.7, layer2.1.conv2=30.2, layer2.2.conv1=29.4, layer2.2.conv2=39.2, layer2.3.conv1=29.6, layer2.3.conv2=37.2, layer3.0.conv1=39.4, layer3.0.conv2=43.0, layer3.1.conv1=31.9, layer3.1.conv2=37.2, layer3.2.conv1=40.8, layer3.2.conv2=44.1, layer3.3.conv1=41.3, layer3.3.conv2=42.5, layer3.4.conv1=38.6, layer3.4.conv2=40.9, layer3.5.conv1=32.8, layer3.5.conv2=51.4, layer4.0.conv1=57.9, layer4.0.conv2=53.0, layer4.1.conv1=46.3, layer4.1.conv2=32.6, layer4.2.conv1=24.7, layer4.2.conv2=67.9
+[03:22:17]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0]
+[03:22:27]     S4_omp_ls              x14.50   59.91%  (-2.34)  params  -5.2%  MACs  -1.6%  HIT
+  seed 2:  59.91%  (-2.34)  params -5.2%  widths [64, 64, 64, 64, 64, 64, 128, 128, 128, 128, 128, 128, 128, 128, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 256, 512, 512, 512, 473, 359, 512]
+
+=== imagenet32_vgg16_bn: S4_omp_ls x7.75 (paper: 46.50%, 48.63% dense)
+[03:22:47] AIM: imagenet32_vgg16_bn 48.63% -> within [46.13, 51.13] with zero fine-tuning
+[03:22:47]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:22:47]   params 15,236,136 (folded 15,227,688), MACs 313.7M, calib 4609 images
+[03:23:07]   GRIDE (filter_proj) in 20s: 0=9.6, 3=20.8, 7=28.0, 10=25.9, 14=42.8, 17=51.3, 20=62.0, 24=53.8, 27=38.3, 30=71.2, 34=64.1, 37=78.9, 40=136.6
+[03:23:07]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:23:14]     S4_omp_ls              x7.75    46.50%  (-2.13)  params -17.1%  MACs -12.7%  HIT
+  seed 0:  46.50%  (-2.13)  params -17.1%  widths [64, 64, 128, 128, 256, 256, 256, 417, 297, 512, 497, 512, 512]
+[03:23:33] AIM: imagenet32_vgg16_bn 48.63% -> within [46.13, 51.13] with zero fine-tuning
+[03:23:33]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:23:33]   params 15,236,136 (folded 15,227,688), MACs 313.7M, calib 4609 images
+[03:23:53]   GRIDE (filter_proj) in 20s: 0=9.6, 3=20.8, 7=28.0, 10=25.9, 14=42.8, 17=48.4, 20=59.1, 24=57.1, 27=37.4, 30=72.1, 34=64.3, 37=75.5, 40=130.1
+[03:23:53]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:24:01]     S4_omp_ls              x7.75    46.58%  (-2.05)  params -16.6%  MACs -12.3%  HIT
+  seed 1:  46.58%  (-2.05)  params -16.6%  widths [64, 64, 128, 128, 256, 256, 256, 443, 290, 512, 498, 512, 512]
+[03:24:21] AIM: imagenet32_vgg16_bn 48.63% -> within [46.13, 51.13] with zero fine-tuning
+[03:24:21]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:24:21]   params 15,236,136 (folded 15,227,688), MACs 313.7M, calib 4609 images
+[03:24:40]   GRIDE (filter_proj) in 19s: 0=9.6, 3=20.8, 7=28.0, 10=25.9, 14=42.8, 17=49.7, 20=60.5, 24=53.8, 27=40.3, 30=69.7, 34=55.5, 37=68.8, 40=140.4
+[03:24:40]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+[03:24:47]     S4_omp_ls              x7.75    46.14%  (-2.49)  params -20.3%  MACs -12.8%  HIT
+  seed 2:  46.14%  (-2.49)  params -20.3%  widths [64, 64, 128, 128, 256, 256, 256, 417, 312, 512, 430, 512, 512]
+
+=== imagenet32_vgg19_bn: S4_omp_ls x8.25 (paper: 46.60%, 49.06% dense)
+[03:25:07] AIM: imagenet32_vgg19_bn 49.06% -> within [46.56, 51.56] with zero fine-tuning
+[03:25:07]   16 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512, 512, 512]
+[03:25:07]   params 20,548,392 (folded 20,537,384), MACs 398.6M, calib 4609 images
+[03:25:33]   GRIDE (filter_proj) in 25s: 0=8.0, 3=20.9, 7=26.0, 10=30.3, 14=39.7, 17=40.8, 20=54.5, 23=42.2, 27=65.0, 30=31.6, 33=49.5, 36=64.0, 40=50.5, 43=70.2, 46=86.1, 49=139.1
+[03:25:33]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0]
+[03:25:40]     S4_omp_ls              x8.25    46.60%  (-2.46)  params -19.1%  MACs -13.0%  HIT
+  seed 0:  46.60%  (-2.46)  params -19.1%  widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 261, 409, 512, 416, 512, 512, 512]
+[03:25:59] AIM: imagenet32_vgg19_bn 49.06% -> within [46.56, 51.56] with zero fine-tuning
+[03:25:59]   16 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512, 512, 512]
+[03:25:59]   params 20,548,392 (folded 20,537,384), MACs 398.6M, calib 4609 images
+[03:26:25]   GRIDE (filter_proj) in 26s: 0=8.0, 3=20.9, 7=26.0, 10=30.3, 14=39.7, 17=40.6, 20=52.7, 23=43.2, 27=62.6, 30=31.2, 33=48.6, 36=63.2, 40=52.3, 43=78.0, 46=96.2, 49=132.6
+[03:26:25]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0]
+[03:26:33]     S4_omp_ls              x8.25    46.53%  (-2.52)  params -18.9%  MACs -13.3%  
+  seed 1:  46.53%  (-2.52)  params -18.9%  widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 257, 401, 512, 431, 512, 512, 512]
+[03:26:54] AIM: imagenet32_vgg19_bn 49.06% -> within [46.56, 51.56] with zero fine-tuning
+[03:26:54]   16 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 512, 512, 512, 512, 512, 512, 512]
+[03:26:54]   params 20,548,392 (folded 20,537,384), MACs 398.6M, calib 4609 images
+[03:27:20]   GRIDE (filter_proj) in 26s: 0=8.0, 3=20.9, 7=26.0, 10=30.3, 14=39.7, 17=39.2, 20=52.7, 23=47.0, 27=66.5, 30=30.5, 33=47.0, 36=56.5, 40=55.0, 43=79.8, 46=106.0, 49=129.8
+[03:27:20]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0]
+[03:27:28]     S4_omp_ls              x8.25    46.12%  (-2.94)  params -20.2%  MACs -14.4%  
+  seed 2:  46.12%  (-2.94)  params -20.2%  widths [64, 64, 128, 128, 256, 256, 256, 256, 512, 252, 388, 466, 454, 512, 512, 512]
+
+==============================================================================
+E1 -- seed variance at the frontier configuration
+==============================================================================
+model                     n  acc mean     sd         range  cut sd  widths stable?
+cifar100_resnet18         3     77.04   0.40 [76.69, 77.48]    2.67              NO
+cifar100_resnet34         3     77.30   0.12 [77.19, 77.43]    0.57              NO
+cifar100_vgg11_bn         3     70.81   0.36 [70.53, 71.22]    1.60              NO
+cifar100_vgg16_bn         3     73.06   0.29 [72.77, 73.35]    1.24              NO
+cifar10_resnet18          3     93.12   0.15 [92.95, 93.25]    0.12              NO
+cifar10_resnet34          3     93.00   0.07 [92.93, 93.06]    0.06              NO
+cifar10_vgg11_bn          3     90.36   0.10 [90.27, 90.47]    0.56              NO
+cifar10_vgg16_bn          3     91.67   0.16 [91.49, 91.80]    0.06              NO
+fashionmnist_resnet18     3     93.16   0.06 [93.09, 93.21]    0.05              NO
+fashionmnist_resnet34     3     93.12   0.08 [93.03, 93.17]    0.04              NO
+fashionmnist_vgg11_bn     3     92.13   0.10 [92.03, 92.23]    0.13              NO
+fashionmnist_vgg16_bn     3     92.51   0.05 [92.45, 92.55]    0.00              NO
+imagenet32_resnet34       3     56.09   0.21 [55.89, 56.31]    0.47              NO
+imagenet32_resnet50       3     59.90   0.06 [59.84, 59.96]    0.46              NO
+imagenet32_vgg16_bn       3     46.41   0.23 [46.14, 46.58]    2.03              NO
+imagenet32_vgg19_bn       3     46.42   0.26 [46.12, 46.60]    0.69              NO
+------------------------------------------------------------------------------
+median accuracy s.d. across models : 0.154 pts
+max accuracy s.d.                  : 0.404 pts
+max parameter-cut s.d.             : 2.668 pts
+runs inside the +/-2.5 window      : 40/48
+worst drop over all seeds          : -2.94 (imagenet32_vgg19_bn, seed 2)
+
+wrote <PROJECT_ROOT>/to_do_experiment/results/e1_seed_variance.csv

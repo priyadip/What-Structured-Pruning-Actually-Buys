@@ -1,0 +1,35 @@
+{
+  "path": "artifacts/distilbert_mnli_ffn.safetensors",
+  "config": "filter_proj/residual",
+  "alpha_star": 13.53125,
+  "widths": [
+    1142,
+    956,
+    868,
+    936,
+    728,
+    745
+  ],
+  "dims": [
+    84.394,
+    70.62,
+    64.137,
+    69.141,
+    53.802,
+    55.03
+  ],
+  "accuracy_in_process": 79.8981,
+  "accuracy_reloaded": 79.8981151299032,
+  "dense_accuracy": 82.21090168110035,
+  "delta": -2.3127865511971493,
+  "params": {
+    "total": 46887170,
+    "embedding": 23835648,
+    "encoder": 23051522,
+    "ffn": 8265983
+  },
+  "red_total_pct": 29.9729,
+  "red_encoder_pct": 46.5412,
+  "red_ffn_pct": 70.8272,
+  "bytes": 187561864
+}

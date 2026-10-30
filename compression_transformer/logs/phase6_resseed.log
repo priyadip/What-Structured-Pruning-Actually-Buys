@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 10903.55it/s]
+[02:55:39] dense 82.21%  window >= 79.71%
+[02:55:56]   omp_ls             a=11.1562 seed=0 acc= 79.96 ( -2.25) red tot/enc/ffn =  29.6/ 46.0/ 70.0%  17s
+[02:56:13]   omp_ls             a=11.1562 seed=1 acc= 79.69 ( -2.52) red tot/enc/ffn =  29.7/ 46.1/ 70.1%  17s
+[02:56:31]   omp_ls             a=11.1562 seed=2 acc= 79.50 ( -2.71) red tot/enc/ffn =  29.9/ 46.5/ 70.7%  17s
+[02:56:49]   omp_ls             a=12      seed=0 acc= 80.12 ( -2.09) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  18s
+[02:57:07]   omp_ls             a=12      seed=1 acc= 80.05 ( -2.16) red tot/enc/ffn =  28.7/ 44.6/ 67.8%  18s
+[02:57:25]   omp_ls             a=12      seed=2 acc= 80.03 ( -2.18) red tot/enc/ffn =  29.0/ 45.0/ 68.5%  18s
+[02:57:43]   omp_ls             a=13      seed=0 acc= 80.44 ( -1.77) red tot/enc/ffn =  27.5/ 42.8/ 65.1%  19s
+[02:58:02]   omp_ls             a=13      seed=1 acc= 80.07 ( -2.14) red tot/enc/ffn =  27.6/ 42.8/ 65.2%  19s
+[02:58:21]   omp_ls             a=13      seed=2 acc= 80.61 ( -1.60) red tot/enc/ffn =  27.9/ 43.3/ 65.9%  18s
+[02:58:40]   omp_ls             a=14      seed=0 acc= 80.58 ( -1.63) red tot/enc/ffn =  26.4/ 41.0/ 62.4%  19s
+[02:58:59]   omp_ls             a=14      seed=1 acc= 80.34 ( -1.87) red tot/enc/ffn =  26.4/ 41.1/ 62.5%  19s
+[02:59:18]   omp_ls             a=14      seed=2 acc= 80.50 ( -1.71) red tot/enc/ffn =  26.8/ 41.6/ 63.2%  20s

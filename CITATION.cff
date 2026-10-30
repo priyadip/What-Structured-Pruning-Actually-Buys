@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: >-
+  What Structured Pruning Actually Buys: A Decomposition, and Why
+  Selection Criteria Stop Mattering
+message: Please cite the paper if you use this artifact.
+type: software
+authors:
+  - name: Anonymous (under double-blind review)
+abstract: >-
+  Reference implementation and analysis pipeline for a re-analysis of 3922
+  structured-pruning runs across fully connected, convolutional and Transformer
+  models, showing that the consumer-side repair dominates the selection
+  criterion at deployable budgets, and giving an exact orthogonal decomposition
+  that explains why.
+license: MIT
+keywords:
+  - structured pruning
+  - model compression
+  - network pruning
+  - least squares reconstruction
+  - intrinsic dimension

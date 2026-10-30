@@ -1,0 +1,123 @@
+[03:27:43] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:27:43]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:27:43]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:27:56]   GRIDE (filter_proj) in 13s: 0=8.5, 4=24.2, 8=40.4, 11=34.4, 15=17.7, 18=16.2, 22=25.4, 25=16.2
+[03:27:56]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+
+=== cifar10_vgg11_bn  dense 92.64%
+[03:28:03]     M1_plain_norefit       x2.00    10.00%  (-82.64)  params -98.3%  MACs -94.5%  
+[03:28:03]   computing logit-pullback metrics (forward-only recursion)
+[03:28:11]     M2_metric_norefit      x2.00    10.00%  (-82.64)  params -98.3%  MACs -94.5%  
+[03:28:18]     M3_plain_refit         x2.00    67.64%  (-25.00)  params -98.3%  MACs -94.5%  
+[03:28:25]     M4_metric_refit        x2.00    67.53%  (-25.11)  params -98.3%  MACs -94.5%  
+[03:28:33]     M1_plain_norefit       x3.00    10.00%  (-82.64)  params -96.2%  MACs -87.8%  
+[03:28:40]     M2_metric_norefit      x3.00    10.00%  (-82.64)  params -96.2%  MACs -87.8%  
+[03:28:48]     M3_plain_refit         x3.00    78.86%  (-13.78)  params -96.2%  MACs -87.8%  
+[03:28:55]     M4_metric_refit        x3.00    78.66%  (-13.98)  params -96.2%  MACs -87.8%  
+[03:29:03]     M1_plain_norefit       x4.00    10.00%  (-82.64)  params -93.3%  MACs -78.5%  
+[03:29:11]     M2_metric_norefit      x4.00    10.00%  (-82.64)  params -93.3%  MACs -78.5%  
+[03:29:18]     M3_plain_refit         x4.00    83.98%  (-8.66)  params -93.3%  MACs -78.5%  
+[03:29:26]     M4_metric_refit        x4.00    84.11%  (-8.53)  params -93.3%  MACs -78.5%  
+[03:29:33]     M1_plain_norefit       x6.00    10.00%  (-82.64)  params -85.4%  MACs -55.0%  
+[03:29:40]     M2_metric_norefit      x6.00    17.14%  (-75.50)  params -85.4%  MACs -55.0%  
+[03:29:47]     M3_plain_refit         x6.00    89.54%  (-3.10)  params -85.4%  MACs -55.0%  
+[03:29:54]     M4_metric_refit        x6.00    88.84%  (-3.80)  params -85.4%  MACs -55.0%  
+[03:29:58]     M1_plain_norefit       x8.00    63.75%  (-28.89)  params -79.1%  MACs -43.0%  
+[03:30:02]     M2_metric_norefit      x8.00    39.68%  (-52.96)  params -79.1%  MACs -43.0%  
+[03:30:05]     M3_plain_refit         x8.00    90.71%  (-1.93)  params -79.1%  MACs -43.0%  HIT
+[03:30:09]     M4_metric_refit        x8.00    90.79%  (-1.85)  params -79.1%  MACs -43.0%  HIT
+[03:30:13] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:30:13]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:30:13]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:30:23]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=44.2, layer4.0.conv1=30.6, layer4.1.conv1=20.4
+[03:30:23]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+
+=== cifar10_resnet18  dense 95.43%
+[03:30:31]     M1_plain_norefit       x2.00    12.89%  (-82.54)  params -83.1%  MACs -70.2%  
+[03:30:31]   computing logit-pullback metrics (forward-only recursion)
+[03:30:39]     M2_metric_norefit      x2.00    10.78%  (-84.65)  params -83.1%  MACs -70.2%  
+[03:30:47]     M3_plain_refit         x2.00    91.07%  (-4.36)  params -83.1%  MACs -70.2%  
+[03:30:55]     M4_metric_refit        x2.00    90.83%  (-4.60)  params -83.1%  MACs -70.2%  
+[03:31:04]     M1_plain_norefit       x3.00     2.88%  (-92.55)  params -75.4%  MACs -56.1%  
+[03:31:12]     M2_metric_norefit      x3.00    11.34%  (-84.09)  params -75.4%  MACs -56.1%  
+[03:31:20]     M3_plain_refit         x3.00    93.78%  (-1.65)  params -75.4%  MACs -56.1%  HIT
+[03:31:28]     M4_metric_refit        x3.00    93.56%  (-1.87)  params -75.4%  MACs -56.1%  HIT
+[03:31:37]     M1_plain_norefit       x4.00     5.52%  (-89.91)  params -67.7%  MACs -41.8%  
+[03:31:46]     M2_metric_norefit      x4.00     5.51%  (-89.92)  params -67.7%  MACs -41.8%  
+[03:31:54]     M3_plain_refit         x4.00    94.61%  (-0.82)  params -67.7%  MACs -41.8%  HIT
+[03:32:03]     M4_metric_refit        x4.00    94.64%  (-0.79)  params -67.7%  MACs -41.8%  HIT
+[03:32:07]     M1_plain_norefit       x6.00    31.06%  (-64.37)  params -53.2%  MACs -18.5%  
+[03:32:11]     M2_metric_norefit      x6.00    35.68%  (-59.75)  params -53.2%  MACs -18.5%  
+[03:32:16]     M3_plain_refit         x6.00    95.22%  (-0.21)  params -53.2%  MACs -18.5%  HIT
+[03:32:20]     M4_metric_refit        x6.00    95.26%  (-0.17)  params -53.2%  MACs -18.5%  HIT
+[03:32:23]     M1_plain_norefit       x8.00    77.40%  (-18.03)  params -45.4%  MACs -14.6%  
+[03:32:25]     M2_metric_norefit      x8.00    79.84%  (-15.59)  params -45.4%  MACs -14.6%  
+[03:32:27]     M3_plain_refit         x8.00    95.28%  (-0.15)  params -45.4%  MACs -14.6%  HIT
+[03:32:30]     M4_metric_refit        x8.00    95.34%  (-0.09)  params -45.4%  MACs -14.6%  HIT
+[03:32:34] AIM: cifar100_vgg11_bn 72.94% -> within [70.44, 75.44] with zero fine-tuning
+[03:32:34]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:32:34]   params 9,277,284 (folded 9,271,780), MACs 152.8M, calib 4609 images
+[03:32:45]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.4, 8=38.8, 11=47.4, 15=53.0, 18=90.2, 22=40.4, 25=53.4
+[03:32:45]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+
+=== cifar100_vgg11_bn  dense 72.94%
+[03:32:53]     M1_plain_norefit       x2.00     1.03%  (-71.91)  params -93.6%  MACs -90.9%  
+[03:32:53]   computing logit-pullback metrics (forward-only recursion)
+[03:33:01]     M2_metric_norefit      x2.00     1.00%  (-71.94)  params -93.6%  MACs -90.9%  
+[03:33:09]     M3_plain_refit         x2.00    37.27%  (-35.67)  params -93.6%  MACs -90.9%  
+[03:33:17]     M4_metric_refit        x2.00    36.66%  (-36.28)  params -93.6%  MACs -90.9%  
+[03:33:25]     M1_plain_norefit       x3.00     2.13%  (-70.81)  params -85.8%  MACs -79.8%  
+[03:33:33]     M2_metric_norefit      x3.00     3.64%  (-69.30)  params -85.8%  MACs -79.8%  
+[03:33:42]     M3_plain_refit         x3.00    54.95%  (-17.99)  params -85.8%  MACs -79.8%  
+[03:33:50]     M4_metric_refit        x3.00    55.02%  (-17.92)  params -85.8%  MACs -79.8%  
+[03:33:59]     M1_plain_norefit       x4.00    12.40%  (-60.54)  params -74.8%  MACs -64.4%  
+[03:34:07]     M2_metric_norefit      x4.00    14.49%  (-58.45)  params -74.8%  MACs -64.4%  
+[03:34:16]     M3_plain_refit         x4.00    62.97%  (-9.97)  params -74.8%  MACs -64.4%  
+[03:34:25]     M4_metric_refit        x4.00    63.00%  (-9.94)  params -74.8%  MACs -64.4%  
+[03:34:31]     M1_plain_norefit       x6.00    58.61%  (-14.33)  params -47.0%  MACs -27.7%  
+[03:34:37]     M2_metric_norefit      x6.00    60.03%  (-12.91)  params -47.0%  MACs -27.7%  
+[03:34:43]     M3_plain_refit         x6.00    69.80%  (-3.14)  params -47.0%  MACs -27.7%  
+[03:34:49]     M4_metric_refit        x6.00    69.94%  (-3.00)  params -47.0%  MACs -27.7%  
+[03:34:53]     M1_plain_norefit       x8.00    68.94%  (-4.00)  params -28.0%  MACs -11.6%  
+[03:34:57]     M2_metric_norefit      x8.00    68.65%  (-4.29)  params -28.0%  MACs -11.6%  
+[03:35:01]     M3_plain_refit         x8.00    71.82%  (-1.12)  params -28.0%  MACs -11.6%  HIT
+[03:35:05]     M4_metric_refit        x8.00    71.89%  (-1.05)  params -28.0%  MACs -11.6%  HIT
+[03:35:08] AIM: fashionmnist_vgg16_bn 94.91% -> within [92.41, 97.41] with zero fine-tuning
+[03:35:08]   13 compressible units, widths [64, 64, 128, 128, 256, 256, 256, 512, 512, 512, 512, 512, 512]
+[03:35:08]   params 14,728,266 (folded 14,719,818), MACs 313.2M, calib 4609 images
+[03:35:28]   GRIDE (filter_proj) in 19s: 0=2.6, 3=8.9, 7=9.5, 10=26.7, 14=25.6, 17=30.1, 20=26.4, 24=30.7, 27=28.8, 30=27.0, 34=16.3, 37=18.2, 40=12.5
+[03:35:28]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+
+=== fashionmnist_vgg16_bn  dense 94.91%
+[03:35:40]     M1_plain_norefit       x2.00    10.00%  (-84.91)  params -98.5%  MACs -96.6%  
+[03:35:40]   computing logit-pullback metrics (forward-only recursion)
+[03:35:53]     M2_metric_norefit      x2.00    10.00%  (-84.91)  params -98.5%  MACs -96.6%  
+[03:36:05]     M3_plain_refit         x2.00    89.42%  (-5.49)  params -98.5%  MACs -96.6%  
+[03:36:17]     M4_metric_refit        x2.00    89.30%  (-5.61)  params -98.5%  MACs -96.6%  
+[03:36:30]     M1_plain_norefit       x3.00    10.00%  (-84.91)  params -96.7%  MACs -92.2%  
+[03:36:42]     M2_metric_norefit      x3.00    10.00%  (-84.91)  params -96.7%  MACs -92.2%  
+[03:36:55]     M3_plain_refit         x3.00    92.79%  (-2.12)  params -96.7%  MACs -92.2%  HIT
+[03:37:07]     M4_metric_refit        x3.00    92.62%  (-2.29)  params -96.7%  MACs -92.2%  HIT
+[03:37:20]     M1_plain_norefit       x4.00    10.00%  (-84.91)  params -94.1%  MACs -86.2%  
+[03:37:33]     M2_metric_norefit      x4.00    10.00%  (-84.91)  params -94.1%  MACs -86.2%  
+[03:37:46]     M3_plain_refit         x4.00    93.78%  (-1.13)  params -94.1%  MACs -86.2%  HIT
+[03:37:59]     M4_metric_refit        x4.00    93.80%  (-1.11)  params -94.1%  MACs -86.2%  HIT
+[03:38:11]     M1_plain_norefit       x6.00    10.00%  (-84.91)  params -87.1%  MACs -71.4%  
+[03:38:24]     M2_metric_norefit      x6.00    10.00%  (-84.91)  params -87.1%  MACs -71.4%  
+[03:38:36]     M3_plain_refit         x6.00    94.62%  (-0.29)  params -87.1%  MACs -71.4%  HIT
+[03:38:48]     M4_metric_refit        x6.00    94.52%  (-0.39)  params -87.1%  MACs -71.4%  HIT
+[03:39:00]     M1_plain_norefit       x8.00    10.00%  (-84.91)  params -77.9%  MACs -54.0%  
+[03:39:12]     M2_metric_norefit      x8.00    11.76%  (-83.15)  params -77.9%  MACs -54.0%  
+[03:39:23]     M3_plain_refit         x8.00    94.80%  (-0.11)  params -77.9%  MACs -54.0%  HIT
+[03:39:36]     M4_metric_refit        x8.00    94.82%  (-0.09)  params -77.9%  MACs -54.0%  HIT
+
+========================================================================
+E4 -- does the output metric help once nothing downstream can fix it?
+========================================================================
+NO refit downstream  (M2 - M1):  +0.147  se 1.365  t +0.11  wins 8/20
+refit downstream     (M4 - M3):  -0.089  se 0.049  t -1.80  wins 11/20
+------------------------------------------------------------------------
+hypothesis (metric helps frozen, hurts/ties with a refit): SUPPORTED
+difference of differences: +0.236 pts
+
+wrote <PROJECT_ROOT>/to_do_experiment/results/e4_metric_norefit.csv

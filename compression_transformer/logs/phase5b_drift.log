@@ -1,0 +1,11 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 13547.66it/s]
+[02:30:30] dense 82.21%  window >= 79.71%
+[02:30:35] alpha 12.0 widths [1011, 958, 1029, 1173, 1140, 632]
+[02:30:37]   layer 0: FFN writes 0.543 of the stream, inherited drift 0.0000, nan% of it reachable by the refit
+[02:30:40]   layer 1: FFN writes 1.496 of the stream, inherited drift 0.1328, 8.2% of it reachable by the refit
+[02:30:43]   layer 2: FFN writes 1.694 of the stream, inherited drift 0.1702, 9.8% of it reachable by the refit
+[02:30:45]   layer 3: FFN writes 0.436 of the stream, inherited drift 0.2409, 12.3% of it reachable by the refit
+[02:30:48]   layer 4: FFN writes 3.257 of the stream, inherited drift 0.3384, 11.9% of it reachable by the refit
+[02:30:51]   layer 5: FFN writes 0.725 of the stream, inherited drift 0.4051, 13.5% of it reachable by the refit
+[02:30:51] wrote phase5b_drift.json

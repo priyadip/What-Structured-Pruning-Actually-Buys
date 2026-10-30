@@ -1,0 +1,28 @@
+{
+  "source_compressed": "mnist_mlp3_bn_compressed",
+  "dataset": "MNIST",
+  "input_dim": 784,
+  "r": 45,
+  "r_input_gride": 14.942165514472295,
+  "multiplier": 3.0116116674263225,
+  "encoder_family": "opt_linear",
+  "lambda": 0.0,
+  "landmark_strategy": "-",
+  "K": 0,
+  "out_of_sample_method": "linear",
+  "folds_into_first_layer": true,
+  "hidden_dims": [
+    60,
+    30,
+    25
+  ],
+  "num_classes": 10,
+  "dense_acc": 99.27,
+  "hidden_only_acc": 96.95,
+  "fully_compressed_acc": 96.95,
+  "total_params": 40950,
+  "cwf": 0.20365091603380636,
+  "target_hit": true,
+  "fitted_on_n": 60000,
+  "selection": "highest accuracy"
+}

@@ -1,0 +1,26 @@
+{
+  "in_dim": 784,
+  "hidden_dims": [
+    52,
+    52
+  ],
+  "num_classes": 10,
+  "activation": "relu",
+  "batch_norm": false,
+  "source_checkpoint": "mnist_mlp2_bn.safetensors",
+  "strategy": "N08_augdict_fwdbwd",
+  "multiplier": 6.0,
+  "gride_dims": [
+    17.32193284060653,
+    8.615440507404438
+  ],
+  "id_space": "neuron",
+  "original_widths": [
+    256,
+    128
+  ],
+  "original_acc": 99.27,
+  "compressed_acc": 96.82,
+  "params": 44106,
+  "target_hit": true
+}

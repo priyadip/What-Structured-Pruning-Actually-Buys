@@ -1,0 +1,26 @@
+# Conda environment matching the machine the paper was produced on.
+# CUDA 12.6, Python 3.13. See Technical Supplement/Hardware/HARDWARE.md.
+name: structured-pruning-decomposition
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pytorch=2.7.1
+  - pytorch-cuda=12.6
+  - torchvision
+  - numpy=2.2
+  - scipy=1.17
+  - scikit-learn=1.7
+  - pandas
+  - matplotlib=3.10
+  - pyarrow
+  - pillow
+  - tqdm
+  - pip
+  - pip:
+      - safetensors>=0.4
+      - POT>=0.9
+      - transformers==5.14.1
+      - datasets==4.8.4

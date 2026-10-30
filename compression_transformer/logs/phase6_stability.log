@@ -1,0 +1,43 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 12247.17it/s]
+[23:38:24] dense 82.21%  window >= 79.71%
+[23:38:40]   omp_ls             a=8       seed=0 acc= 77.72 ( -4.49) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  15s
+[23:38:55]   omp_ls             a=8       seed=1 acc= 77.55 ( -4.66) red tot/enc/ffn =  33.2/ 51.6/ 78.6%  16s
+[23:39:11]   omp_ls             a=8       seed=2 acc= 77.30 ( -4.91) red tot/enc/ffn =  33.4/ 51.9/ 79.0%  15s
+[23:39:27]   omp_ls             a=10      seed=0 acc= 79.08 ( -3.13) red tot/enc/ffn =  30.9/ 48.0/ 73.1%  17s
+[23:39:44]   omp_ls             a=10      seed=1 acc= 78.80 ( -3.41) red tot/enc/ffn =  31.0/ 48.1/ 73.2%  17s
+[23:40:01]   omp_ls             a=10      seed=2 acc= 78.62 ( -3.59) red tot/enc/ffn =  31.2/ 48.4/ 73.7%  16s
+[23:40:19]   omp_ls             a=12      seed=0 acc= 79.68 ( -2.53) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  18s
+[23:40:36]   omp_ls             a=12      seed=1 acc= 79.49 ( -2.72) red tot/enc/ffn =  28.7/ 44.6/ 67.8%  18s
+[23:40:55]   omp_ls             a=12      seed=2 acc= 79.61 ( -2.60) red tot/enc/ffn =  29.0/ 45.0/ 68.5%  18s
+[23:41:12]   omp_ls             a=12.125  seed=0 acc= 79.86 ( -2.35) red tot/enc/ffn =  28.5/ 44.3/ 67.4%  18s
+[23:41:30]   omp_ls             a=12.125  seed=1 acc= 79.65 ( -2.56) red tot/enc/ffn =  28.6/ 44.4/ 67.5%  18s
+[23:41:48]   omp_ls             a=12.125  seed=2 acc= 79.61 ( -2.60) red tot/enc/ffn =  28.8/ 44.8/ 68.1%  18s
+[23:42:07]   omp_ls             a=13      seed=0 acc= 80.38 ( -1.83) red tot/enc/ffn =  27.5/ 42.8/ 65.1%  19s
+[23:42:25]   omp_ls             a=13      seed=1 acc= 80.15 ( -2.06) red tot/enc/ffn =  27.6/ 42.8/ 65.2%  19s
+[23:42:44]   omp_ls             a=13      seed=2 acc= 80.03 ( -2.18) red tot/enc/ffn =  27.9/ 43.3/ 65.9%  18s
+[23:43:02]   omp_ls             a=14      seed=0 acc= 80.63 ( -1.58) red tot/enc/ffn =  26.4/ 41.0/ 62.4%  19s
+[23:43:22]   omp_ls             a=14      seed=1 acc= 80.51 ( -1.70) red tot/enc/ffn =  26.4/ 41.1/ 62.5%  19s
+[23:43:41]   omp_ls             a=14      seed=2 acc= 80.34 ( -1.87) red tot/enc/ffn =  26.8/ 41.6/ 63.2%  19s
+[23:44:01]   omp_ls             a=16      seed=0 acc= 81.22 ( -0.99) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  20s
+[23:44:21]   omp_ls             a=16      seed=1 acc= 80.95 ( -1.26) red tot/enc/ffn =  24.2/ 37.5/ 57.1%  20s
+[23:44:41]   omp_ls             a=16      seed=2 acc= 80.45 ( -1.76) red tot/enc/ffn =  24.5/ 38.1/ 58.0%  20s
+[23:45:03]   omp_ls             a=20      seed=0 acc= 81.08 ( -1.13) red tot/enc/ffn =  19.6/ 30.4/ 46.2%  22s
+[23:45:26]   omp_ls             a=20      seed=1 acc= 81.31 ( -0.90) red tot/enc/ffn =  19.6/ 30.5/ 46.4%  22s
+[23:45:48]   omp_ls             a=20      seed=2 acc= 81.25 ( -0.96) red tot/enc/ffn =  20.1/ 31.2/ 47.5%  23s
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 9028.22it/s]
+[23:45:58] dense 82.21%  window >= 79.71%
+[23:46:12]   omp_ls             a=12.125  seed=0 acc= 79.64 ( -2.57) red tot/enc/ffn =  28.5/ 44.3/ 67.4%  14s
+[23:46:23]   omp_ls             a=16      seed=0 acc= 80.76 ( -1.45) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  12s
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 11757.93it/s]
+[23:46:33] dense 82.21%  window >= 79.71%
+[23:46:48]   omp_ls             a=12.125  seed=0 acc= 79.97 ( -2.24) red tot/enc/ffn =  28.5/ 44.3/ 67.4%  16s
+[23:47:01]   omp_ls             a=16      seed=0 acc= 80.58 ( -1.63) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  13s
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 11053.58it/s]
+[23:47:11] dense 82.21%  window >= 79.71%
+[23:47:29]   omp_ls             a=12.125  seed=0 acc= 79.86 ( -2.35) red tot/enc/ffn =  28.5/ 44.3/ 67.4%  18s
+[23:47:44]   omp_ls             a=16      seed=0 acc= 81.22 ( -0.99) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  15s
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 8458.88it/s]
+[23:47:54] dense 82.21%  window >= 79.71%
+[23:48:18]   omp_ls             a=12.125  seed=0 acc= 79.80 ( -2.41) red tot/enc/ffn =  28.5/ 44.3/ 67.4%  23s
+[23:48:37]   omp_ls             a=16      seed=0 acc= 81.13 ( -1.08) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  20s

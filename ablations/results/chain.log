@@ -1,0 +1,16 @@
+[chain] started 03:19:18
+[chain] E1 finished at 03:27:36
+[chain] GPU0 free -> E4 (metric without refit)
+[chain] E4 done
+[chain] GPU0 -> E2 (calibration size)
+[chain] E2 done
+[chain] E3 finished at 03:42:44
+[chain] GPU1 free -> E5 (joint budget)
+[chain] E5 done
+[chain] E4 finished at 04:36:19
+[chain] E2 finished at 04:36:19
+[chain] E5 finished at 04:36:19
+[chain] all GPU work done -> E7 (wall-clock, needs idle hardware)
+[chain] E7 done
+wrote <PROJECT_ROOT>/to_do_experiment/RESULTS.md
+[chain] finished 04:49:22

@@ -1,0 +1,82 @@
+
+=== cifar10_vgg11_bn: S4_omp_ls x7.0 (paper used calib 4609)
+[03:39:43] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:39:43]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:39:43]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 2305 images
+[03:39:55]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.2, 8=40.4, 11=35.8, 15=18.6, 18=16.2, 22=24.8, 25=16.8
+[03:39:55]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:40:00]     S4_omp_ls              x7.00    90.40%  (-2.24)  params -81.2%  MACs -45.6%  HIT
+  od   2.0  calib   2305   90.40%  (-2.24)  widths [59, 128, 256, 251, 130, 113, 174, 117]
+[03:40:03] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:40:03]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:40:03]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 4609 images
+[03:40:16]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.2, 8=40.4, 11=34.4, 15=17.7, 18=16.2, 22=25.4, 25=16.2
+[03:40:16]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:40:22]     S4_omp_ls              x7.00    90.27%  (-2.37)  params -81.8%  MACs -46.8%  HIT
+  od   4.0  calib   4609   90.27%  (-2.37)  widths [59, 128, 256, 241, 124, 113, 178, 114]
+[03:40:26] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:40:26]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:40:26]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 9218 images
+[03:40:38]   GRIDE (filter_proj) in 12s: 0=8.5, 4=24.2, 8=40.4, 11=35.3, 15=18.4, 18=16.2, 22=25.7, 25=15.9
+[03:40:38]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+[03:40:45]     S4_omp_ls              x7.00    90.33%  (-2.31)  params -81.4%  MACs -46.0%  HIT
+  od   8.0  calib   9218   90.33%  (-2.31)  widths [59, 128, 256, 247, 129, 114, 180, 111]
+[03:40:50] AIM: cifar10_vgg11_bn 92.64% -> within [90.14, 95.14] with zero fine-tuning
+[03:40:50]   8 compressible units, widths [64, 128, 256, 256, 512, 512, 512, 512]
+[03:40:50]   params 9,231,114 (folded 9,225,610), MACs 152.8M, calib 16384 images
+[03:41:03]   GRIDE (filter_proj) in 13s: 0=8.5, 4=24.2, 8=40.4, 11=34.7, 15=18.6, 18=16.2, 22=24.8, 25=16.9
+[03:41:03]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:41:12]     S4_omp_ls              x7.00    90.60%  (-2.04)  params -81.5%  MACs -46.4%  HIT
+  od  16.0  calib  16384   90.60%  (-2.04)  widths [59, 128, 256, 243, 130, 114, 174, 118]
+
+=== cifar10_resnet18: S4_omp_ls x2.62 (paper used calib 1153)
+[03:41:16] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:41:16]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:41:16]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1024 images
+[03:41:25]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=45.3, layer4.0.conv1=30.8, layer4.1.conv1=19.8
+[03:41:25]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:41:34]     S4_omp_ls              x2.62    93.06%  (-2.37)  params -78.2%  MACs -61.3%  HIT
+  od   2.0  calib   1024   93.06%  (-2.37)  widths [29, 34, 50, 60, 106, 119, 81, 52]
+[03:41:38] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:41:38]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:41:38]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 1153 images
+[03:41:47]   GRIDE (filter_proj) in 9s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=44.2, layer4.0.conv1=30.6, layer4.1.conv1=20.4
+[03:41:47]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:41:55]     S4_omp_ls              x2.62    93.16%  (-2.27)  params -78.3%  MACs -61.4%  HIT
+  od   4.0  calib   1153   93.16%  (-2.27)  widths [29, 34, 50, 60, 106, 116, 80, 53]
+[03:41:59] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:41:59]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:41:59]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 2305 images
+[03:42:09]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=45.3, layer4.0.conv1=30.7, layer4.1.conv1=20.0
+[03:42:09]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:42:18]     S4_omp_ls              x2.62    93.21%  (-2.22)  params -78.2%  MACs -61.3%  HIT
+  od   8.0  calib   2305   93.21%  (-2.22)  widths [29, 34, 50, 60, 106, 119, 81, 52]
+[03:42:22] AIM: cifar10_resnet18 95.43% -> within [92.93, 97.93] with zero fine-tuning
+[03:42:22]   8 compressible units, widths [64, 64, 128, 128, 256, 256, 512, 512]
+[03:42:22]   params 11,178,762 (folded 11,169,162), MACs 555.4M, calib 4609 images
+[03:42:32]   GRIDE (filter_proj) in 10s: layer1.0.conv1=11.0, layer1.1.conv1=13.0, layer2.0.conv1=19.1, layer2.1.conv1=23.0, layer3.0.conv1=40.3, layer3.1.conv1=44.8, layer4.0.conv1=30.9, layer4.1.conv1=20.0
+[03:42:32]   multiplier ladder: [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0]
+[03:42:42]     S4_omp_ls              x2.62    93.14%  (-2.29)  params -78.3%  MACs -61.4%  HIT
+  od  16.0  calib   4609   93.14%  (-2.29)  widths [29, 34, 50, 60, 106, 117, 81, 52]
+
+========================================================================
+E2 -- accuracy against calibration size, budget held fixed
+========================================================================
+
+cifar10_resnet18   (production default is od 4 -> calib 1153)
+     od   calib     acc  vs default  widths == default?
+    2.0    1024   93.06       -0.10                  NO
+    4.0    1153   93.16       +0.00                 yes
+    8.0    2305   93.21       +0.05                  NO
+   16.0    4609   93.14       -0.02                  NO
+  full-range accuracy spread: 0.15 pts
+
+cifar10_vgg11_bn   (production default is od 4 -> calib 4609)
+     od   calib     acc  vs default  widths == default?
+    2.0    2305   90.40       +0.13                  NO
+    4.0    4609   90.27       +0.00                 yes
+    8.0    9218   90.33       +0.06                  NO
+   16.0   16384   90.60       +0.33                  NO
+  full-range accuracy spread: 0.33 pts
+
+wrote <PROJECT_ROOT>/to_do_experiment/results/e2_calibration.csv

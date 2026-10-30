@@ -1,0 +1,73 @@
+ADAPTIVE RESEARCH REQUEST
+==============================================================================
+generated      : 2026-07-25T09:07:21
+model          : FashionMNIST/mlp3_bn  (243,658 params)
+dense accuracy : 90.12%
+target window  : [87.62%, 92.62%]  (+/- 2.5)
+GRIDE dims     : [16.07, 16.357, 11.474]  (neuron cloud)
+cross-check    : [11.563, 10.446, 10.02]
+original widths: [256, 128, 64]
+multipliers    : [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+runs completed : 100
+
+BEST SO FAR
+------------------------------------------------------------------------------
+07_mixed_importance @ x12.0 M=[193, 128, 64] -> 89.91% (gap to window: -2.29 pts)
+
+TOP 12 RUNS
+------------------------------------------------------------------------------
+ 89.91%  07_mixed_importance            x12.0   M=[193, 128, 64]
+ 89.85%  01_direct_ls_svd               x12.0   M=[193, 128, 64]
+ 89.82%  10_iterative_refinement        x12.0   M=[193, 128, 64]
+ 89.72%  08_ot_then_ls                  x12.0   M=[193, 128, 64]
+ 89.53%  10_iterative_refinement        x10.0   M=[161, 128, 64]
+ 89.47%  07_mixed_importance            x10.0   M=[161, 128, 64]
+ 89.37%  01_direct_ls_svd               x10.0   M=[161, 128, 64]
+ 89.30%  10_iterative_refinement        x8.0    M=[129, 128, 64]
+ 89.22%  08_ot_then_ls                  x10.0   M=[161, 128, 64]
+ 88.95%  07_mixed_importance            x8.0    M=[129, 128, 64]
+ 88.79%  01_direct_ls_svd               x8.0    M=[129, 128, 64]
+ 88.69%  03_activation_pattern_kmeans   x12.0   M=[193, 128, 64]
+
+BEST PER STRATEGY
+------------------------------------------------------------------------------
+ 89.91%  07_mixed_importance            x12.0   M=[193, 128, 64]
+ 89.85%  01_direct_ls_svd               x12.0   M=[193, 128, 64]
+ 89.82%  10_iterative_refinement        x12.0   M=[193, 128, 64]
+ 89.72%  08_ot_then_ls                  x12.0   M=[193, 128, 64]
+ 88.69%  03_activation_pattern_kmeans   x12.0   M=[193, 128, 64]
+ 88.37%  05_balanced_signature          x12.0   M=[193, 128, 64]
+ 88.37%  09_kernel_kmeans_rbf           x12.0   M=[193, 128, 64]
+ 86.44%  06_greedy_wasserstein1         x12.0   M=[193, 128, 64]
+ 78.45%  02_topm_l2_norm                x12.0   M=[193, 128, 64]
+ 71.19%  04_cosine_ot_intrafusion       x12.0   M=[193, 128, 64]
+
+BEST ACCURACY PER MULTIPLIER (is the budget or the method the bottleneck?)
+------------------------------------------------------------------------------
+  x1.5    ->  67.12%
+  x2.0    ->  73.40%
+  x2.5    ->  78.62%
+  x3.0    ->  80.11%
+  x4.0    ->  84.36%
+  x5.0    ->  86.41%
+  x6.0    ->  87.55%
+  x8.0    ->  89.30%
+  x10.0   ->  89.53%
+  x12.0   ->  89.91%
+
+PER-LAYER LS RESIDUAL AT THE BEST BUDGET
+------------------------------------------------------------------------------
+  layer 1: relative residual ||Y-Yhat||/||Y|| = 0.0828
+  layer 2: relative residual ||Y-Yhat||/||Y|| = 0.1032
+  layer 3: relative residual ||Y-Yhat||/||Y|| = 0.0587
+
+WHAT IS NEEDED
+------------------------------------------------------------------------------
+Drop new Strategy subclasses into novel_strategies/*.py, each module exposing
+`STRATEGIES = [...]` or `get_strategies()`. They are imported and swept
+automatically on the next round.
+
+REMINDER -- GOLDEN RULE: a strategy receives `target_m` and MUST return exactly
+that many neurons. target_m is round(multiplier * GRIDE_d_l). A strategy may not
+choose its own width, use PCA rank, or use a fixed sparsity ratio.
+No fine-tuning: no backward passes, no optimizer.step().

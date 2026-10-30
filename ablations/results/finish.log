@@ -1,0 +1,9 @@
+[finish] E5 done 04:36:36
+[finish] E6 done 04:36:37
+[finish] chain done 04:49:40
+[finish] GPUs idle -> E7 wall-clock (re-run; the chain's copy overlapped E5)
+[finish] E7 done
+wrote <PROJECT_ROOT>/to_do_experiment/RESULTS.md
+wrote table8_seeds.tex
+wrote table9_thinet.tex
+[finish] all experiments complete 05:02:27

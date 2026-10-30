@@ -1,0 +1,274 @@
+{
+  "winners": {
+    "inside": {
+      "augdict_fwdbwd": 12,
+      "N04_bias_calibrated_omp": 1,
+      "fisher_omp": 1,
+      "N09_fisher_omp_e2": 6,
+      "omp_ls": 18,
+      "fwdbwd_ls": 7,
+      "N05_omp_transport": 4,
+      "augdict_omp": 1,
+      "omp_ls_lowridge": 1,
+      "magnitude_ls": 4,
+      "ot_then_ls": 5,
+      "span_ls": 6,
+      "magnitude": 3,
+      "thinet_lsfull": 1,
+      "omp_ls_noint": 1,
+      "N06_augdict_omp_wide": 0
+    },
+    "outside": {
+      "augdict_omp": 8,
+      "N06_augdict_omp_wide": 17,
+      "augdict_fwdbwd": 22,
+      "fwdbwd_ls": 11,
+      "N04_bias_calibrated_omp": 6,
+      "N09_fisher_omp_e2": 1,
+      "omp_ls": 18,
+      "span_ls": 1,
+      "omp_ls_lowridge": 0,
+      "ot_then_ls": 0,
+      "magnitude": 0,
+      "omp_ls_noint": 0,
+      "thinet_lsfull": 0,
+      "N05_omp_transport": 0,
+      "magnitude_ls": 0,
+      "fisher_omp": 0
+    },
+    "n_inside": 71,
+    "n_outside": 84
+  },
+  "refit_family_spread": {
+    "inside": {
+      "n": 71,
+      "mean": 2.124,
+      "sd": 3.942,
+      "se": 0.468,
+      "t": 4.54,
+      "pos": 70
+    },
+    "outside": {
+      "n": 84,
+      "mean": 19.434,
+      "sd": 13.218,
+      "se": 1.442,
+      "t": 13.48,
+      "pos": 84
+    }
+  },
+  "frontier_winners": {
+    "cnn/cifar100_resnet18": {
+      "mult": 8.0,
+      "winner": "span_ls",
+      "acc": 77.78,
+      "dense": 79.44,
+      "gap_to_omp_ls": 0.13,
+      "n_ops": 6
+    },
+    "cnn/cifar100_resnet34": {
+      "mult": 10.0,
+      "winner": "magnitude_ls",
+      "acc": 78.76,
+      "dense": 79.37,
+      "gap_to_omp_ls": 0.03,
+      "n_ops": 6
+    },
+    "cnn/cifar100_vgg11_bn": {
+      "mult": 12.0,
+      "winner": "ot_then_ls",
+      "acc": 72.84,
+      "dense": 72.94,
+      "gap_to_omp_ls": 0.06,
+      "n_ops": 6
+    },
+    "cnn/cifar100_vgg16_bn": {
+      "mult": 10.0,
+      "winner": "span_ls",
+      "acc": 74.31,
+      "dense": 75.18,
+      "gap_to_omp_ls": 0.28,
+      "n_ops": 6
+    },
+    "cnn/cifar10_resnet18": {
+      "mult": 4.0,
+      "winner": "omp_ls",
+      "acc": 94.61,
+      "dense": 95.43,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/cifar10_resnet34": {
+      "mult": 5.0,
+      "winner": "omp_ls",
+      "acc": 94.97,
+      "dense": 95.53,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/cifar10_vgg11_bn": {
+      "mult": 8.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 90.87,
+      "dense": 92.64,
+      "gap_to_omp_ls": 0.16,
+      "n_ops": 4
+    },
+    "cnn/cifar10_vgg16_bn": {
+      "mult": 4.0,
+      "winner": "omp_ls",
+      "acc": 91.71,
+      "dense": 94.05,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/fashionmnist_resnet18": {
+      "mult": 4.0,
+      "winner": "omp_ls",
+      "acc": 94.93,
+      "dense": 95.49,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/fashionmnist_resnet34": {
+      "mult": 4.0,
+      "winner": "omp_ls",
+      "acc": 95.08,
+      "dense": 95.53,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/fashionmnist_vgg11_bn": {
+      "mult": 12.0,
+      "winner": "omp_ls",
+      "acc": 93.01,
+      "dense": 94.57,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/fashionmnist_vgg16_bn": {
+      "mult": 4.0,
+      "winner": "omp_ls",
+      "acc": 93.78,
+      "dense": 94.91,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/imagenet32_resnet34": {
+      "mult": 12.0,
+      "winner": "span_ls",
+      "acc": 57.744,
+      "dense": 58.552,
+      "gap_to_omp_ls": 0.064,
+      "n_ops": 6
+    },
+    "cnn/imagenet32_resnet50": {
+      "mult": 20.0,
+      "winner": "omp_ls",
+      "acc": 62.194,
+      "dense": 62.244,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "cnn/imagenet32_vgg16_bn": {
+      "mult": 12.0,
+      "winner": "ot_then_ls",
+      "acc": 48.462,
+      "dense": 48.632,
+      "gap_to_omp_ls": 0.09,
+      "n_ops": 6
+    },
+    "cnn/imagenet32_vgg19_bn": {
+      "mult": 16.0,
+      "winner": "omp_ls",
+      "acc": 49.024,
+      "dense": 49.058,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 6
+    },
+    "mlp/cifar100_mlp3_oct_bn": {
+      "mult": 20.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 38.21,
+      "dense": 40.25,
+      "gap_to_omp_ls": 0.34,
+      "n_ops": 24
+    },
+    "mlp/cifar100_mlp3_quad_bn": {
+      "mult": 16.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 35.85,
+      "dense": 37.27,
+      "gap_to_omp_ls": 0.23,
+      "n_ops": 24
+    },
+    "mlp/cifar10_mlp3_oct_bn": {
+      "mult": 20.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 64.6,
+      "dense": 66.7,
+      "gap_to_omp_ls": 0.47,
+      "n_ops": 24
+    },
+    "mlp/cifar10_mlp3_quad_bn": {
+      "mult": 16.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 63.83,
+      "dense": 65.45,
+      "gap_to_omp_ls": 0.43,
+      "n_ops": 24
+    },
+    "mlp/fashionmnist_mlp2_bn": {
+      "mult": 6.0,
+      "winner": "N05_omp_transport",
+      "acc": 87.98,
+      "dense": 90.1,
+      "gap_to_omp_ls": 0.25,
+      "n_ops": 24
+    },
+    "mlp/fashionmnist_mlp3_bn": {
+      "mult": 6.0,
+      "winner": "N05_omp_transport",
+      "acc": 88.31,
+      "dense": 90.12,
+      "gap_to_omp_ls": 0.15,
+      "n_ops": 24
+    },
+    "mlp/mnist_mlp2_bn": {
+      "mult": 4.0,
+      "winner": "augdict_fwdbwd",
+      "acc": 97.46,
+      "dense": 99.27,
+      "gap_to_omp_ls": 0.25,
+      "n_ops": 24
+    },
+    "mlp/mnist_mlp3_bn": {
+      "mult": 4.0,
+      "winner": "N09_fisher_omp_e2",
+      "acc": 97.33,
+      "dense": 99.27,
+      "gap_to_omp_ls": 0.14,
+      "n_ops": 24
+    },
+    "transformer/distilbert_mnli": {
+      "mult": 12.0,
+      "winner": "omp_ls",
+      "acc": 80.1223,
+      "dense": 82.2109,
+      "gap_to_omp_ls": 0.0,
+      "n_ops": 16
+    }
+  },
+  "frontier_summary": {
+    "n_checkpoints": 25,
+    "omp_not_winner": 15,
+    "gap": {
+      "n": 25,
+      "mean": 0.123,
+      "sd": 0.144,
+      "se": 0.029,
+      "t": 4.26,
+      "pos": 15
+    }
+  }
+}

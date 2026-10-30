@@ -1,0 +1,28 @@
+{
+  "source_compressed": "fashionmnist_mlp3_bn_compressed",
+  "dataset": "FashionMNIST",
+  "input_dim": 784,
+  "r": 43,
+  "r_input_gride": 14.168147044719817,
+  "multiplier": 3.0349769708259227,
+  "encoder_family": "N1_jacobian_linear",
+  "lambda": 0.0,
+  "landmark_strategy": "jacobian_metric",
+  "K": 0,
+  "out_of_sample_method": "linear",
+  "folds_into_first_layer": true,
+  "hidden_dims": [
+    86,
+    87,
+    61
+  ],
+  "num_classes": 10,
+  "dense_acc": 90.12,
+  "hidden_only_acc": 87.84,
+  "fully_compressed_acc": 87.73,
+  "total_params": 51096,
+  "cwf": 0.3647259098042924,
+  "target_hit": true,
+  "fitted_on_n": 60000,
+  "selection": "smallest r clearing the window on full data"
+}

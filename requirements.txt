@@ -1,0 +1,24 @@
+# Core numerics and training. Versions are those the paper was produced with;
+# the lower bounds are what the code actually requires.
+torch==2.7.1
+torchvision>=0.16
+numpy==2.2.6
+scipy==1.17.1
+scikit-learn==1.7.2
+pandas>=2.0
+matplotlib==3.10.8
+safetensors>=0.4
+
+# Optimal transport, used by the Intra-Fusion and OT merge baselines.
+POT>=0.9
+
+# Transformer study only. The vision studies and the Section 4 residual
+# verification run without these.
+transformers==5.14.1
+datasets==4.8.4
+
+# Dataset transport. CIFAR-10/100 are pulled from a Hugging Face parquet mirror
+# rather than the University of Toronto server.
+pyarrow>=14.0
+Pillow>=10.0
+tqdm>=4.66

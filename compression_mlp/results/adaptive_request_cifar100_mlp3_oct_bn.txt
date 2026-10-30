@@ -1,0 +1,77 @@
+ADAPTIVE RESEARCH REQUEST
+==============================================================================
+generated      : 2026-07-25T09:32:54
+model          : CIFAR100/mlp3_oct_bn  (8,974,948 params)
+dense accuracy : 40.25%
+target window  : [37.75%, 42.75%]  (+/- 2.5)
+GRIDE dims     : [19.091, 34.127, 39.91]  (neuron cloud)
+cross-check    : [30.557, 27.682, 23.607]
+original widths: [2048, 1024, 512]
+multipliers    : [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 24.0, 32.0]
+runs completed : 140
+
+BEST SO FAR
+------------------------------------------------------------------------------
+10_iterative_refinement @ x32.0 M=[611, 1024, 512] -> 39.02% (gap to window: -1.27 pts)
+
+TOP 12 RUNS
+------------------------------------------------------------------------------
+ 39.02%  10_iterative_refinement        x32.0   M=[611, 1024, 512]
+ 38.54%  07_mixed_importance            x32.0   M=[611, 1024, 512]
+ 37.71%  10_iterative_refinement        x24.0   M=[458, 819, 512]
+ 37.17%  01_direct_ls_svd               x32.0   M=[611, 1024, 512]
+ 36.93%  07_mixed_importance            x24.0   M=[458, 819, 512]
+ 36.23%  08_ot_then_ls                  x32.0   M=[611, 1024, 512]
+ 36.08%  10_iterative_refinement        x20.0   M=[382, 683, 512]
+ 35.47%  01_direct_ls_svd               x24.0   M=[458, 819, 512]
+ 35.39%  07_mixed_importance            x20.0   M=[382, 683, 512]
+ 34.61%  03_activation_pattern_kmeans   x32.0   M=[611, 1024, 512]
+ 34.56%  05_balanced_signature          x32.0   M=[611, 1024, 512]
+ 34.56%  09_kernel_kmeans_rbf           x32.0   M=[611, 1024, 512]
+
+BEST PER STRATEGY
+------------------------------------------------------------------------------
+ 39.02%  10_iterative_refinement        x32.0   M=[611, 1024, 512]
+ 38.54%  07_mixed_importance            x32.0   M=[611, 1024, 512]
+ 37.17%  01_direct_ls_svd               x32.0   M=[611, 1024, 512]
+ 36.23%  08_ot_then_ls                  x32.0   M=[611, 1024, 512]
+ 34.61%  03_activation_pattern_kmeans   x32.0   M=[611, 1024, 512]
+ 34.56%  05_balanced_signature          x32.0   M=[611, 1024, 512]
+ 34.56%  09_kernel_kmeans_rbf           x32.0   M=[611, 1024, 512]
+ 19.49%  06_greedy_wasserstein1         x32.0   M=[611, 1024, 512]
+  6.21%  04_cosine_ot_intrafusion       x32.0   M=[611, 1024, 512]
+  5.15%  02_topm_l2_norm                x32.0   M=[611, 1024, 512]
+
+BEST ACCURACY PER MULTIPLIER (is the budget or the method the bottleneck?)
+------------------------------------------------------------------------------
+  x1.5    ->   3.73%
+  x2.0    ->   5.15%
+  x2.5    ->   6.31%
+  x3.0    ->   7.77%
+  x4.0    ->  11.18%
+  x5.0    ->  14.11%
+  x6.0    ->  16.58%
+  x8.0    ->  23.65%
+  x10.0   ->  27.61%
+  x12.0   ->  30.98%
+  x16.0   ->  34.13%
+  x20.0   ->  36.08%
+  x24.0   ->  37.71%
+  x32.0   ->  39.02%
+
+PER-LAYER LS RESIDUAL AT THE BEST BUDGET
+------------------------------------------------------------------------------
+  layer 1: relative residual ||Y-Yhat||/||Y|| = 0.1406
+  layer 2: relative residual ||Y-Yhat||/||Y|| = 0.1858
+  layer 3: relative residual ||Y-Yhat||/||Y|| = 0.1238
+
+WHAT IS NEEDED
+------------------------------------------------------------------------------
+Drop new Strategy subclasses into novel_strategies/*.py, each module exposing
+`STRATEGIES = [...]` or `get_strategies()`. They are imported and swept
+automatically on the next round.
+
+REMINDER -- GOLDEN RULE: a strategy receives `target_m` and MUST return exactly
+that many neurons. target_m is round(multiplier * GRIDE_d_l). A strategy may not
+choose its own width, use PCA rank, or use a fixed sparsity ratio.
+No fine-tuning: no backward passes, no optimizer.step().

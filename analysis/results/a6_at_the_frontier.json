@@ -1,0 +1,246 @@
+{
+  "per_checkpoint": {
+    "cnn/cifar100_resnet18": {
+      "alpha_star": 8.0,
+      "correction": 5.66,
+      "correction (merge)": 10.93,
+      "selection: target vs span": -0.13,
+      "selection: OMP vs magnitude": 0.04,
+      "select vs merge": 0.81
+    },
+    "cnn/cifar100_resnet34": {
+      "alpha_star": 10.0,
+      "correction": 1.91,
+      "correction (merge)": 6.77,
+      "selection: target vs span": 0.15,
+      "selection: OMP vs magnitude": -0.03,
+      "select vs merge": 0.6
+    },
+    "cnn/cifar100_vgg11_bn": {
+      "alpha_star": 12.0,
+      "correction": 0.36,
+      "correction (merge)": 0.25,
+      "selection: target vs span": -0.04,
+      "selection: OMP vs magnitude": 0.0,
+      "select vs merge": -0.06
+    },
+    "cnn/cifar100_vgg16_bn": {
+      "alpha_star": 10.0,
+      "correction": 15.64,
+      "correction (merge)": 20.86,
+      "selection: target vs span": -0.28,
+      "selection: OMP vs magnitude": 0.22,
+      "select vs merge": 0.5
+    },
+    "cnn/cifar10_resnet18": {
+      "alpha_star": 4.0,
+      "correction": 69.68,
+      "correction (merge)": 84.36,
+      "selection: target vs span": 0.3,
+      "selection: OMP vs magnitude": 0.55,
+      "select vs merge": 0.25
+    },
+    "cnn/cifar10_resnet34": {
+      "alpha_star": 5.0,
+      "correction": 13.81,
+      "correction (merge)": 69.95,
+      "selection: target vs span": 0.21,
+      "selection: OMP vs magnitude": 0.49,
+      "select vs merge": 0.22
+    },
+    "cnn/cifar10_vgg11_bn": {
+      "alpha_star": 8.0,
+      "selection: target vs span": 0.99,
+      "backward elimination": 0.14
+    },
+    "cnn/cifar10_vgg16_bn": {
+      "alpha_star": 4.0,
+      "correction": 80.29,
+      "correction (merge)": 79.36,
+      "selection: target vs span": 0.3,
+      "selection: OMP vs magnitude": 1.42,
+      "select vs merge": 2.35
+    },
+    "cnn/fashionmnist_resnet18": {
+      "alpha_star": 4.0,
+      "correction": 75.49,
+      "correction (merge)": 84.51,
+      "selection: target vs span": 0.16,
+      "selection: OMP vs magnitude": 0.43,
+      "select vs merge": 0.42
+    },
+    "cnn/fashionmnist_resnet34": {
+      "alpha_star": 4.0,
+      "correction": 66.87,
+      "correction (merge)": 85.0,
+      "selection: target vs span": 0.01,
+      "selection: OMP vs magnitude": 0.26,
+      "select vs merge": 0.08
+    },
+    "cnn/fashionmnist_vgg11_bn": {
+      "alpha_star": 12.0,
+      "correction": 81.19,
+      "correction (merge)": 77.71,
+      "selection: target vs span": 1.01,
+      "selection: OMP vs magnitude": 1.55,
+      "select vs merge": 5.3
+    },
+    "cnn/fashionmnist_vgg16_bn": {
+      "alpha_star": 4.0,
+      "correction": 78.87,
+      "correction (merge)": 71.47,
+      "selection: target vs span": 0.88,
+      "selection: OMP vs magnitude": 4.91,
+      "select vs merge": 12.31
+    },
+    "cnn/imagenet32_resnet34": {
+      "alpha_star": 12.0,
+      "correction": 0.572,
+      "correction (merge)": 0.692,
+      "selection: target vs span": -0.064,
+      "selection: OMP vs magnitude": -0.004,
+      "select vs merge": 0.202
+    },
+    "cnn/imagenet32_resnet50": {
+      "alpha_star": 20.0,
+      "correction": 0.562,
+      "correction (merge)": 0.456,
+      "selection: target vs span": 0.046,
+      "selection: OMP vs magnitude": 0.134,
+      "select vs merge": 0.158
+    },
+    "cnn/imagenet32_vgg16_bn": {
+      "alpha_star": 12.0,
+      "correction": 2.212,
+      "correction (merge)": 1.006,
+      "selection: target vs span": 0.01,
+      "selection: OMP vs magnitude": -0.052,
+      "select vs merge": -0.09
+    },
+    "cnn/imagenet32_vgg19_bn": {
+      "alpha_star": 16.0,
+      "correction": 0.314,
+      "correction (merge)": 0.17,
+      "selection: target vs span": 0.008,
+      "selection: OMP vs magnitude": 0.064,
+      "select vs merge": 0.082
+    },
+    "mlp/cifar100_mlp3_oct_bn": {
+      "alpha_star": 20.0,
+      "correction (merge)": 29.65,
+      "selection: target vs span": 1.79,
+      "select vs merge": 6.17,
+      "backward elimination": 0.29
+    },
+    "mlp/cifar100_mlp3_quad_bn": {
+      "alpha_star": 16.0,
+      "correction (merge)": 27.07,
+      "selection: target vs span": 0.82,
+      "select vs merge": 4.14,
+      "backward elimination": 0.06
+    },
+    "mlp/cifar10_mlp3_oct_bn": {
+      "alpha_star": 20.0,
+      "correction (merge)": 48.59,
+      "selection: target vs span": 0.94,
+      "select vs merge": 3.45,
+      "backward elimination": 0.11
+    },
+    "mlp/cifar10_mlp3_quad_bn": {
+      "alpha_star": 16.0,
+      "correction (merge)": 31.71,
+      "selection: target vs span": 0.31,
+      "select vs merge": 3.1,
+      "backward elimination": 0.02
+    },
+    "mlp/fashionmnist_mlp2_bn": {
+      "alpha_star": 6.0,
+      "correction (merge)": 62.0,
+      "selection: target vs span": -0.1,
+      "select vs merge": 2.29,
+      "backward elimination": 0.2
+    },
+    "mlp/fashionmnist_mlp3_bn": {
+      "alpha_star": 6.0,
+      "correction (merge)": 66.87,
+      "selection: target vs span": 0.61,
+      "select vs merge": 2.26,
+      "backward elimination": -0.33
+    },
+    "mlp/mnist_mlp2_bn": {
+      "alpha_star": 4.0,
+      "correction (merge)": 83.46,
+      "selection: target vs span": 2.25,
+      "select vs merge": 4.01,
+      "backward elimination": -0.02
+    },
+    "mlp/mnist_mlp3_bn": {
+      "alpha_star": 4.0,
+      "correction (merge)": 81.72,
+      "selection: target vs span": 2.27,
+      "select vs merge": 5.32,
+      "backward elimination": -0.32
+    },
+    "transformer/distilbert_mnli": {
+      "alpha_star": 12.0,
+      "correction": 30.494,
+      "correction (merge)": 34.06,
+      "selection: target vs span": 0.418,
+      "selection: OMP vs magnitude": 11.645,
+      "select vs merge": 10.545,
+      "backward elimination": -0.183
+    }
+  },
+  "pooled": {
+    "correction": {
+      "n": 16,
+      "mean": 32.745,
+      "sd": 35.152,
+      "se": 8.788,
+      "t": 3.73,
+      "pos": 16
+    },
+    "correction (merge)": {
+      "n": 24,
+      "mean": 44.109,
+      "sd": 33.509,
+      "se": 6.84,
+      "t": 6.45,
+      "pos": 24
+    },
+    "selection: target vs span": {
+      "n": 25,
+      "mean": 0.515,
+      "sd": 0.712,
+      "se": 0.142,
+      "t": 3.62,
+      "pos": 20
+    },
+    "selection: OMP vs magnitude": {
+      "n": 16,
+      "mean": 1.352,
+      "sd": 3.009,
+      "se": 0.752,
+      "t": 1.8,
+      "pos": 12
+    },
+    "select vs merge": {
+      "n": 24,
+      "mean": 2.684,
+      "sd": 3.34,
+      "se": 0.682,
+      "t": 3.94,
+      "pos": 22
+    },
+    "backward elimination": {
+      "n": 10,
+      "mean": -0.003,
+      "sd": 0.212,
+      "se": 0.067,
+      "t": -0.05,
+      "pos": 6
+    },
+    "ratio_correction_over_selection": 85.6
+  },
+  "n_checkpoints": 25
+}

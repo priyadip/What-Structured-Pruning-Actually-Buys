@@ -1,0 +1,24 @@
+{
+  "model": "typeform/distilbert-base-uncased-mnli",
+  "dense_acc_validation_matched": 82.21090168110035,
+  "dense_acc_best_permutation": 82.21090168110035,
+  "label_mapping": "identity",
+  "permutation_accs": {
+    "identity": 82.21090168110035
+  },
+  "params": {
+    "total": 66955779,
+    "embedding": 23835648,
+    "encoder": 43120131,
+    "ffn": 28334592
+  },
+  "ffn_share_pct": 42.31836657445207,
+  "embedding_share_pct": 35.599089960554416,
+  "max_total_reduction_from_ffn_pct": 42.28391995857445,
+  "noop_acc": 82.21090168110035,
+  "noop_delta": 0.0,
+  "calib2048_valid_rows": 80539,
+  "calib2048_sampled_rows": 65536,
+  "overdetermination": 21.32639114871461,
+  "seconds": 26.53420615196228
+}

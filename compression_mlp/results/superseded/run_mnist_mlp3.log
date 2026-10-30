@@ -1,0 +1,172 @@
+discovered 8 MLP checkpoints in <PROJECT_ROOT>/trainer/checkpoint:
+   cifar100_mlp3_oct_bn                 35.9 MB
+   cifar10_mlp3_oct_bn                  35.7 MB
+   cifar100_mlp3_quad_bn                15.3 MB
+   cifar10_mlp3_quad_bn                 15.3 MB
+   fashionmnist_mlp3_bn                  1.0 MB
+   mnist_mlp3_bn                         1.0 MB
+   fashionmnist_mlp2_bn                  0.9 MB
+   mnist_mlp2_bn                         0.9 MB
+
+####################################################################################################
+# mnist_mlp3_bn.safetensors  ->  dataset=MNIST  arch=mlp3_bn
+####################################################################################################
+
+🎯 AIM: Compress mlp3_bn from 99.27% to within [96.77%, 101.77%] without fine-tuning.
+   dataset=MNIST  params=243,658  device=cuda:1
+   calibration set: (16384, 784) (train split, no augmentation)
+   BN-folded dense sanity check: 99.27% (delta +0.00 pts)
+
+📐 GRIDE dimensions: Layer 1: 17.66, Layer 2: 8.42, Layer 3: 7.20   [neuron cloud, 1.0s]
+   (cross-check, activation cloud: 11.81, 10.39, 8.12)
+   original widths: [256, 128, 64]
+   multiplier sweep (runtime-derived): [1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0]
+   -> every M_l = round(multiplier * d_l). No other width source is used.
+
+====================================================================================================
+PHASE 1 -- seed strategies x GRIDE multiplier sweep
+====================================================================================================
+
+ multiplier x1.5  ->  M = [26, 13, 11]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x1.50  M=[26, 13, 11]         acc= 70.17%  drop= 29.10  params-91.4%   0.5s
+   [02_topm_l2_norm             ] x1.50  M=[26, 13, 11]         acc= 10.09%  drop= 89.18  params-91.4%   0.4s
+   [03_activation_pattern_kmeans] x1.50  M=[26, 13, 11]         acc= 42.27%  drop= 57.00  params-91.4%   0.6s
+   [04_cosine_ot_intrafusion    ] x1.50  M=[26, 13, 11]         acc= 10.09%  drop= 89.18  params-91.4%   0.4s
+   [05_balanced_signature       ] x1.50  M=[26, 13, 11]         acc= 26.46%  drop= 72.81  params-91.4%   0.7s
+   [06_greedy_wasserstein1      ] x1.50  M=[26, 13, 11]         acc=  9.74%  drop= 89.53  params-91.4%   0.5s
+   [07_mixed_importance         ] x1.50  M=[26, 13, 11]         acc= 65.77%  drop= 33.50  params-91.4%   0.6s
+   [08_ot_then_ls               ] x1.50  M=[26, 13, 11]         acc= 47.11%  drop= 52.16  params-91.4%   0.4s
+   [09_kernel_kmeans_rbf        ] x1.50  M=[26, 13, 11]         acc= 26.46%  drop= 72.81  params-91.4%   0.6s
+   [10_iterative_refinement     ] x1.50  M=[26, 13, 11]         acc= 75.70%  drop= 23.57  params-91.4%   0.5s
+
+ multiplier x2.0  ->  M = [35, 17, 14]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x2.00  M=[35, 17, 14]         acc= 76.23%  drop= 23.04  params-88.3%   0.4s
+   [02_topm_l2_norm             ] x2.00  M=[35, 17, 14]         acc= 20.00%  drop= 79.27  params-88.3%   0.4s
+   [03_activation_pattern_kmeans] x2.00  M=[35, 17, 14]         acc= 57.75%  drop= 41.52  params-88.3%   0.6s
+   [04_cosine_ot_intrafusion    ] x2.00  M=[35, 17, 14]         acc= 10.09%  drop= 89.18  params-88.3%   0.4s
+   [05_balanced_signature       ] x2.00  M=[35, 17, 14]         acc= 50.11%  drop= 49.16  params-88.3%   0.6s
+   [06_greedy_wasserstein1      ] x2.00  M=[35, 17, 14]         acc=  9.74%  drop= 89.53  params-88.3%   0.4s
+   [07_mixed_importance         ] x2.00  M=[35, 17, 14]         acc= 77.53%  drop= 21.74  params-88.3%   0.6s
+   [08_ot_then_ls               ] x2.00  M=[35, 17, 14]         acc= 64.57%  drop= 34.70  params-88.3%   0.4s
+   [09_kernel_kmeans_rbf        ] x2.00  M=[35, 17, 14]         acc= 50.11%  drop= 49.16  params-88.3%   0.6s
+   [10_iterative_refinement     ] x2.00  M=[35, 17, 14]         acc= 84.65%  drop= 14.62  params-88.3%   0.5s
+
+ multiplier x2.5  ->  M = [44, 21, 18]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x2.50  M=[44, 21, 18]         acc= 83.03%  drop= 16.24  params-85.2%   0.4s
+   [02_topm_l2_norm             ] x2.50  M=[44, 21, 18]         acc= 14.52%  drop= 84.75  params-85.2%   0.4s
+   [03_activation_pattern_kmeans] x2.50  M=[44, 21, 18]         acc= 62.53%  drop= 36.74  params-85.2%   0.6s
+   [04_cosine_ot_intrafusion    ] x2.50  M=[44, 21, 18]         acc= 10.10%  drop= 89.17  params-85.2%   0.4s
+   [05_balanced_signature       ] x2.50  M=[44, 21, 18]         acc= 56.73%  drop= 42.54  params-85.2%   0.6s
+   [06_greedy_wasserstein1      ] x2.50  M=[44, 21, 18]         acc=  9.74%  drop= 89.53  params-85.2%   0.4s
+   [07_mixed_importance         ] x2.50  M=[44, 21, 18]         acc= 87.48%  drop= 11.79  params-85.2%   0.6s
+   [08_ot_then_ls               ] x2.50  M=[44, 21, 18]         acc= 78.35%  drop= 20.92  params-85.2%   0.4s
+   [09_kernel_kmeans_rbf        ] x2.50  M=[44, 21, 18]         acc= 56.73%  drop= 42.54  params-85.2%   0.6s
+   [10_iterative_refinement     ] x2.50  M=[44, 21, 18]         acc= 88.72%  drop= 10.55  params-85.2%   0.4s
+
+ multiplier x3.0  ->  M = [53, 25, 22]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x3.00  M=[53, 25, 22]         acc= 88.35%  drop= 10.92  params-82.0%   0.4s
+   [02_topm_l2_norm             ] x3.00  M=[53, 25, 22]         acc= 26.27%  drop= 73.00  params-82.0%   0.4s
+   [03_activation_pattern_kmeans] x3.00  M=[53, 25, 22]         acc= 73.10%  drop= 26.17  params-82.0%   0.6s
+   [04_cosine_ot_intrafusion    ] x3.00  M=[53, 25, 22]         acc=  9.74%  drop= 89.53  params-82.0%   0.4s
+   [05_balanced_signature       ] x3.00  M=[53, 25, 22]         acc= 60.90%  drop= 38.37  params-82.0%   0.7s
+   [06_greedy_wasserstein1      ] x3.00  M=[53, 25, 22]         acc=  9.74%  drop= 89.53  params-82.0%   0.4s
+   [07_mixed_importance         ] x3.00  M=[53, 25, 22]         acc= 89.85%  drop=  9.42  params-82.0%   0.6s
+   [08_ot_then_ls               ] x3.00  M=[53, 25, 22]         acc= 83.91%  drop= 15.36  params-82.0%   0.4s
+   [09_kernel_kmeans_rbf        ] x3.00  M=[53, 25, 22]         acc= 60.90%  drop= 38.37  params-82.0%   0.6s
+   [10_iterative_refinement     ] x3.00  M=[53, 25, 22]         acc= 91.65%  drop=  7.62  params-82.0%   0.4s
+
+ multiplier x4.0  ->  M = [71, 34, 29]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x4.00  M=[71, 34, 29]         acc= 93.17%  drop=  6.10  params-75.6%   0.4s
+   [02_topm_l2_norm             ] x4.00  M=[71, 34, 29]         acc= 29.44%  drop= 69.83  params-75.6%   0.4s
+   [03_activation_pattern_kmeans] x4.00  M=[71, 34, 29]         acc= 87.74%  drop= 11.53  params-75.6%   0.7s
+   [04_cosine_ot_intrafusion    ] x4.00  M=[71, 34, 29]         acc= 10.44%  drop= 88.83  params-75.6%   0.4s
+   [05_balanced_signature       ] x4.00  M=[71, 34, 29]         acc= 81.32%  drop= 17.95  params-75.6%   0.6s
+   [06_greedy_wasserstein1      ] x4.00  M=[71, 34, 29]         acc= 10.75%  drop= 88.52  params-75.6%   0.4s
+   [07_mixed_importance         ] x4.00  M=[71, 34, 29]         acc= 94.85%  drop=  4.42  params-75.6%   0.6s
+   [08_ot_then_ls               ] x4.00  M=[71, 34, 29]         acc= 92.87%  drop=  6.40  params-75.6%   0.4s
+   [09_kernel_kmeans_rbf        ] x4.00  M=[71, 34, 29]         acc= 81.32%  drop= 17.95  params-75.6%   0.6s
+   [10_iterative_refinement     ] x4.00  M=[71, 34, 29]         acc= 94.87%  drop=  4.40  params-75.6%   0.5s
+
+ multiplier x5.0  ->  M = [88, 42, 36]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x5.00  M=[88, 42, 36]         acc= 95.89%  drop=  3.38  params-69.3%   0.4s
+   [02_topm_l2_norm             ] x5.00  M=[88, 42, 36]         acc= 44.45%  drop= 54.82  params-69.3%   0.4s
+   [03_activation_pattern_kmeans] x5.00  M=[88, 42, 36]         acc= 91.83%  drop=  7.44  params-69.3%   0.6s
+   [04_cosine_ot_intrafusion    ] x5.00  M=[88, 42, 36]         acc= 12.32%  drop= 86.95  params-69.3%   0.4s
+   [05_balanced_signature       ] x5.00  M=[88, 42, 36]         acc= 77.99%  drop= 21.28  params-69.3%   0.7s
+   [06_greedy_wasserstein1      ] x5.00  M=[88, 42, 36]         acc= 12.55%  drop= 86.72  params-69.3%   0.4s
+   [07_mixed_importance         ] x5.00  M=[88, 42, 36]         acc= 96.74%  drop=  2.53  params-69.3%   0.7s
+   [08_ot_then_ls               ] x5.00  M=[88, 42, 36]         acc= 95.45%  drop=  3.82  params-69.3%   0.4s
+   [09_kernel_kmeans_rbf        ] x5.00  M=[88, 42, 36]         acc= 77.99%  drop= 21.28  params-69.3%   0.7s
+   [10_iterative_refinement     ] x5.00  M=[88, 42, 36]         acc= 96.56%  drop=  2.71  params-69.3%   0.4s
+
+ multiplier x6.0  ->  M = [106, 51, 43]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x6.00  M=[106, 51, 43]        acc= 97.14%  drop=  2.13  params-62.5%   0.4s  ✅ HIT
+   [02_topm_l2_norm             ] x6.00  M=[106, 51, 43]        acc= 49.85%  drop= 49.42  params-62.5%   0.4s
+   [03_activation_pattern_kmeans] x6.00  M=[106, 51, 43]        acc= 93.73%  drop=  5.54  params-62.5%   0.7s
+   [04_cosine_ot_intrafusion    ] x6.00  M=[106, 51, 43]        acc= 19.14%  drop= 80.13  params-62.5%   0.4s
+   [05_balanced_signature       ] x6.00  M=[106, 51, 43]        acc= 93.41%  drop=  5.86  params-62.5%   0.7s
+   [06_greedy_wasserstein1      ] x6.00  M=[106, 51, 43]        acc= 19.14%  drop= 80.13  params-62.5%   0.4s
+   [07_mixed_importance         ] x6.00  M=[106, 51, 43]        acc= 97.83%  drop=  1.44  params-62.5%   0.7s  ✅ HIT
+   [08_ot_then_ls               ] x6.00  M=[106, 51, 43]        acc= 96.78%  drop=  2.49  params-62.5%   0.5s  ✅ HIT
+   [09_kernel_kmeans_rbf        ] x6.00  M=[106, 51, 43]        acc= 93.41%  drop=  5.86  params-62.5%   0.7s
+   [10_iterative_refinement     ] x6.00  M=[106, 51, 43]        acc= 97.41%  drop=  1.86  params-62.5%   0.4s  ✅ HIT
+
+ multiplier x8.0  ->  M = [141, 67, 58]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x8.00  M=[141, 67, 58]        acc= 98.23%  drop=  1.04  params-48.8%   0.4s  ✅ HIT
+   [02_topm_l2_norm             ] x8.00  M=[141, 67, 58]        acc= 74.43%  drop= 24.84  params-48.8%   0.4s
+   [03_activation_pattern_kmeans] x8.00  M=[141, 67, 58]        acc= 97.67%  drop=  1.60  params-48.8%   0.8s  ✅ HIT
+   [04_cosine_ot_intrafusion    ] x8.00  M=[141, 67, 58]        acc= 33.99%  drop= 65.28  params-48.8%   0.4s
+   [05_balanced_signature       ] x8.00  M=[141, 67, 58]        acc= 94.41%  drop=  4.86  params-48.8%   0.8s
+   [06_greedy_wasserstein1      ] x8.00  M=[141, 67, 58]        acc= 57.94%  drop= 41.33  params-48.8%   0.4s
+   [07_mixed_importance         ] x8.00  M=[141, 67, 58]        acc= 98.57%  drop=  0.70  params-48.8%   0.7s  ✅ HIT
+   [08_ot_then_ls               ] x8.00  M=[141, 67, 58]        acc= 98.11%  drop=  1.16  params-48.8%   0.4s  ✅ HIT
+   [09_kernel_kmeans_rbf        ] x8.00  M=[141, 67, 58]        acc= 94.41%  drop=  4.86  params-48.8%   0.8s
+   [10_iterative_refinement     ] x8.00  M=[141, 67, 58]        acc= 98.63%  drop=  0.64  params-48.8%   0.5s  ✅ HIT
+
+ multiplier x10.0  ->  M = [177, 84, 64]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x10.00 M=[177, 84, 64]        acc= 98.91%  drop=  0.36  params-34.3%   0.4s  ✅ HIT
+   [02_topm_l2_norm             ] x10.00 M=[177, 84, 64]        acc= 93.65%  drop=  5.62  params-34.3%   0.4s
+   [03_activation_pattern_kmeans] x10.00 M=[177, 84, 64]        acc= 98.80%  drop=  0.47  params-34.3%   0.8s  ✅ HIT
+   [04_cosine_ot_intrafusion    ] x10.00 M=[177, 84, 64]        acc= 71.54%  drop= 27.73  params-34.3%   0.5s
+   [05_balanced_signature       ] x10.00 M=[177, 84, 64]        acc= 98.43%  drop=  0.84  params-34.3%   0.8s  ✅ HIT
+   [06_greedy_wasserstein1      ] x10.00 M=[177, 84, 64]        acc= 90.81%  drop=  8.46  params-34.3%   0.6s
+   [07_mixed_importance         ] x10.00 M=[177, 84, 64]        acc= 98.84%  drop=  0.43  params-34.3%   0.8s  ✅ HIT
+   [08_ot_then_ls               ] x10.00 M=[177, 84, 64]        acc= 98.62%  drop=  0.65  params-34.3%   0.4s  ✅ HIT
+   [09_kernel_kmeans_rbf        ] x10.00 M=[177, 84, 64]        acc= 98.43%  drop=  0.84  params-34.3%   0.9s  ✅ HIT
+   [10_iterative_refinement     ] x10.00 M=[177, 84, 64]        acc= 98.99%  drop=  0.28  params-34.3%   0.5s  ✅ HIT
+
+ multiplier x12.0  ->  M = [212, 101, 64]  (from GRIDE d=[17.66, 8.42, 7.2])
+   [01_direct_ls_svd            ] x12.00 M=[212, 101, 64]       acc= 99.16%  drop=  0.11  params-19.9%   0.4s  ✅ HIT
+   [02_topm_l2_norm             ] x12.00 M=[212, 101, 64]       acc= 97.97%  drop=  1.30  params-19.9%   0.4s  ✅ HIT
+   [03_activation_pattern_kmeans] x12.00 M=[212, 101, 64]       acc= 99.07%  drop=  0.20  params-19.9%   0.8s  ✅ HIT
+   [04_cosine_ot_intrafusion    ] x12.00 M=[212, 101, 64]       acc= 92.29%  drop=  6.98  params-19.9%   0.4s
+   [05_balanced_signature       ] x12.00 M=[212, 101, 64]       acc= 99.01%  drop=  0.26  params-19.9%   0.9s  ✅ HIT
+   [06_greedy_wasserstein1      ] x12.00 M=[212, 101, 64]       acc= 98.40%  drop=  0.87  params-19.9%   0.5s  ✅ HIT
+   [07_mixed_importance         ] x12.00 M=[212, 101, 64]       acc= 99.03%  drop=  0.24  params-19.9%   0.9s  ✅ HIT
+   [08_ot_then_ls               ] x12.00 M=[212, 101, 64]       acc= 98.99%  drop=  0.28  params-19.9%   0.5s  ✅ HIT
+   [09_kernel_kmeans_rbf        ] x12.00 M=[212, 101, 64]       acc= 99.01%  drop=  0.26  params-19.9%   1.0s  ✅ HIT
+   [10_iterative_refinement     ] x12.00 M=[212, 101, 64]       acc= 99.20%  drop=  0.07  params-19.9%   0.6s  ✅ HIT
+
+====================================================================================================
+PHASE 4 -- budget refinement: bisecting x5.0 (miss) .. x6.0 (hit) with ['07_mixed_importance', '10_iterative_refinement', '01_direct_ls_svd']
+====================================================================================================
+   [07_mixed_importance         ] x5.50  M=[97, 46, 40]         acc= 96.92%  drop=  2.35  params-66.0%   0.8s  ✅ HIT
+   [10_iterative_refinement     ] x5.50  M=[97, 46, 40]         acc= 97.02%  drop=  2.25  params-66.0%   0.5s  ✅ HIT
+   [01_direct_ls_svd            ] x5.50  M=[97, 46, 40]         acc= 96.38%  drop=  2.89  params-66.0%   0.4s
+   [07_mixed_importance         ] x5.25  M=[93, 44, 38]         acc= 97.03%  drop=  2.24  params-67.5%   0.7s  ✅ HIT
+   [10_iterative_refinement     ] x5.25  M=[93, 44, 38]         acc= 96.96%  drop=  2.31  params-67.5%   0.6s  ✅ HIT
+   [01_direct_ls_svd            ] x5.25  M=[93, 44, 38]         acc= 96.11%  drop=  3.16  params-67.5%   0.4s
+   [07_mixed_importance         ] x5.12  M=[90, 43, 37]         acc= 96.94%  drop=  2.33  params-68.6%   0.7s  ✅ HIT
+   [10_iterative_refinement     ] x5.12  M=[90, 43, 37]         acc= 96.90%  drop=  2.37  params-68.6%   0.5s  ✅ HIT
+   [01_direct_ls_svd            ] x5.12  M=[90, 43, 37]         acc= 95.85%  drop=  3.42  params-68.6%   0.5s
+   [07_mixed_importance         ] x5.06  M=[89, 43, 36]         acc= 96.86%  drop=  2.41  params-68.9%   0.8s  ✅ HIT
+   [10_iterative_refinement     ] x5.06  M=[89, 43, 36]         acc= 96.63%  drop=  2.64  params-68.9%   0.5s
+   [01_direct_ls_svd            ] x5.06  M=[89, 43, 36]         acc= 95.90%  drop=  3.37  params-68.9%   0.4s
+   [07_mixed_importance         ] x5.03  M=[89, 42, 36]         acc= 96.74%  drop=  2.53  params-69.0%   0.7s
+   [10_iterative_refinement     ] x5.03  M=[89, 42, 36]         acc= 96.66%  drop=  2.61  params-69.0%   0.6s
+   [01_direct_ls_svd            ] x5.03  M=[89, 42, 36]         acc= 95.70%  drop=  3.57  params-69.0%   0.4s
+   frontier: smallest GRIDE budget inside the window is x5.06 -> M=[89, 43, 36] (75,689 params, -68.9%)
+
+🎉 AIM ACHIEVED for mlp3_bn.
+
+📄 report -> Explore/final_report.md and Explore/results/final_report_mnist_mlp3_bn.md

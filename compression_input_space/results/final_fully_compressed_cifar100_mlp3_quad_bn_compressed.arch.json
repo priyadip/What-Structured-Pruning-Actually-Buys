@@ -1,0 +1,28 @@
+{
+  "source_compressed": "cifar100_mlp3_quad_bn_compressed",
+  "dataset": "CIFAR100",
+  "input_dim": 3072,
+  "r": 193,
+  "r_input_gride": 24.132642834599405,
+  "multiplier": 7.9974663911775306,
+  "encoder_family": "w1_svd",
+  "lambda": 0.0,
+  "landmark_strategy": "-",
+  "K": 0,
+  "out_of_sample_method": "linear",
+  "folds_into_first_layer": true,
+  "hidden_dims": [
+    241,
+    352,
+    256
+  ],
+  "num_classes": 100,
+  "dense_acc": 37.27,
+  "hidden_only_acc": 34.79,
+  "fully_compressed_acc": 34.83,
+  "total_params": 841095,
+  "cwf": 1.3202938681212075,
+  "target_hit": true,
+  "fitted_on_n": 50000,
+  "selection": "highest accuracy"
+}

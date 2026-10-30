@@ -1,0 +1,65 @@
+ADAPTIVE RESEARCH REQUEST — input reduction
+==============================================================================
+generated       : 2026-07-25T21:19:16
+model           : mnist_mlp3_bn_compressed  (MNIST, D=784)
+dense accuracy  : 99.27%
+hidden-only     : 96.95%  (input still full-dimensional)
+target window   : [96.77%, 101.77%]
+GRIDE d_input   : 14.942   r grid: [7, 15, 22, 30, 45, 60, 90, 120]
+runs so far     : 32
+
+BEST SO FAR
+------------------------------------------------------------------------------
+opt_linear r=45 λ=0.0 - K=0 linear -> 97.08%  (gap to window -0.31)
+
+THE LINEAR CEILING (opt_linear = reduced-rank regression)
+------------------------------------------------------------------------------
+best linear encoder at any r: 97.08% (r=45)
+Any linear encoder — PCA, random projection, or a distilled srGW-MDS
+probe — is mathematically bounded by this. Beating it REQUIRES a
+non-linear encoder, which costs K×D flops per sample.
+
+TOP 15 RUNS
+------------------------------------------------------------------------------
+ 97.08%  opt_linear           r=45   λ=0.0    -                  K=0    linear
+ 96.99%  w1_svd               r=45   λ=0.0    -                  K=0    linear
+ 96.95%  opt_linear           r=60   λ=0.0    -                  K=0    linear
+ 96.95%  w1_svd               r=60   λ=0.0    -                  K=0    linear
+ 96.95%  opt_linear           r=90   λ=0.0    -                  K=0    linear
+ 96.95%  w1_svd               r=90   λ=0.0    -                  K=0    linear
+ 96.95%  opt_linear           r=120  λ=0.0    -                  K=0    linear
+ 96.95%  w1_svd               r=120  λ=0.0    -                  K=0    linear
+ 96.84%  pca                  r=120  λ=0.0    -                  K=0    linear
+ 96.73%  pca                  r=90   λ=0.0    -                  K=0    linear
+ 96.64%  opt_linear           r=30   λ=0.0    -                  K=0    linear
+ 96.23%  w1_svd               r=30   λ=0.0    -                  K=0    linear
+ 96.01%  pca                  r=60   λ=0.0    -                  K=0    linear
+ 95.78%  opt_linear           r=22   λ=0.0    -                  K=0    linear
+ 95.52%  pca                  r=45   λ=0.0    -                  K=0    linear
+
+BEST BY LAMBDA
+------------------------------------------------------------------------------
+
+BEST BY LANDMARK STRATEGY
+------------------------------------------------------------------------------
+
+BEST BY OOS METHOD
+------------------------------------------------------------------------------
+
+WHAT IS NEEDED
+------------------------------------------------------------------------------
+Drop new encoder factories into novel_strategies/*.py exposing
+`STRATEGIES = [(name, fn), ...]` where fn(session, r) -> core.oos.Encoder.
+They are imported and swept automatically on the next round.
+
+Directions worth trying, given the diagnostics above:
+ (a) build D_geo on the COMPRESSED HIDDEN ACTIVATIONS rather than raw
+     pixels — the manifold that matters is the one the network sees;
+ (b) replace the linear reconstruction A with a small non-linear map,
+     accepting that it no longer folds;
+ (c) density-based or coreset landmark selection;
+ (d) supervised//class-aware D_geo (shrink between-class distances).
+
+CONSTRAINTS: r must stay round(multiplier × GRIDE d_input). Hidden layers
+stay frozen — no gradient may touch any network weight. Only the embedding
+and the linear map A are fitted.

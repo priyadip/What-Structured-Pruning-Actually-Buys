@@ -1,0 +1,371 @@
+discovered 4 compressed models (compressed):
+   cifar100_mlp3_oct_bn_compressed
+   cifar100_mlp3_quad_bn_compressed
+   cifar10_mlp3_oct_bn_compressed
+   cifar10_mlp3_quad_bn_compressed
+
+####################################################################################################
+# cifar100_mlp3_oct_bn_compressed   dataset=CIFAR100  D=3072  hidden=[344, 614, 512]
+####################################################################################################
+🎯 AIM: fully compress mlp3_oct_bn to within [37.75%, 42.75%] of dense 40.25% (hidden-only already gives 37.82%)
+   headroom left by the hidden compression: +0.07 pts
+📐 GRIDE on RAW INPUT: d_input = 24.13  [1.0s]
+   r sweep = round(mult × d_input) for mult [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0]  ->  [12, 24, 36, 48, 72, 97, 145, 193]
+   fitting subsample: 20000  test: 10000
+
+====================================================================================================
+STAGE A — linear baselines (opt_linear is the provable ceiling for every linear encoder)
+====================================================================================================
+   [opt_linear            ] r=12   λ=0.0    -              K=0    linear   fold  acc= 13.16%  Δdense=-27.09  Δhidden=-24.66   0.0s
+   [pca                   ] r=12   λ=0.0    -              K=0    linear   fold  acc=  9.87%  Δdense=-30.38  Δhidden=-27.95   0.0s
+   [w1_svd                ] r=12   λ=0.0    -              K=0    linear   fold  acc=  3.34%  Δdense=-36.91  Δhidden=-34.48   0.0s
+   [random                ] r=12   λ=0.0    -              K=0    linear   fold  acc=  5.03%  Δdense=-35.22  Δhidden=-32.79   0.0s
+   [opt_linear            ] r=24   λ=0.0    -              K=0    linear   fold  acc= 26.19%  Δdense=-14.06  Δhidden=-11.63   0.0s
+   [pca                   ] r=24   λ=0.0    -              K=0    linear   fold  acc= 21.15%  Δdense=-19.10  Δhidden=-16.67   0.0s
+   [w1_svd                ] r=24   λ=0.0    -              K=0    linear   fold  acc=  6.91%  Δdense=-33.34  Δhidden=-30.91   0.0s
+   [random                ] r=24   λ=0.0    -              K=0    linear   fold  acc=  8.74%  Δdense=-31.51  Δhidden=-29.08   0.0s
+   [opt_linear            ] r=36   λ=0.0    -              K=0    linear   fold  acc= 32.62%  Δdense= -7.63  Δhidden= -5.20   0.0s
+   [pca                   ] r=36   λ=0.0    -              K=0    linear   fold  acc= 25.83%  Δdense=-14.42  Δhidden=-11.99   0.0s
+   [w1_svd                ] r=36   λ=0.0    -              K=0    linear   fold  acc= 12.31%  Δdense=-27.94  Δhidden=-25.51   0.0s
+   [random                ] r=36   λ=0.0    -              K=0    linear   fold  acc= 12.35%  Δdense=-27.90  Δhidden=-25.47   0.0s
+   [opt_linear            ] r=48   λ=0.0    -              K=0    linear   fold  acc= 35.26%  Δdense= -4.99  Δhidden= -2.56   0.0s
+   [pca                   ] r=48   λ=0.0    -              K=0    linear   fold  acc= 31.11%  Δdense= -9.14  Δhidden= -6.71   0.0s
+   [w1_svd                ] r=48   λ=0.0    -              K=0    linear   fold  acc= 17.71%  Δdense=-22.54  Δhidden=-20.11   0.0s
+   [random                ] r=48   λ=0.0    -              K=0    linear   fold  acc= 15.88%  Δdense=-24.37  Δhidden=-21.94   0.0s
+   [opt_linear            ] r=72   λ=0.0    -              K=0    linear   fold  acc= 37.29%  Δdense= -2.96  Δhidden= -0.53   0.0s
+   [pca                   ] r=72   λ=0.0    -              K=0    linear   fold  acc= 35.51%  Δdense= -4.74  Δhidden= -2.31   0.0s
+   [w1_svd                ] r=72   λ=0.0    -              K=0    linear   fold  acc= 30.71%  Δdense= -9.54  Δhidden= -7.11   0.0s
+   [random                ] r=72   λ=0.0    -              K=0    linear   fold  acc= 21.29%  Δdense=-18.96  Δhidden=-16.53   0.0s
+   [opt_linear            ] r=97   λ=0.0    -              K=0    linear   fold  acc= 37.67%  Δdense= -2.58  Δhidden= -0.15   0.0s
+   [pca                   ] r=97   λ=0.0    -              K=0    linear   fold  acc= 36.15%  Δdense= -4.10  Δhidden= -1.67   0.0s
+   [w1_svd                ] r=97   λ=0.0    -              K=0    linear   fold  acc= 37.28%  Δdense= -2.97  Δhidden= -0.54   0.0s
+   [random                ] r=97   λ=0.0    -              K=0    linear   fold  acc= 25.38%  Δdense=-14.87  Δhidden=-12.44   0.0s
+   [opt_linear            ] r=145  λ=0.0    -              K=0    linear   fold  acc= 37.85%  Δdense= -2.40  Δhidden= +0.03   0.0s  ✅ HIT
+   [pca                   ] r=145  λ=0.0    -              K=0    linear   fold  acc= 37.38%  Δdense= -2.87  Δhidden= -0.44   0.0s
+   [w1_svd                ] r=145  λ=0.0    -              K=0    linear   fold  acc= 37.82%  Δdense= -2.43  Δhidden= +0.00   0.0s  ✅ HIT
+   [random                ] r=145  λ=0.0    -              K=0    linear   fold  acc= 29.48%  Δdense=-10.77  Δhidden= -8.34   0.0s
+   [opt_linear            ] r=193  λ=0.0    -              K=0    linear   fold  acc= 37.89%  Δdense= -2.36  Δhidden= +0.07   0.0s  ✅ HIT
+   [pca                   ] r=193  λ=0.0    -              K=0    linear   fold  acc= 37.46%  Δdense= -2.79  Δhidden= -0.36   0.0s
+   [w1_svd                ] r=193  λ=0.0    -              K=0    linear   fold  acc= 37.87%  Δdense= -2.38  Δhidden= +0.05   0.0s  ✅ HIT
+   [random                ] r=193  λ=0.0    -              K=0    linear   fold  acc= 32.24%  Δdense= -8.01  Δhidden= -5.58   0.0s
+
+====================================================================================================
+ADAPTIVE RESEARCH — round 1/1
+====================================================================================================
+   diagnostics -> explore_data_reduction_and_fit/adaptive_research_request.txt
+   loaded 3 encoder strategies from innovations.py
+   [N1_jacobian_linear    ] r=12   λ=0.0    jacobian_metri K=0    linear   fold  acc= 14.64%  Δdense=-25.61  Δhidden=-23.18   0.0s
+   [N1_jacobian_linear    ] r=24   λ=0.0    jacobian_metri K=0    linear   fold  acc= 27.05%  Δdense=-13.20  Δhidden=-10.77   0.0s
+   [N1_jacobian_linear    ] r=36   λ=0.0    jacobian_metri K=0    linear   fold  acc= 33.38%  Δdense= -6.87  Δhidden= -4.44   0.0s
+   [N1_jacobian_linear    ] r=48   λ=0.0    jacobian_metri K=0    linear   fold  acc= 35.70%  Δdense= -4.55  Δhidden= -2.12   0.0s
+   [N1_jacobian_linear    ] r=72   λ=0.0    jacobian_metri K=0    linear   fold  acc= 37.31%  Δdense= -2.94  Δhidden= -0.51   0.0s
+   [N1_jacobian_linear    ] r=97   λ=0.0    jacobian_metri K=0    linear   fold  acc= 37.67%  Δdense= -2.58  Δhidden= -0.15   0.0s
+   [N1_jacobian_linear    ] r=145  λ=0.0    jacobian_metri K=0    linear   fold  acc= 37.84%  Δdense= -2.41  Δhidden= +0.02   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=193  λ=0.0    jacobian_metri K=0    linear   fold  acc= 37.83%  Δdense= -2.42  Δhidden= +0.01   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=12   λ=0.0    act_frequency  K=0    linear   fold  acc= 14.50%  Δdense=-25.75  Δhidden=-23.32   0.0s
+   [N3_actfreq_linear     ] r=24   λ=0.0    act_frequency  K=0    linear   fold  acc= 27.05%  Δdense=-13.20  Δhidden=-10.77   0.0s
+   [N3_actfreq_linear     ] r=36   λ=0.0    act_frequency  K=0    linear   fold  acc= 32.96%  Δdense= -7.29  Δhidden= -4.86   0.0s
+   [N3_actfreq_linear     ] r=48   λ=0.0    act_frequency  K=0    linear   fold  acc= 35.53%  Δdense= -4.72  Δhidden= -2.29   0.0s
+   [N3_actfreq_linear     ] r=72   λ=0.0    act_frequency  K=0    linear   fold  acc= 37.47%  Δdense= -2.78  Δhidden= -0.35   0.0s
+   [N3_actfreq_linear     ] r=97   λ=0.0    act_frequency  K=0    linear   fold  acc= 37.75%  Δdense= -2.50  Δhidden= -0.07   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=145  λ=0.0    act_frequency  K=0    linear   fold  acc= 37.89%  Δdense= -2.36  Δhidden= +0.07   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=193  λ=0.0    act_frequency  K=0    linear   fold  acc= 37.93%  Δdense= -2.32  Δhidden= +0.11   0.0s  ✅ HIT
+   [N2_rff1024            ] r=12   λ=0.0    rff1024        K=0    kernel   dist  acc= 13.78%  Δdense=-26.47  Δhidden=-24.04   0.0s
+   [N2_rff1024            ] r=24   λ=0.0    rff1024        K=0    kernel   dist  acc= 25.38%  Δdense=-14.87  Δhidden=-12.44   0.0s
+   [N2_rff1024            ] r=36   λ=0.0    rff1024        K=0    kernel   dist  acc= 30.93%  Δdense= -9.32  Δhidden= -6.89   0.0s
+   [N2_rff1024            ] r=48   λ=0.0    rff1024        K=0    kernel   dist  acc= 32.67%  Δdense= -7.58  Δhidden= -5.15   0.0s
+   [N2_rff1024            ] r=72   λ=0.0    rff1024        K=0    kernel   dist  acc= 34.07%  Δdense= -6.18  Δhidden= -3.75   0.0s
+   [N2_rff1024            ] r=97   λ=0.0    rff1024        K=0    kernel   dist  acc= 34.17%  Δdense= -6.08  Δhidden= -3.65   0.0s
+   [N2_rff1024            ] r=145  λ=0.0    rff1024        K=0    kernel   dist  acc= 34.02%  Δdense= -6.23  Δhidden= -3.80   0.0s
+   [N2_rff1024            ] r=193  λ=0.0    rff1024        K=0    kernel   dist  acc= 34.09%  Δdense= -6.16  Δhidden= -3.73   0.0s
+
+====================================================================================================
+FINAL — refitting the most accurate configuration on ALL 50000 training samples
+====================================================================================================
+   [N3_actfreq_linear     ] r=193  λ=0.0    act_frequency  K=0    linear   fold  acc= 37.92%  Δdense= -2.33  Δhidden= +0.10   0.0s  ✅ HIT
+   saved -> final_fully_compressed_cifar100_mlp3_oct_bn_compressed.safetensors
+
+====================================================================================================
+FRONTIER — validating on ALL 50000 training samples, walking up from r=97
+====================================================================================================
+   [N3_actfreq_linear     ] r=97   λ=0.0    act_frequency  K=0    linear   fold  acc= 37.74%  Δdense= -2.51  Δhidden= -0.08   0.0s
+   r=97 misses on full data (37.74%, Δdense -2.51) — trying the next budget
+   [N3_actfreq_linear     ] r=145  λ=0.0    act_frequency  K=0    linear   fold  acc= 37.78%  Δdense= -2.47  Δhidden= -0.04   0.0s  ✅ HIT
+   frontier confirmed on full data: r=145 (×6.01 of d_input) -> 37.78%
+   saved -> final_fully_compressed_cifar100_mlp3_oct_bn_compressed_frontier.safetensors
+
+🎉 SUCCESS for cifar100_mlp3_oct_bn_compressed: 37.93% within [37.75, 42.75]
+
+####################################################################################################
+# cifar100_mlp3_quad_bn_compressed   dataset=CIFAR100  D=3072  hidden=[241, 352, 256]
+####################################################################################################
+🎯 AIM: fully compress mlp3_quad_bn to within [34.77%, 39.77%] of dense 37.27% (hidden-only already gives 34.79%)
+   headroom left by the hidden compression: +0.02 pts
+📐 GRIDE on RAW INPUT: d_input = 24.13  [0.8s]
+   r sweep = round(mult × d_input) for mult [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0]  ->  [12, 24, 36, 48, 72, 97, 145, 193]
+   fitting subsample: 20000  test: 10000
+
+====================================================================================================
+STAGE A — linear baselines (opt_linear is the provable ceiling for every linear encoder)
+====================================================================================================
+   [opt_linear            ] r=12   λ=0.0    -              K=0    linear   fold  acc= 15.49%  Δdense=-21.78  Δhidden=-19.30   0.0s
+   [pca                   ] r=12   λ=0.0    -              K=0    linear   fold  acc= 10.86%  Δdense=-26.41  Δhidden=-23.93   0.0s
+   [w1_svd                ] r=12   λ=0.0    -              K=0    linear   fold  acc=  4.64%  Δdense=-32.63  Δhidden=-30.15   0.0s
+   [random                ] r=12   λ=0.0    -              K=0    linear   fold  acc=  5.57%  Δdense=-31.70  Δhidden=-29.22   0.0s
+   [opt_linear            ] r=24   λ=0.0    -              K=0    linear   fold  acc= 26.35%  Δdense=-10.92  Δhidden= -8.44   0.0s
+   [pca                   ] r=24   λ=0.0    -              K=0    linear   fold  acc= 21.06%  Δdense=-16.21  Δhidden=-13.73   0.0s
+   [w1_svd                ] r=24   λ=0.0    -              K=0    linear   fold  acc=  8.93%  Δdense=-28.34  Δhidden=-25.86   0.0s
+   [random                ] r=24   λ=0.0    -              K=0    linear   fold  acc=  9.50%  Δdense=-27.77  Δhidden=-25.29   0.0s
+   [opt_linear            ] r=36   λ=0.0    -              K=0    linear   fold  acc= 31.30%  Δdense= -5.97  Δhidden= -3.49   0.0s
+   [pca                   ] r=36   λ=0.0    -              K=0    linear   fold  acc= 25.27%  Δdense=-12.00  Δhidden= -9.52   0.0s
+   [w1_svd                ] r=36   λ=0.0    -              K=0    linear   fold  acc= 13.11%  Δdense=-24.16  Δhidden=-21.68   0.0s
+   [random                ] r=36   λ=0.0    -              K=0    linear   fold  acc= 13.17%  Δdense=-24.10  Δhidden=-21.62   0.0s
+   [opt_linear            ] r=48   λ=0.0    -              K=0    linear   fold  acc= 33.30%  Δdense= -3.97  Δhidden= -1.49   0.0s
+   [pca                   ] r=48   λ=0.0    -              K=0    linear   fold  acc= 29.51%  Δdense= -7.76  Δhidden= -5.28   0.0s
+   [w1_svd                ] r=48   λ=0.0    -              K=0    linear   fold  acc= 19.61%  Δdense=-17.66  Δhidden=-15.18   0.0s
+   [random                ] r=48   λ=0.0    -              K=0    linear   fold  acc= 15.98%  Δdense=-21.29  Δhidden=-18.81   0.0s
+   [opt_linear            ] r=72   λ=0.0    -              K=0    linear   fold  acc= 34.66%  Δdense= -2.61  Δhidden= -0.13   0.0s
+   [pca                   ] r=72   λ=0.0    -              K=0    linear   fold  acc= 33.16%  Δdense= -4.11  Δhidden= -1.63   0.0s
+   [w1_svd                ] r=72   λ=0.0    -              K=0    linear   fold  acc= 32.22%  Δdense= -5.05  Δhidden= -2.57   0.0s
+   [random                ] r=72   λ=0.0    -              K=0    linear   fold  acc= 20.89%  Δdense=-16.38  Δhidden=-13.90   0.0s
+   [opt_linear            ] r=97   λ=0.0    -              K=0    linear   fold  acc= 34.69%  Δdense= -2.58  Δhidden= -0.10   0.0s
+   [pca                   ] r=97   λ=0.0    -              K=0    linear   fold  acc= 33.58%  Δdense= -3.69  Δhidden= -1.21   0.0s
+   [w1_svd                ] r=97   λ=0.0    -              K=0    linear   fold  acc= 34.49%  Δdense= -2.78  Δhidden= -0.30   0.0s
+   [random                ] r=97   λ=0.0    -              K=0    linear   fold  acc= 24.05%  Δdense=-13.22  Δhidden=-10.74   0.0s
+   [opt_linear            ] r=145  λ=0.0    -              K=0    linear   fold  acc= 34.66%  Δdense= -2.61  Δhidden= -0.13   0.0s
+   [pca                   ] r=145  λ=0.0    -              K=0    linear   fold  acc= 34.28%  Δdense= -2.99  Δhidden= -0.51   0.0s
+   [w1_svd                ] r=145  λ=0.0    -              K=0    linear   fold  acc= 34.68%  Δdense= -2.59  Δhidden= -0.11   0.0s
+   [random                ] r=145  λ=0.0    -              K=0    linear   fold  acc= 27.90%  Δdense= -9.37  Δhidden= -6.89   0.0s
+   [opt_linear            ] r=193  λ=0.0    -              K=0    linear   fold  acc= 34.81%  Δdense= -2.46  Δhidden= +0.02   0.0s  ✅ HIT
+   [pca                   ] r=193  λ=0.0    -              K=0    linear   fold  acc= 34.68%  Δdense= -2.59  Δhidden= -0.11   0.0s
+   [w1_svd                ] r=193  λ=0.0    -              K=0    linear   fold  acc= 34.83%  Δdense= -2.44  Δhidden= +0.04   0.0s  ✅ HIT
+   [random                ] r=193  λ=0.0    -              K=0    linear   fold  acc= 30.22%  Δdense= -7.05  Δhidden= -4.57   0.0s
+
+====================================================================================================
+ADAPTIVE RESEARCH — round 1/1
+====================================================================================================
+   diagnostics -> explore_data_reduction_and_fit/adaptive_research_request.txt
+   loaded 3 encoder strategies from innovations.py
+   [N1_jacobian_linear    ] r=12   λ=0.0    jacobian_metri K=0    linear   fold  acc= 16.47%  Δdense=-20.80  Δhidden=-18.32   0.0s
+   [N1_jacobian_linear    ] r=24   λ=0.0    jacobian_metri K=0    linear   fold  acc= 26.94%  Δdense=-10.33  Δhidden= -7.85   0.0s
+   [N1_jacobian_linear    ] r=36   λ=0.0    jacobian_metri K=0    linear   fold  acc= 31.78%  Δdense= -5.49  Δhidden= -3.01   0.0s
+   [N1_jacobian_linear    ] r=48   λ=0.0    jacobian_metri K=0    linear   fold  acc= 33.68%  Δdense= -3.59  Δhidden= -1.11   0.0s
+   [N1_jacobian_linear    ] r=72   λ=0.0    jacobian_metri K=0    linear   fold  acc= 34.81%  Δdense= -2.46  Δhidden= +0.02   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=97   λ=0.0    jacobian_metri K=0    linear   fold  acc= 34.69%  Δdense= -2.58  Δhidden= -0.10   0.0s
+   [N1_jacobian_linear    ] r=145  λ=0.0    jacobian_metri K=0    linear   fold  acc= 34.66%  Δdense= -2.61  Δhidden= -0.13   0.0s
+   [N1_jacobian_linear    ] r=193  λ=0.0    jacobian_metri K=0    linear   fold  acc= 34.80%  Δdense= -2.47  Δhidden= +0.01   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=12   λ=0.0    act_frequency  K=0    linear   fold  acc= 15.78%  Δdense=-21.49  Δhidden=-19.01   0.0s
+   [N3_actfreq_linear     ] r=24   λ=0.0    act_frequency  K=0    linear   fold  acc= 26.64%  Δdense=-10.63  Δhidden= -8.15   0.0s
+   [N3_actfreq_linear     ] r=36   λ=0.0    act_frequency  K=0    linear   fold  acc= 31.31%  Δdense= -5.96  Δhidden= -3.48   0.0s
+   [N3_actfreq_linear     ] r=48   λ=0.0    act_frequency  K=0    linear   fold  acc= 33.48%  Δdense= -3.79  Δhidden= -1.31   0.0s
+   [N3_actfreq_linear     ] r=72   λ=0.0    act_frequency  K=0    linear   fold  acc= 34.71%  Δdense= -2.56  Δhidden= -0.08   0.0s
+   [N3_actfreq_linear     ] r=97   λ=0.0    act_frequency  K=0    linear   fold  acc= 34.66%  Δdense= -2.61  Δhidden= -0.13   0.0s
+   [N3_actfreq_linear     ] r=145  λ=0.0    act_frequency  K=0    linear   fold  acc= 34.72%  Δdense= -2.55  Δhidden= -0.07   0.0s
+   [N3_actfreq_linear     ] r=193  λ=0.0    act_frequency  K=0    linear   fold  acc= 34.82%  Δdense= -2.45  Δhidden= +0.03   0.0s  ✅ HIT
+   [N2_rff1024            ] r=12   λ=0.0    rff1024        K=0    kernel   dist  acc= 15.70%  Δdense=-21.57  Δhidden=-19.09   0.0s
+   [N2_rff1024            ] r=24   λ=0.0    rff1024        K=0    kernel   dist  acc= 25.05%  Δdense=-12.22  Δhidden= -9.74   0.0s
+   [N2_rff1024            ] r=36   λ=0.0    rff1024        K=0    kernel   dist  acc= 29.09%  Δdense= -8.18  Δhidden= -5.70   0.0s
+   [N2_rff1024            ] r=48   λ=0.0    rff1024        K=0    kernel   dist  acc= 30.79%  Δdense= -6.48  Δhidden= -4.00   0.0s
+   [N2_rff1024            ] r=72   λ=0.0    rff1024        K=0    kernel   dist  acc= 31.51%  Δdense= -5.76  Δhidden= -3.28   0.0s
+   [N2_rff1024            ] r=97   λ=0.0    rff1024        K=0    kernel   dist  acc= 31.75%  Δdense= -5.52  Δhidden= -3.04   0.0s
+   [N2_rff1024            ] r=145  λ=0.0    rff1024        K=0    kernel   dist  acc= 31.64%  Δdense= -5.63  Δhidden= -3.15   0.0s
+   [N2_rff1024            ] r=193  λ=0.0    rff1024        K=0    kernel   dist  acc= 31.76%  Δdense= -5.51  Δhidden= -3.03   0.0s
+
+====================================================================================================
+FINAL — refitting the most accurate configuration on ALL 50000 training samples
+====================================================================================================
+   [w1_svd                ] r=193  λ=0.0    -              K=0    linear   fold  acc= 34.83%  Δdense= -2.44  Δhidden= +0.04   0.0s  ✅ HIT
+   saved -> final_fully_compressed_cifar100_mlp3_quad_bn_compressed.safetensors
+
+====================================================================================================
+FRONTIER — validating on ALL 50000 training samples, walking up from r=72
+====================================================================================================
+   [N1_jacobian_linear    ] r=72   λ=0.0    jacobian_metri K=0    linear   fold  acc= 34.84%  Δdense= -2.43  Δhidden= +0.05   0.0s  ✅ HIT
+   frontier confirmed on full data: r=72 (×2.98 of d_input) -> 34.84%
+   saved -> final_fully_compressed_cifar100_mlp3_quad_bn_compressed_frontier.safetensors
+
+🎉 SUCCESS for cifar100_mlp3_quad_bn_compressed: 34.84% within [34.77, 39.77]
+
+####################################################################################################
+# cifar10_mlp3_oct_bn_compressed   dataset=CIFAR10  D=3072  hidden=[405, 487, 408]
+####################################################################################################
+🎯 AIM: fully compress mlp3_oct_bn to within [64.20%, 69.20%] of dense 66.70% (hidden-only already gives 64.31%)
+   headroom left by the hidden compression: +0.11 pts
+📐 GRIDE on RAW INPUT: d_input = 28.11  [1.0s]
+   r sweep = round(mult × d_input) for mult [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0]  ->  [14, 28, 42, 56, 84, 112, 169, 225]
+   fitting subsample: 20000  test: 10000
+
+====================================================================================================
+STAGE A — linear baselines (opt_linear is the provable ceiling for every linear encoder)
+====================================================================================================
+   [opt_linear            ] r=14   λ=0.0    -              K=0    linear   fold  acc= 38.17%  Δdense=-28.53  Δhidden=-26.14   0.0s
+   [pca                   ] r=14   λ=0.0    -              K=0    linear   fold  acc= 31.08%  Δdense=-35.62  Δhidden=-33.23   0.0s
+   [w1_svd                ] r=14   λ=0.0    -              K=0    linear   fold  acc= 23.18%  Δdense=-43.52  Δhidden=-41.13   0.0s
+   [random                ] r=14   λ=0.0    -              K=0    linear   fold  acc= 23.92%  Δdense=-42.78  Δhidden=-40.39   0.0s
+   [opt_linear            ] r=28   λ=0.0    -              K=0    linear   fold  acc= 54.02%  Δdense=-12.68  Δhidden=-10.29   0.0s
+   [pca                   ] r=28   λ=0.0    -              K=0    linear   fold  acc= 47.53%  Δdense=-19.17  Δhidden=-16.78   0.0s
+   [w1_svd                ] r=28   λ=0.0    -              K=0    linear   fold  acc= 33.32%  Δdense=-33.38  Δhidden=-30.99   0.0s
+   [random                ] r=28   λ=0.0    -              K=0    linear   fold  acc= 30.89%  Δdense=-35.81  Δhidden=-33.42   0.0s
+   [opt_linear            ] r=42   λ=0.0    -              K=0    linear   fold  acc= 60.03%  Δdense= -6.67  Δhidden= -4.28   0.0s
+   [pca                   ] r=42   λ=0.0    -              K=0    linear   fold  acc= 52.80%  Δdense=-13.90  Δhidden=-11.51   0.0s
+   [w1_svd                ] r=42   λ=0.0    -              K=0    linear   fold  acc= 44.98%  Δdense=-21.72  Δhidden=-19.33   0.0s
+   [random                ] r=42   λ=0.0    -              K=0    linear   fold  acc= 36.73%  Δdense=-29.97  Δhidden=-27.58   0.0s
+   [opt_linear            ] r=56   λ=0.0    -              K=0    linear   fold  acc= 62.75%  Δdense= -3.95  Δhidden= -1.56   0.0s
+   [pca                   ] r=56   λ=0.0    -              K=0    linear   fold  acc= 56.74%  Δdense= -9.96  Δhidden= -7.57   0.0s
+   [w1_svd                ] r=56   λ=0.0    -              K=0    linear   fold  acc= 50.71%  Δdense=-15.99  Δhidden=-13.60   0.0s
+   [random                ] r=56   λ=0.0    -              K=0    linear   fold  acc= 41.32%  Δdense=-25.38  Δhidden=-22.99   0.0s
+   [opt_linear            ] r=84   λ=0.0    -              K=0    linear   fold  acc= 63.93%  Δdense= -2.77  Δhidden= -0.38   0.0s
+   [pca                   ] r=84   λ=0.0    -              K=0    linear   fold  acc= 61.29%  Δdense= -5.41  Δhidden= -3.02   0.0s
+   [w1_svd                ] r=84   λ=0.0    -              K=0    linear   fold  acc= 62.63%  Δdense= -4.07  Δhidden= -1.68   0.0s
+   [random                ] r=84   λ=0.0    -              K=0    linear   fold  acc= 47.45%  Δdense=-19.25  Δhidden=-16.86   0.0s
+   [opt_linear            ] r=112  λ=0.0    -              K=0    linear   fold  acc= 64.38%  Δdense= -2.32  Δhidden= +0.07   0.0s  ✅ HIT
+   [pca                   ] r=112  λ=0.0    -              K=0    linear   fold  acc= 62.68%  Δdense= -4.02  Δhidden= -1.63   0.0s
+   [w1_svd                ] r=112  λ=0.0    -              K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   [random                ] r=112  λ=0.0    -              K=0    linear   fold  acc= 52.06%  Δdense=-14.64  Δhidden=-12.25   0.0s
+   [opt_linear            ] r=169  λ=0.0    -              K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   [pca                   ] r=169  λ=0.0    -              K=0    linear   fold  acc= 63.68%  Δdense= -3.02  Δhidden= -0.63   0.0s
+   [w1_svd                ] r=169  λ=0.0    -              K=0    linear   fold  acc= 64.34%  Δdense= -2.36  Δhidden= +0.03   0.0s  ✅ HIT
+   [random                ] r=169  λ=0.0    -              K=0    linear   fold  acc= 57.57%  Δdense= -9.13  Δhidden= -6.74   0.0s
+   [opt_linear            ] r=225  λ=0.0    -              K=0    linear   fold  acc= 64.28%  Δdense= -2.42  Δhidden= -0.03   0.0s  ✅ HIT
+   [pca                   ] r=225  λ=0.0    -              K=0    linear   fold  acc= 63.98%  Δdense= -2.72  Δhidden= -0.33   0.0s
+   [w1_svd                ] r=225  λ=0.0    -              K=0    linear   fold  acc= 64.26%  Δdense= -2.44  Δhidden= -0.05   0.0s  ✅ HIT
+   [random                ] r=225  λ=0.0    -              K=0    linear   fold  acc= 60.06%  Δdense= -6.64  Δhidden= -4.25   0.0s
+
+====================================================================================================
+ADAPTIVE RESEARCH — round 1/1
+====================================================================================================
+   diagnostics -> explore_data_reduction_and_fit/adaptive_research_request.txt
+   loaded 3 encoder strategies from innovations.py
+   [N1_jacobian_linear    ] r=14   λ=0.0    jacobian_metri K=0    linear   fold  acc= 39.97%  Δdense=-26.73  Δhidden=-24.34   0.0s
+   [N1_jacobian_linear    ] r=28   λ=0.0    jacobian_metri K=0    linear   fold  acc= 55.16%  Δdense=-11.54  Δhidden= -9.15   0.0s
+   [N1_jacobian_linear    ] r=42   λ=0.0    jacobian_metri K=0    linear   fold  acc= 61.32%  Δdense= -5.38  Δhidden= -2.99   0.0s
+   [N1_jacobian_linear    ] r=56   λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.34%  Δdense= -3.36  Δhidden= -0.97   0.0s
+   [N1_jacobian_linear    ] r=84   λ=0.0    jacobian_metri K=0    linear   fold  acc= 64.06%  Δdense= -2.64  Δhidden= -0.25   0.0s
+   [N1_jacobian_linear    ] r=112  λ=0.0    jacobian_metri K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=169  λ=0.0    jacobian_metri K=0    linear   fold  acc= 64.30%  Δdense= -2.40  Δhidden= -0.01   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=225  λ=0.0    jacobian_metri K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=14   λ=0.0    act_frequency  K=0    linear   fold  acc= 38.83%  Δdense=-27.87  Δhidden=-25.48   0.0s
+   [N3_actfreq_linear     ] r=28   λ=0.0    act_frequency  K=0    linear   fold  acc= 53.99%  Δdense=-12.71  Δhidden=-10.32   0.0s
+   [N3_actfreq_linear     ] r=42   λ=0.0    act_frequency  K=0    linear   fold  acc= 60.01%  Δdense= -6.69  Δhidden= -4.30   0.0s
+   [N3_actfreq_linear     ] r=56   λ=0.0    act_frequency  K=0    linear   fold  acc= 62.80%  Δdense= -3.90  Δhidden= -1.51   0.0s
+   [N3_actfreq_linear     ] r=84   λ=0.0    act_frequency  K=0    linear   fold  acc= 63.84%  Δdense= -2.86  Δhidden= -0.47   0.0s
+   [N3_actfreq_linear     ] r=112  λ=0.0    act_frequency  K=0    linear   fold  acc= 64.26%  Δdense= -2.44  Δhidden= -0.05   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=169  λ=0.0    act_frequency  K=0    linear   fold  acc= 64.35%  Δdense= -2.35  Δhidden= +0.04   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=225  λ=0.0    act_frequency  K=0    linear   fold  acc= 64.29%  Δdense= -2.41  Δhidden= -0.02   0.0s  ✅ HIT
+   [N2_rff1024            ] r=14   λ=0.0    rff1024        K=0    kernel   dist  acc= 37.97%  Δdense=-28.73  Δhidden=-26.34   0.0s
+   [N2_rff1024            ] r=28   λ=0.0    rff1024        K=0    kernel   dist  acc= 52.19%  Δdense=-14.51  Δhidden=-12.12   0.0s
+   [N2_rff1024            ] r=42   λ=0.0    rff1024        K=0    kernel   dist  acc= 57.92%  Δdense= -8.78  Δhidden= -6.39   0.0s
+   [N2_rff1024            ] r=56   λ=0.0    rff1024        K=0    kernel   dist  acc= 59.57%  Δdense= -7.13  Δhidden= -4.74   0.0s
+   [N2_rff1024            ] r=84   λ=0.0    rff1024        K=0    kernel   dist  acc= 60.52%  Δdense= -6.18  Δhidden= -3.79   0.0s
+   [N2_rff1024            ] r=112  λ=0.0    rff1024        K=0    kernel   dist  acc= 60.98%  Δdense= -5.72  Δhidden= -3.33   0.0s
+   [N2_rff1024            ] r=169  λ=0.0    rff1024        K=0    kernel   dist  acc= 60.84%  Δdense= -5.86  Δhidden= -3.47   0.0s
+   [N2_rff1024            ] r=225  λ=0.0    rff1024        K=0    kernel   dist  acc= 60.79%  Δdense= -5.91  Δhidden= -3.52   0.0s
+
+====================================================================================================
+FINAL — refitting the most accurate configuration on ALL 50000 training samples
+====================================================================================================
+   [opt_linear            ] r=112  λ=0.0    -              K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   saved -> final_fully_compressed_cifar10_mlp3_oct_bn_compressed.safetensors
+
+====================================================================================================
+FRONTIER — validating on ALL 50000 training samples, walking up from r=112
+====================================================================================================
+   [opt_linear            ] r=112  λ=0.0    -              K=0    linear   fold  acc= 64.31%  Δdense= -2.39  Δhidden= +0.00   0.0s  ✅ HIT
+   frontier confirmed on full data: r=112 (×3.98 of d_input) -> 64.31%
+   saved -> final_fully_compressed_cifar10_mlp3_oct_bn_compressed_frontier.safetensors
+
+🎉 SUCCESS for cifar10_mlp3_oct_bn_compressed: 64.38% within [64.20, 69.20]
+
+####################################################################################################
+# cifar10_mlp3_quad_bn_compressed   dataset=CIFAR10  D=3072  hidden=[299, 309, 194]
+####################################################################################################
+🎯 AIM: fully compress mlp3_quad_bn to within [62.95%, 67.95%] of dense 65.45% (hidden-only already gives 63.11%)
+   headroom left by the hidden compression: +0.16 pts
+📐 GRIDE on RAW INPUT: d_input = 28.11  [0.9s]
+   r sweep = round(mult × d_input) for mult [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0, 8.0]  ->  [14, 28, 42, 56, 84, 112, 169, 225]
+   fitting subsample: 20000  test: 10000
+
+====================================================================================================
+STAGE A — linear baselines (opt_linear is the provable ceiling for every linear encoder)
+====================================================================================================
+   [opt_linear            ] r=14   λ=0.0    -              K=0    linear   fold  acc= 39.81%  Δdense=-25.64  Δhidden=-23.30   0.0s
+   [pca                   ] r=14   λ=0.0    -              K=0    linear   fold  acc= 31.35%  Δdense=-34.10  Δhidden=-31.76   0.0s
+   [w1_svd                ] r=14   λ=0.0    -              K=0    linear   fold  acc= 26.59%  Δdense=-38.86  Δhidden=-36.52   0.0s
+   [random                ] r=14   λ=0.0    -              K=0    linear   fold  acc= 24.09%  Δdense=-41.36  Δhidden=-39.02   0.0s
+   [opt_linear            ] r=28   λ=0.0    -              K=0    linear   fold  acc= 54.12%  Δdense=-11.33  Δhidden= -8.99   0.0s
+   [pca                   ] r=28   λ=0.0    -              K=0    linear   fold  acc= 47.31%  Δdense=-18.14  Δhidden=-15.80   0.0s
+   [w1_svd                ] r=28   λ=0.0    -              K=0    linear   fold  acc= 41.53%  Δdense=-23.92  Δhidden=-21.58   0.0s
+   [random                ] r=28   λ=0.0    -              K=0    linear   fold  acc= 30.62%  Δdense=-34.83  Δhidden=-32.49   0.0s
+   [opt_linear            ] r=42   λ=0.0    -              K=0    linear   fold  acc= 59.90%  Δdense= -5.55  Δhidden= -3.21   0.0s
+   [pca                   ] r=42   λ=0.0    -              K=0    linear   fold  acc= 52.06%  Δdense=-13.39  Δhidden=-11.05   0.0s
+   [w1_svd                ] r=42   λ=0.0    -              K=0    linear   fold  acc= 50.36%  Δdense=-15.09  Δhidden=-12.75   0.0s
+   [random                ] r=42   λ=0.0    -              K=0    linear   fold  acc= 36.47%  Δdense=-28.98  Δhidden=-26.64   0.0s
+   [opt_linear            ] r=56   λ=0.0    -              K=0    linear   fold  acc= 61.54%  Δdense= -3.91  Δhidden= -1.57   0.0s
+   [pca                   ] r=56   λ=0.0    -              K=0    linear   fold  acc= 55.64%  Δdense= -9.81  Δhidden= -7.47   0.0s
+   [w1_svd                ] r=56   λ=0.0    -              K=0    linear   fold  acc= 56.84%  Δdense= -8.61  Δhidden= -6.27   0.0s
+   [random                ] r=56   λ=0.0    -              K=0    linear   fold  acc= 41.29%  Δdense=-24.16  Δhidden=-21.82   0.0s
+   [opt_linear            ] r=84   λ=0.0    -              K=0    linear   fold  acc= 62.93%  Δdense= -2.52  Δhidden= -0.18   0.0s
+   [pca                   ] r=84   λ=0.0    -              K=0    linear   fold  acc= 60.21%  Δdense= -5.24  Δhidden= -2.90   0.0s
+   [w1_svd                ] r=84   λ=0.0    -              K=0    linear   fold  acc= 62.07%  Δdense= -3.38  Δhidden= -1.04   0.0s
+   [random                ] r=84   λ=0.0    -              K=0    linear   fold  acc= 46.75%  Δdense=-18.70  Δhidden=-16.36   0.0s
+   [opt_linear            ] r=112  λ=0.0    -              K=0    linear   fold  acc= 62.87%  Δdense= -2.58  Δhidden= -0.24   0.0s
+   [pca                   ] r=112  λ=0.0    -              K=0    linear   fold  acc= 61.30%  Δdense= -4.15  Δhidden= -1.81   0.0s
+   [w1_svd                ] r=112  λ=0.0    -              K=0    linear   fold  acc= 62.95%  Δdense= -2.50  Δhidden= -0.16   0.0s  ✅ HIT
+   [random                ] r=112  λ=0.0    -              K=0    linear   fold  acc= 51.07%  Δdense=-14.38  Δhidden=-12.04   0.0s
+   [opt_linear            ] r=169  λ=0.0    -              K=0    linear   fold  acc= 63.11%  Δdense= -2.34  Δhidden= +0.00   0.0s  ✅ HIT
+   [pca                   ] r=169  λ=0.0    -              K=0    linear   fold  acc= 62.80%  Δdense= -2.65  Δhidden= -0.31   0.0s
+   [w1_svd                ] r=169  λ=0.0    -              K=0    linear   fold  acc= 63.08%  Δdense= -2.37  Δhidden= -0.03   0.0s  ✅ HIT
+   [random                ] r=169  λ=0.0    -              K=0    linear   fold  acc= 56.11%  Δdense= -9.34  Δhidden= -7.00   0.0s
+   [opt_linear            ] r=225  λ=0.0    -              K=0    linear   fold  acc= 63.13%  Δdense= -2.32  Δhidden= +0.02   0.0s  ✅ HIT
+   [pca                   ] r=225  λ=0.0    -              K=0    linear   fold  acc= 62.96%  Δdense= -2.49  Δhidden= -0.15   0.0s  ✅ HIT
+   [w1_svd                ] r=225  λ=0.0    -              K=0    linear   fold  acc= 63.19%  Δdense= -2.26  Δhidden= +0.08   0.0s  ✅ HIT
+   [random                ] r=225  λ=0.0    -              K=0    linear   fold  acc= 58.45%  Δdense= -7.00  Δhidden= -4.66   0.0s
+
+====================================================================================================
+ADAPTIVE RESEARCH — round 1/1
+====================================================================================================
+   diagnostics -> explore_data_reduction_and_fit/adaptive_research_request.txt
+   loaded 3 encoder strategies from innovations.py
+   [N1_jacobian_linear    ] r=14   λ=0.0    jacobian_metri K=0    linear   fold  acc= 40.33%  Δdense=-25.12  Δhidden=-22.78   0.0s
+   [N1_jacobian_linear    ] r=28   λ=0.0    jacobian_metri K=0    linear   fold  acc= 55.21%  Δdense=-10.24  Δhidden= -7.90   0.0s
+   [N1_jacobian_linear    ] r=42   λ=0.0    jacobian_metri K=0    linear   fold  acc= 60.39%  Δdense= -5.06  Δhidden= -2.72   0.0s
+   [N1_jacobian_linear    ] r=56   λ=0.0    jacobian_metri K=0    linear   fold  acc= 61.82%  Δdense= -3.63  Δhidden= -1.29   0.0s
+   [N1_jacobian_linear    ] r=84   λ=0.0    jacobian_metri K=0    linear   fold  acc= 62.84%  Δdense= -2.61  Δhidden= -0.27   0.0s
+   [N1_jacobian_linear    ] r=112  λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.10%  Δdense= -2.35  Δhidden= -0.01   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=169  λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.23%  Δdense= -2.22  Δhidden= +0.12   0.0s  ✅ HIT
+   [N1_jacobian_linear    ] r=225  λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.10%  Δdense= -2.35  Δhidden= -0.01   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=14   λ=0.0    act_frequency  K=0    linear   fold  acc= 38.76%  Δdense=-26.69  Δhidden=-24.35   0.0s
+   [N3_actfreq_linear     ] r=28   λ=0.0    act_frequency  K=0    linear   fold  acc= 53.98%  Δdense=-11.47  Δhidden= -9.13   0.0s
+   [N3_actfreq_linear     ] r=42   λ=0.0    act_frequency  K=0    linear   fold  acc= 60.20%  Δdense= -5.25  Δhidden= -2.91   0.0s
+   [N3_actfreq_linear     ] r=56   λ=0.0    act_frequency  K=0    linear   fold  acc= 61.66%  Δdense= -3.79  Δhidden= -1.45   0.0s
+   [N3_actfreq_linear     ] r=84   λ=0.0    act_frequency  K=0    linear   fold  acc= 62.91%  Δdense= -2.54  Δhidden= -0.20   0.0s
+   [N3_actfreq_linear     ] r=112  λ=0.0    act_frequency  K=0    linear   fold  acc= 62.97%  Δdense= -2.48  Δhidden= -0.14   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=169  λ=0.0    act_frequency  K=0    linear   fold  acc= 63.17%  Δdense= -2.28  Δhidden= +0.06   0.0s  ✅ HIT
+   [N3_actfreq_linear     ] r=225  λ=0.0    act_frequency  K=0    linear   fold  acc= 63.14%  Δdense= -2.31  Δhidden= +0.03   0.0s  ✅ HIT
+   [N2_rff1024            ] r=14   λ=0.0    rff1024        K=0    kernel   dist  acc= 38.12%  Δdense=-27.33  Δhidden=-24.99   0.0s
+   [N2_rff1024            ] r=28   λ=0.0    rff1024        K=0    kernel   dist  acc= 52.31%  Δdense=-13.14  Δhidden=-10.80   0.0s
+   [N2_rff1024            ] r=42   λ=0.0    rff1024        K=0    kernel   dist  acc= 56.50%  Δdense= -8.95  Δhidden= -6.61   0.0s
+   [N2_rff1024            ] r=56   λ=0.0    rff1024        K=0    kernel   dist  acc= 58.58%  Δdense= -6.87  Δhidden= -4.53   0.0s
+   [N2_rff1024            ] r=84   λ=0.0    rff1024        K=0    kernel   dist  acc= 59.50%  Δdense= -5.95  Δhidden= -3.61   0.0s
+   [N2_rff1024            ] r=112  λ=0.0    rff1024        K=0    kernel   dist  acc= 59.61%  Δdense= -5.84  Δhidden= -3.50   0.0s
+   [N2_rff1024            ] r=169  λ=0.0    rff1024        K=0    kernel   dist  acc= 59.62%  Δdense= -5.83  Δhidden= -3.49   0.0s
+   [N2_rff1024            ] r=225  λ=0.0    rff1024        K=0    kernel   dist  acc= 59.74%  Δdense= -5.71  Δhidden= -3.37   0.0s
+
+====================================================================================================
+FINAL — refitting the most accurate configuration on ALL 50000 training samples
+====================================================================================================
+   [N1_jacobian_linear    ] r=169  λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.22%  Δdense= -2.23  Δhidden= +0.11   0.0s  ✅ HIT
+   saved -> final_fully_compressed_cifar10_mlp3_quad_bn_compressed.safetensors
+
+====================================================================================================
+FRONTIER — validating on ALL 50000 training samples, walking up from r=112
+====================================================================================================
+   [N1_jacobian_linear    ] r=112  λ=0.0    jacobian_metri K=0    linear   fold  acc= 63.12%  Δdense= -2.33  Δhidden= +0.01   0.0s  ✅ HIT
+   frontier confirmed on full data: r=112 (×3.98 of d_input) -> 63.12%
+   saved -> final_fully_compressed_cifar10_mlp3_quad_bn_compressed_frontier.safetensors
+
+🎉 SUCCESS for cifar10_mlp3_quad_bn_compressed: 63.23% within [62.95, 67.95]
+
+====================================================================================================
+4/4 models inside ±2.5 of dense
+====================================================================================================

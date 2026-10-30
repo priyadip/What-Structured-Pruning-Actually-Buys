@@ -1,0 +1,28 @@
+{
+  "source_compressed": "cifar10_mlp3_oct_bn_compressed",
+  "dataset": "CIFAR10",
+  "input_dim": 3072,
+  "r": 112,
+  "r_input_gride": 28.10657886115859,
+  "multiplier": 3.984832183000988,
+  "encoder_family": "opt_linear",
+  "lambda": 0.0,
+  "landmark_strategy": "-",
+  "K": 0,
+  "out_of_sample_method": "linear",
+  "folds_into_first_layer": true,
+  "hidden_dims": [
+    405,
+    487,
+    408
+  ],
+  "num_classes": 10,
+  "dense_acc": 66.7,
+  "hidden_only_acc": 64.31,
+  "fully_compressed_acc": 64.31,
+  "total_params": 790857,
+  "cwf": 0.46898195447592317,
+  "target_hit": true,
+  "fitted_on_n": 50000,
+  "selection": "highest accuracy"
+}

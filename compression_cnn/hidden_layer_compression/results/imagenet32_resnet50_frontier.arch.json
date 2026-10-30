@@ -1,0 +1,1572 @@
+{
+  "source_checkpoint": "imagenet32_resnet50.safetensors",
+  "model_name": "resnet50",
+  "dataset": "ImageNet32",
+  "family": "resnet",
+  "bn_folded": true,
+  "kind": "frontier",
+  "strategy": "S4_omp_ls",
+  "multiplier": 14.5,
+  "allocation": "search",
+  "explicit_targets": null,
+  "unit_order": [
+    "layer1.0.conv1",
+    "layer1.0.conv2",
+    "layer1.1.conv1",
+    "layer1.1.conv2",
+    "layer1.2.conv1",
+    "layer1.2.conv2",
+    "layer2.0.conv1",
+    "layer2.0.conv2",
+    "layer2.1.conv1",
+    "layer2.1.conv2",
+    "layer2.2.conv1",
+    "layer2.2.conv2",
+    "layer2.3.conv1",
+    "layer2.3.conv2",
+    "layer3.0.conv1",
+    "layer3.0.conv2",
+    "layer3.1.conv1",
+    "layer3.1.conv2",
+    "layer3.2.conv1",
+    "layer3.2.conv2",
+    "layer3.3.conv1",
+    "layer3.3.conv2",
+    "layer3.4.conv1",
+    "layer3.4.conv2",
+    "layer3.5.conv1",
+    "layer3.5.conv2",
+    "layer4.0.conv1",
+    "layer4.0.conv2",
+    "layer4.1.conv1",
+    "layer4.1.conv2",
+    "layer4.2.conv1",
+    "layer4.2.conv2"
+  ],
+  "widths": [
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    512,
+    512,
+    512,
+    457,
+    359,
+    512
+  ],
+  "original_widths": [
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    128,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    512,
+    512,
+    512,
+    512,
+    512,
+    512
+  ],
+  "gride_dims": {
+    "layer1.0.conv1": {
+      "filter_proj": 11.203286831919264,
+      "neuron": 6.48791362809259,
+      "patch": 8.051456780022791
+    },
+    "layer1.0.conv2": {
+      "filter_proj": 19.60388054861999,
+      "neuron": 12.528862075512858,
+      "patch": 11.153667338539869
+    },
+    "layer1.1.conv1": {
+      "filter_proj": 17.338855026583687,
+      "neuron": 11.371906864903186,
+      "patch": 10.027239672062807
+    },
+    "layer1.1.conv2": {
+      "filter_proj": 25.069506428741906,
+      "neuron": 17.13152631031671,
+      "patch": 24.0914485768421
+    },
+    "layer1.2.conv1": {
+      "filter_proj": 19.1458198901578,
+      "neuron": 12.882639286359822,
+      "patch": 18.207623832422836
+    },
+    "layer1.2.conv2": {
+      "filter_proj": 31.29107849086659,
+      "neuron": 18.118405701510994,
+      "patch": 41.49674011873524
+    },
+    "layer2.0.conv1": {
+      "filter_proj": 25.437883217479367,
+      "neuron": 16.020788888084663,
+      "patch": 23.564712307297846
+    },
+    "layer2.0.conv2": {
+      "filter_proj": 26.908113784971476,
+      "neuron": 20.28864193921265,
+      "patch": 39.76751782602976
+    },
+    "layer2.1.conv1": {
+      "filter_proj": 23.664188762837277,
+      "neuron": 17.31212027116938,
+      "patch": 24.62808701909456
+    },
+    "layer2.1.conv2": {
+      "filter_proj": 30.198732701522058,
+      "neuron": 17.011363627660955,
+      "patch": 32.992874262145186
+    },
+    "layer2.2.conv1": {
+      "filter_proj": 29.381997053444564,
+      "neuron": 18.951067904063333,
+      "patch": 29.97371699041791
+    },
+    "layer2.2.conv2": {
+      "filter_proj": 39.24854366516273,
+      "neuron": 20.255477479932832,
+      "patch": 38.11913716430522
+    },
+    "layer2.3.conv1": {
+      "filter_proj": 29.574012370783567,
+      "neuron": 20.37265402221788,
+      "patch": 34.77078977265045
+    },
+    "layer2.3.conv2": {
+      "filter_proj": 37.20011002031544,
+      "neuron": 22.589885698812452,
+      "patch": 44.46245047597051
+    },
+    "layer3.0.conv1": {
+      "filter_proj": 39.39669514232275,
+      "neuron": 24.040875762875064,
+      "patch": 38.38507466510455
+    },
+    "layer3.0.conv2": {
+      "filter_proj": 36.266352792200834,
+      "neuron": 28.777708277791696,
+      "patch": 78.97250449617657
+    },
+    "layer3.1.conv1": {
+      "filter_proj": 31.855079042740922,
+      "neuron": 19.907394549649045,
+      "patch": 28.804224742022967
+    },
+    "layer3.1.conv2": {
+      "filter_proj": 37.535951553708564,
+      "neuron": 21.123388185422517,
+      "patch": 47.5001010609678
+    },
+    "layer3.2.conv1": {
+      "filter_proj": 40.800729557702525,
+      "neuron": 24.453800057177634,
+      "patch": 38.62238358384157
+    },
+    "layer3.2.conv2": {
+      "filter_proj": 42.61415770345475,
+      "neuron": 26.121055524793622,
+      "patch": 53.99292822417262
+    },
+    "layer3.3.conv1": {
+      "filter_proj": 41.25283881690848,
+      "neuron": 27.19414597420911,
+      "patch": 44.82023257672155
+    },
+    "layer3.3.conv2": {
+      "filter_proj": 42.80455399735726,
+      "neuron": 28.042911084279392,
+      "patch": 51.74455113365255
+    },
+    "layer3.4.conv1": {
+      "filter_proj": 38.59787044791805,
+      "neuron": 27.25022669046879,
+      "patch": 48.39796572912077
+    },
+    "layer3.4.conv2": {
+      "filter_proj": 42.902430081143436,
+      "neuron": 24.76058919678272,
+      "patch": 58.051628203512294
+    },
+    "layer3.5.conv1": {
+      "filter_proj": 32.764203032124705,
+      "neuron": 30.313284207086546,
+      "patch": 51.05531402941819
+    },
+    "layer3.5.conv2": {
+      "filter_proj": 51.602304952548366,
+      "neuron": 30.12732156314386,
+      "patch": 71.23172195111907
+    },
+    "layer4.0.conv1": {
+      "filter_proj": 57.86645590421132,
+      "neuron": 42.37263675029012,
+      "patch": 53.851480857855655
+    },
+    "layer4.0.conv2": {
+      "filter_proj": 49.3345148216106,
+      "neuron": 41.708214517268814,
+      "patch": 101.0437603463238
+    },
+    "layer4.1.conv1": {
+      "filter_proj": 46.331373118822754,
+      "neuron": 32.35178325904744,
+      "patch": 53.448146226816874
+    },
+    "layer4.1.conv2": {
+      "filter_proj": 31.49905918666015,
+      "neuron": 32.36974698832394,
+      "patch": 65.26047739735255
+    },
+    "layer4.2.conv1": {
+      "filter_proj": 24.73338640195543,
+      "neuron": 44.01986237153571,
+      "patch": 60.21775718655878
+    },
+    "layer4.2.conv2": {
+      "filter_proj": 59.463981892067174,
+      "neuron": 48.5809437530008,
+      "patch": 71.56148541048566
+    }
+  },
+  "id_space": "filter_proj",
+  "dense_acc": 62.244,
+  "compressed_acc": 59.964,
+  "dense_params": 25575912,
+  "params": 24138136,
+  "dense_macs": 1299857408,
+  "macs": 1277706240,
+  "tol": 2.5,
+  "calib": 1153,
+  "seed": 0,
+  "input_shape": [
+    3,
+    32,
+    32
+  ],
+  "modules": [
+    {
+      "path": "conv1",
+      "type": "Conv2d",
+      "in": 3,
+      "out": 64,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.0.conv1",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 64,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.0.conv2",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 64,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.0.conv3",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.0.shortcut.0",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.1.conv1",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 64,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.1.conv2",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 64,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.1.conv3",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.2.conv1",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 64,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.2.conv2",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 64,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer1.2.conv3",
+      "type": "Conv2d",
+      "in": 64,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.0.conv1",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 128,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.0.conv2",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 128,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.0.conv3",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.0.shortcut.0",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.1.conv1",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 128,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.1.conv2",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 128,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.1.conv3",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.2.conv1",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 128,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.2.conv2",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 128,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.2.conv3",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.3.conv1",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 128,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.3.conv2",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 128,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer2.3.conv3",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.0.conv1",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.0.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.0.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.0.shortcut.0",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.1.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.1.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.1.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.2.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.2.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.2.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.3.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.3.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.3.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.4.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.4.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.4.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.5.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 256,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.5.conv2",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer3.5.conv3",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 1024,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.0.conv1",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.0.conv2",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 512,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.0.conv3",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 2048,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.0.shortcut.0",
+      "type": "Conv2d",
+      "in": 1024,
+      "out": 2048,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        2,
+        2
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.1.conv1",
+      "type": "Conv2d",
+      "in": 2048,
+      "out": 512,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.1.conv2",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 457,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.1.conv3",
+      "type": "Conv2d",
+      "in": 457,
+      "out": 2048,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.2.conv1",
+      "type": "Conv2d",
+      "in": 2048,
+      "out": 359,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.2.conv2",
+      "type": "Conv2d",
+      "in": 359,
+      "out": 512,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "layer4.2.conv3",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 2048,
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        0,
+        0
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "linear",
+      "type": "Linear",
+      "in": 2048,
+      "out": 1000,
+      "bias": true
+    }
+  ]
+}

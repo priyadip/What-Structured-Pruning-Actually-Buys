@@ -1,0 +1,300 @@
+{
+  "source_checkpoint": "cifar100_vgg11_bn.safetensors",
+  "model_name": "vgg11_bn",
+  "dataset": "CIFAR100",
+  "family": "vgg",
+  "bn_folded": true,
+  "kind": "frontier",
+  "strategy": "S3_span_ls",
+  "multiplier": 6.75,
+  "allocation": "search",
+  "explicit_targets": null,
+  "unit_order": [
+    "features.0",
+    "features.4",
+    "features.8",
+    "features.11",
+    "features.15",
+    "features.18",
+    "features.22",
+    "features.25"
+  ],
+  "widths": [
+    58,
+    128,
+    256,
+    256,
+    357,
+    512,
+    273,
+    361
+  ],
+  "original_widths": [
+    64,
+    128,
+    256,
+    256,
+    512,
+    512,
+    512,
+    512
+  ],
+  "gride_dims": {
+    "features.0": {
+      "filter_proj": 8.543367157472337,
+      "neuron": 7.474232469957692,
+      "patch": 7.262331522905497
+    },
+    "features.4": {
+      "filter_proj": 24.38766656092423,
+      "neuron": 15.324262616339727,
+      "patch": 15.310358901175507
+    },
+    "features.8": {
+      "filter_proj": 38.80377341754795,
+      "neuron": 22.06572247099928,
+      "patch": 26.754257181045045
+    },
+    "features.11": {
+      "filter_proj": 47.35013567663281,
+      "neuron": 22.89346765942449,
+      "patch": 37.42542388925289
+    },
+    "features.15": {
+      "filter_proj": 52.9599350959276,
+      "neuron": 33.20662120475169,
+      "patch": 52.69719408614345
+    },
+    "features.18": {
+      "filter_proj": 90.20510560572536,
+      "neuron": 40.04227277560474,
+      "patch": 56.86530338197251
+    },
+    "features.22": {
+      "filter_proj": 40.441855033779305,
+      "neuron": 44.32638276658268,
+      "patch": 35.182661658179065
+    },
+    "features.25": {
+      "filter_proj": 53.439708647494655,
+      "neuron": 51.63109570699514,
+      "patch": 15.318006470946044
+    }
+  },
+  "id_space": "filter_proj",
+  "dense_acc": 72.94,
+  "compressed_acc": 70.53,
+  "dense_params": 9277284,
+  "params": 5604064,
+  "dense_macs": 152815616,
+  "macs": 123428872,
+  "tol": 2.5,
+  "calib": 4609,
+  "seed": 0,
+  "input_shape": [
+    3,
+    32,
+    32
+  ],
+  "modules": [
+    {
+      "path": "features.0",
+      "type": "Conv2d",
+      "in": 3,
+      "out": 58,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.4",
+      "type": "Conv2d",
+      "in": 58,
+      "out": 128,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.8",
+      "type": "Conv2d",
+      "in": 128,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.11",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 256,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.15",
+      "type": "Conv2d",
+      "in": 256,
+      "out": 357,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.18",
+      "type": "Conv2d",
+      "in": 357,
+      "out": 512,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.22",
+      "type": "Conv2d",
+      "in": 512,
+      "out": 273,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "features.25",
+      "type": "Conv2d",
+      "in": 273,
+      "out": 361,
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": [
+        1,
+        1
+      ],
+      "padding": [
+        1,
+        1
+      ],
+      "dilation": [
+        1,
+        1
+      ],
+      "groups": 1,
+      "bias": true
+    },
+    {
+      "path": "classifier",
+      "type": "Linear",
+      "in": 361,
+      "out": 100,
+      "bias": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 11625.38it/s]
+[23:29:21] dense 82.21%  window >= 79.71%
+[23:29:21] alpha 16.0  widths [1348, 1277, 1373, 1565, 1520, 842]
+[23:29:41]   omp_ls             a=16      seed=0 acc= 81.22 ( -0.99) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  20s
+[23:29:56]   omp                a=16      seed=0 acc= 77.83 ( -4.38) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  15s
+[23:30:07]   span_ls            a=16      seed=0 acc= 80.69 ( -1.52) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  10s
+[23:30:14]   magnitude_ls       a=16      seed=0 acc= 70.44 (-11.77) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  8s
+[23:30:22]   magnitude          a=16      seed=0 acc= 44.65 (-37.56) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  7s
+[23:30:29]   random_ls          a=16      seed=0 acc= 64.21 (-18.00) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  8s
+[23:30:37]   random             a=16      seed=0 acc= 61.04 (-21.17) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  7s
+[23:30:47]   ot_then_ls         a=16      seed=0 acc= 72.49 ( -9.72) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  10s
+[23:30:56]   ot_intrafusion     a=16      seed=0 acc= 40.12 (-42.09) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  10s
+[23:31:07]   omp_ls             a=16      seed=0 acc= 81.05 ( -1.16) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  11s
+[23:31:22]   omp_ls_noint       a=16      seed=0 acc= 81.19 ( -1.02) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  15s
+[23:31:37]   omp_ls             a=16      seed=0 acc= 81.11 ( -1.10) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  15s
+[23:31:37] alpha 12.0  widths [1011, 958, 1029, 1173, 1140, 632]
+[23:31:50]   omp_ls             a=12      seed=0 acc= 79.68 ( -2.53) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  13s
+[23:32:03]   omp                a=12      seed=0 acc= 74.96 ( -7.25) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  13s
+[23:32:12]   span_ls            a=12      seed=0 acc= 79.70 ( -2.51) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  9s
+[23:32:20]   magnitude_ls       a=12      seed=0 acc= 68.48 (-13.73) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  7s
+[23:32:27]   magnitude          a=12      seed=0 acc= 37.98 (-44.23) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  7s
+[23:32:34]   random_ls          a=12      seed=0 acc= 55.02 (-27.19) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  7s
+[23:32:41]   random             a=12      seed=0 acc= 45.47 (-36.74) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  7s
+[23:32:50]   ot_then_ls         a=12      seed=0 acc= 69.58 (-12.63) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  9s
+[23:32:59]   ot_intrafusion     a=12      seed=0 acc= 35.52 (-46.69) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  9s
+[23:33:08]   omp_ls             a=12      seed=0 acc= 80.22 ( -1.99) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  8s
+[23:33:21]   omp_ls_noint       a=12      seed=0 acc= 79.86 ( -2.35) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  13s
+[23:33:34]   omp_ls             a=12      seed=0 acc= 80.12 ( -2.09) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  13s
+[23:33:34] alpha 8.0  widths [674, 638, 686, 782, 760, 421]
+[23:33:44]   omp_ls             a=8       seed=0 acc= 77.72 ( -4.49) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  10s
+[23:33:55]   omp                a=8       seed=0 acc= 71.71 (-10.50) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  10s
+[23:34:03]   span_ls            a=8       seed=0 acc= 78.02 ( -4.19) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  8s
+[23:34:10]   magnitude_ls       a=8       seed=0 acc= 64.27 (-17.94) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  7s
+[23:34:16]   magnitude          a=8       seed=0 acc= 33.42 (-48.79) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  6s
+[23:34:23]   random_ls          a=8       seed=0 acc= 49.90 (-32.31) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  7s
+[23:34:29]   random             a=8       seed=0 acc= 42.54 (-39.67) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  6s
+[23:34:38]   ot_then_ls         a=8       seed=0 acc= 67.58 (-14.63) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  8s
+[23:34:46]   ot_intrafusion     a=8       seed=0 acc= 35.77 (-46.44) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  8s
+[23:34:52]   omp_ls             a=8       seed=0 acc= 78.68 ( -3.54) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  6s
+[23:35:03]   omp_ls_noint       a=8       seed=0 acc= 77.75 ( -4.46) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  11s
+[23:35:13]   omp_ls             a=8       seed=0 acc= 78.25 ( -3.96) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  11s
+[23:35:13] alpha 6.0  widths [506, 479, 515, 587, 570, 316]
+[23:35:23]   omp_ls             a=6       seed=0 acc= 76.32 ( -5.89) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  9s
+[23:35:32]   omp                a=6       seed=0 acc= 67.39 (-14.82) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  9s
+[23:35:40]   span_ls            a=6       seed=0 acc= 76.19 ( -6.02) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  8s
+[23:35:46]   magnitude_ls       a=6       seed=0 acc= 61.23 (-20.98) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  7s
+[23:35:53]   magnitude          a=6       seed=0 acc= 33.00 (-49.21) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  6s
+[23:35:59]   random_ls          a=6       seed=0 acc= 45.98 (-36.23) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  7s
+[23:36:05]   random             a=6       seed=0 acc= 39.93 (-42.28) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  6s
+[23:36:13]   ot_then_ls         a=6       seed=0 acc= 65.69 (-16.53) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  8s
+[23:36:21]   ot_intrafusion     a=6       seed=0 acc= 36.39 (-45.82) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  8s
+[23:36:26]   omp_ls             a=6       seed=0 acc= 76.74 ( -5.47) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  5s
+[23:36:35]   omp_ls_noint       a=6       seed=0 acc= 76.27 ( -5.94) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  9s
+[23:36:45]   omp_ls             a=6       seed=0 acc= 77.78 ( -4.43) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  9s

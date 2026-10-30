@@ -1,0 +1,27 @@
+{
+  "source_compressed": "mnist_mlp2_bn_compressed",
+  "dataset": "MNIST",
+  "input_dim": 784,
+  "r": 90,
+  "r_input_gride": 14.942165514472295,
+  "multiplier": 6.023223334852645,
+  "encoder_family": "N3_actfreq_linear",
+  "lambda": 0.0,
+  "landmark_strategy": "act_frequency",
+  "K": 0,
+  "out_of_sample_method": "linear",
+  "folds_into_first_layer": true,
+  "hidden_dims": [
+    104,
+    52
+  ],
+  "num_classes": 10,
+  "dense_acc": 99.27,
+  "hidden_only_acc": 98.4,
+  "fully_compressed_acc": 98.42,
+  "total_params": 86104,
+  "cwf": 0.18334930658657972,
+  "target_hit": true,
+  "fitted_on_n": 60000,
+  "selection": "highest accuracy"
+}
