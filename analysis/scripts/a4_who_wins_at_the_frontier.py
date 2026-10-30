@@ -13,7 +13,7 @@ smallest budget still inside the +/-2.5 window, which operator is actually best,
 and by how much is it better than the rest of the refit family?
 
 The CNN study's own generated summary already contains the answer in plain sight
-(`cnn_compression_summary.md` lists `S3_span_ls` as the winner at three model
+(the convolutional study's own summary lists `S3_span_ls` as the winner at three model
 frontiers and bare `S1_magnitude` at three light budgets), but no analysis in the
 repository ever aggregated it.
 """

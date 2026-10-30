@@ -9,7 +9,7 @@ The two studies that live beside this package --
                                 the logit-pullback metric (N1_jacobian)
 
 -- are the same two methods that produced the MLP results in `../compression_mlp` and
-`../compression_input_space`. Everything mathematical is unchanged; only
+the input-space stage. Everything mathematical is unchanged; only
 the *carrier* changes, from a row of a weight matrix to a convolution filter.
 
 The one idea that makes the port mechanical: a conv layer is a linear map on

@@ -131,7 +131,7 @@ def rgb_patch_id(X: torch.Tensor, k: int = 3, stride: int = 2, n_points: int = 4
     This is the question a CNN forces that an MLP never did. An MLP's first layer
     reads the *whole flattened image*, so `d_input` is the intrinsic dimension of
     the image manifold in `R^(3*H*W)` -- that is what
-    `../compression_input_space` measured. A conv's first layer reads a
+    the input-space stage measured. A conv's first layer reads a
     `3*k*k` **patch**, and never anything larger. The two are different manifolds
     with different dimensions, and it is the patch one that bounds how few
     directions the first layer can be given.

@@ -4,7 +4,7 @@ Preserved for provenance: every checkpoint the paper uses should have the code
 that produced it somewhere in this supplement. This run was restarted from a
 partial state after an interruption, which is why it exists separately from
 `trainer/train.py` and why its hyperparameters depart from the defaults. See
-`docs/training.md` for the departure table.
+the header below for how this run departed from the defaults.
 
 Not part of the reproduction path; `trainer/train.py` trains the same model.
 """
