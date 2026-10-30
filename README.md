@@ -2,16 +2,18 @@
 
 *A Decomposition, and Why Selection Criteria Stop Mattering*
 
-Code, recorded runs and experimental record for the paper. The repository root
-holds the code and the analysis pipeline; `technical_supplement/` holds the
-experimental record that the paper draws on.
+Code, recorded runs and the experimental record for the paper. The repository
+root holds the code and the analysis pipeline, each study keeps the result CSVs
+its driver wrote, and `docs/` holds the written record: the evidence map, the
+hyperparameters, the training and evaluation protocol, the hardware, and what
+each ablation changed.
 
 | | |
 | --- | --- |
 | Install | `INSTALL.md` |
 | Reproduce | `REPRODUCE.md` |
-| Evidence map | `technical_supplement/CLAIM_TO_EVIDENCE.md` |
-| Experimental record | `technical_supplement/` |
+| Evidence map | `docs/CLAIM_TO_EVIDENCE.md` |
+| Experimental record | `docs/` |
 
 **Quick start.** `pip install -r requirements.txt && ./reproduce.sh tables`
 regenerates every table and figure in the paper in about a minute, with no GPU,
@@ -19,7 +21,7 @@ no datasets and no trained weights.
 
 ### Where to start
 
-**Five minutes.** Open `technical_supplement/CLAIM_TO_EVIDENCE.md`. It lists
+**Five minutes.** Open `docs/CLAIM_TO_EVIDENCE.md`. It lists
 every quantitative claim in the paper next to the file that carries it and the
 script that produced it, including the one claim it finds weaker than the paper
 states.
@@ -97,9 +99,13 @@ evaluation in it at all; and checking the paper's arithmetic requires no GPU.
 │   ├── tables/            generated LaTeX fragments
 │   └── figures/           generated PDF and PNG
 │
-└── technical_supplement/  the experimental record: result CSVs, hyperparameters,
-                           hardware, ablation outcomes, evidence map
+└── docs/                  evidence map, experimental setup, hyperparameters,
+                           training, evaluation, hardware, ablation outcomes
 ```
+
+Each study directory keeps its own `results/` holding the CSVs its driver wrote.
+Those CSVs are the input to `analysis/`, and they are what makes the tables
+reproducible without a GPU.
 
 The paper source is not included. The manuscript is the submission itself, and
 the AAAI class files it needs are the venue's to distribute, not ours. What this
@@ -131,11 +137,12 @@ still reports 3922 records over 25 models.
 | `intrinsic_rank/` | The GRIDE estimator. `id_estimator.py` is imported by `compression_transformer/scripts/core.py`; the other estimators are archived. |
 | `trainer/` | `train.py` produced the 24 vision checkpoints. `checkpoint/` holds the manifest with SHA-256 digests. `one_off/` holds the runner that trained `imagenet32_resnet50` under non-default settings. |
 | `compression_mlp/` | Study 1. `run_autonomous_compression.py` is both the driver and, because `analysis/scripts/a7_mechanism.py` imports it, the reference definition of checkpoint loading and BatchNorm folding used in Section 4. |
-| `compression_cnn/` | Study 2. `common/` holds shared conv machinery: patch extraction, BN folding, layer discovery, surgery, rebuild, conv GRIDE, linear algebra. `hidden_layer_compression/` holds the driver and its operators. The Transformer study imports `common.linalg` from here. |
-| `compression_transformer/` | Study 3. Nine phase scripts, a shared `core.py` carrying all 17 operators, a self-test and a report verifier. |
+| `compression_cnn/` | Study 2. `common/` holds shared conv machinery: patch extraction, BN folding, layer discovery, surgery, rebuild, conv GRIDE, linear algebra. `hidden_layer_compression/` holds the driver and its operators. `data_reduction_and_fit/` holds the patch-rank input stage that `ablations/e5` and `e7` build on; its code and arch specs are here, its saved weights are not. The Transformer study imports `common.linalg` from here. |
+| `compression_transformer/` | Study 3. Nine phase scripts, a shared `core.py` carrying all 17 operators, a self-test, and `verify_report.py`, which re-derives every headline number in `REPORT.md` from the raw CSVs. |
 | `compression_input_space/` | Input-space reduction. Supports **only** the frozen-network half of the Section 7 metric claim. Included because that number comes from nowhere else; see the evidence map. |
 | `ablations/` | Seven targeted experiments run to attack the paper's claims after they had formed. `e3` became Table 5. `e4` did not confirm what it was built to confirm, which the evidence map records. |
-| `analysis/` | The analysis layer. Everything the paper prints is generated here from the study CSVs. Written-up findings live in `technical_supplement/`. |
+| `analysis/` | The analysis layer. Everything the paper prints is generated here from the study CSVs. |
+| `docs/` | The written record: `CLAIM_TO_EVIDENCE.md` maps every quantitative claim to the artefact that carries it, alongside the experimental setup, hyperparameters, training and evaluation protocol, hardware, and what each ablation changed. |
 
 ---
 
@@ -193,7 +200,7 @@ relocated without editing code.
 Compression settings are command-line arguments with per-driver defaults:
 `--calib`, `--ridge` (1e-4), `--seed` (0), `--alphas`, `--target`,
 `--patch-budget`. The complete table is in
-`technical_supplement/02_hyperparameters/README.md`.
+`docs/hyperparameters.md`.
 
 ---
 

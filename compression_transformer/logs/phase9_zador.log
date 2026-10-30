@@ -1,7 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 12820.21it/s]
-[02:36:30] dense 82.21%  window >= 79.71%
-[02:36:30] uniform alpha=12.125 widths [1022, 968, 1040, 1186, 1152, 638] total 6006 units
-[02:37:05]   uniform      units= 6006 w=[1022, 968, 1040, 1186, 1152, 638] acc= 80.24
-[02:37:05] zador K=1.308e+08 multipliers [11.315, 12.543, 10.939, 8.52, 9.0, 27.093]
-[02:37:34]   zador        units= 6007 w=[954, 1001, 938, 833, 855, 1426] acc= 79.56

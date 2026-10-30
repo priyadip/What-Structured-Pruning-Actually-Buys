@@ -1,6 +1,0 @@
-[extend] E7 finished; extending the E5 grid for fashionmnist_vgg11_bn
-[extend] done; merging
-no separate ext file; treating the latest write as the extension
-merged -> 131 rows, 3 models
-wrote <PROJECT_ROOT>/to_do_experiment/RESULTS.md
-[extend] complete 05:13:42

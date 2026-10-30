@@ -16,13 +16,13 @@ python3 e7_walltime.py --iters 100                 # do MAC cuts become speedups
 ```
 
 Results land in `results/*.csv`; findings are written up in
-`../technical_supplement/07_ablations/RESULTS.md`.
+`../docs/ablation_results.md`.
 
 | file | role |
 |---|---|
 | `harness.py` | shared: builds a production `Session`, reads the saved frontier specs, redirects the driver's CSV so a side experiment can never contaminate the paper's sweep |
 | `e*_*.py` | one experiment each, self-describing in its module docstring |
-| `../technical_supplement/07_ablations/RESULTS.md` | what was found, and what changed in the paper because of it |
+| `../docs/ablation_results.md` | what was found, and what changed in the paper because of it |
 
 ## Design rules these scripts follow
 

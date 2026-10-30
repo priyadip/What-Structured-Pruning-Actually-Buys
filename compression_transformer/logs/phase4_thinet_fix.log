@@ -1,17 +1,0 @@
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 11947.95it/s]
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[02:32:19] dense 82.21%  window >= 79.71%
-[02:32:19] alpha 24.0  widths [2023, 1915, 2059, 2347, 2281, 1263]
-[02:32:43]   thinet_densetgt    a=24      seed=0 acc= 80.12 ( -2.09) red tot/enc/ffn =  15.0/ 23.3/ 35.5%  24s
-[02:32:43] alpha 16.0  widths [1348, 1277, 1373, 1565, 1520, 842]
-[02:33:00]   thinet_densetgt    a=16      seed=0 acc= 78.15 ( -4.07) red tot/enc/ffn =  24.1/ 37.5/ 57.0%  17s
-[02:33:00] alpha 12.0  widths [1011, 958, 1029, 1173, 1140, 632]
-[02:33:21]   thinet_densetgt    a=12      seed=0 acc= 75.46 ( -6.75) red tot/enc/ffn =  28.7/ 44.5/ 67.7%  21s
-[02:33:21] alpha 8.0  widths [674, 638, 686, 782, 760, 421]
-[02:33:42]   thinet_densetgt    a=8       seed=0 acc= 71.90 (-10.31) red tot/enc/ffn =  33.2/ 51.6/ 78.5%  21s
-[02:33:42] alpha 6.0  widths [506, 479, 515, 587, 570, 316]
-[02:34:04]   thinet_densetgt    a=6       seed=0 acc= 68.36 (-13.85) red tot/enc/ffn =  35.5/ 55.1/ 83.9%  22s
-[02:34:04] alpha 4.0  widths [337, 319, 343, 391, 380, 211]
-[02:34:27]   thinet_densetgt    a=4       seed=0 acc= 63.69 (-18.52) red tot/enc/ffn =  37.8/ 58.6/ 89.2%  23s
-[02:34:27] alpha 2.0  widths [169, 160, 172, 196, 190, 105]
-[02:34:50]   thinet_densetgt    a=2       seed=0 acc= 60.63 (-21.58) red tot/enc/ffn =  40.0/ 62.2/ 94.6%  23s

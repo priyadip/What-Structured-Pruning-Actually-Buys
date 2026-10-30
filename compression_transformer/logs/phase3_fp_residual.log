@@ -1,17 +1,0 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/104 [00:00<?, ?it/s]Loading weights: 100%|██████████| 104/104 [00:00<00:00, 12133.06it/s]
-[02:43:06] dense 82.21%  window >= 79.71%
-[02:43:06] dims [84.39, 70.62, 64.14, 69.14, 53.8, 55.03]
-[02:43:06] ladder [10.0, 11.0, 12.0, 13.0, 14.0]
-[02:44:37]   omp_ls             a=10      seed=0 acc= 78.21 ( -4.00) red tot/enc/ffn =  33.2/ 51.5/ 78.4%  92s
-[02:46:01]   omp_ls             a=11      seed=0 acc= 78.89 ( -3.32) red tot/enc/ffn =  32.3/ 50.1/ 76.3%  83s
-[02:47:27]   omp_ls             a=12      seed=0 acc= 79.08 ( -3.13) red tot/enc/ffn =  31.4/ 48.7/ 74.1%  86s
-[02:48:41]   omp_ls             a=13      seed=0 acc= 79.49 ( -2.72) red tot/enc/ffn =  30.5/ 47.3/ 72.0%  74s
-[02:49:47]   omp_ls             a=14      seed=0 acc= 79.76 ( -2.46) red tot/enc/ffn =  29.5/ 45.9/ 69.8%  66s
-[02:49:47] first hit on the ladder: alpha=14.0 acc=79.7555 red_total=29.5483%
-[02:50:52]   omp_ls             a=13.5    seed=0 acc= 79.69 ( -2.52) red tot/enc/ffn =  30.0/ 46.6/ 70.9%  65s
-[02:51:06]   omp_ls             a=13.75   seed=0 acc= 79.75 ( -2.47) red tot/enc/ffn =  29.8/ 46.2/ 70.4%  14s
-[02:51:19]   omp_ls             a=13.625  seed=0 acc= 79.85 ( -2.36) red tot/enc/ffn =  29.9/ 46.4/ 70.6%  12s
-[02:51:31]   omp_ls             a=13.5625 seed=0 acc= 79.79 ( -2.42) red tot/enc/ffn =  29.9/ 46.5/ 70.8%  12s
-[02:51:43]   omp_ls             a=13.5312 seed=0 acc= 79.90 ( -2.31) red tot/enc/ffn =  30.0/ 46.5/ 70.8%  12s
-[02:51:43] FRONTIER alpha* = 13.53125  widths [1142, 956, 868, 936, 728, 745]  acc 79.8981 (-2.3128)  red total 29.9729%  encoder 46.5412%  ffn 70.8272%

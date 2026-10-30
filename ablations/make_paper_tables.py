@@ -4,8 +4,8 @@
 The paper's own rule is that a quoted number must be regenerated from disk by a
 code path different from the one that wrote it. These experiments produce their
 own CSVs, so the same rule applies: this script reads those CSVs and writes
-`original_research/tables/table8_followup.tex` and
-`table9_thinet.tex`, which the paper `\\input`s.
+`tables/table8_seeds.tex` and `tables/table9_thinet.tex`, the extra baseline
+rows the paper `\\input`s.
 
     python3 make_paper_tables.py
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 RES = HERE / "results"
-TAB = HERE.parent / "original_research" / "tables"
+TAB = HERE / "tables"
 TAB.mkdir(parents=True, exist_ok=True)
 
 

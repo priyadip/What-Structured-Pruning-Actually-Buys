@@ -7,7 +7,7 @@ regenerates every table and figure in the paper runs on CPU.
 
 The paper was produced with Python 3.13 and PyTorch 2.7.1 on CUDA 12.6. Exact
 versions are pinned in `requirements.txt` and recorded in
-`technical_supplement/05_hardware/README.md`.
+`docs/hardware.md`.
 
 ## Option 1, pip
 
