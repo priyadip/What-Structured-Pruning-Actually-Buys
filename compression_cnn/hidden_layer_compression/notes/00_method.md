@@ -133,5 +133,5 @@ m_l = d_l · ( K · w_l / (d_l² · c_l) ) ^ ( d_l / (2 + d_l) )
 with one global `K` swept along the budget. Widths remain `multiplier_l × d_l`;
 only the split across layers changes. `w_l = tr(Ω_l Σ_l)` measures how much
 distortion at layer `l` actually costs at the logits — see
-`../data_reduction_and_fit/notes/00_method.md` for `Ω`. Results in
+the patch-rank stage, which is not part of this repository, for `Ω`. Results in
 `01_findings.md`.

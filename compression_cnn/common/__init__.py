@@ -4,7 +4,8 @@ The two studies that live beside this package --
 
     hidden_layer_compression/   channel budgets from GRIDE on the effective
                                 neuron cloud + LS-corrected consumer refit
-    data_reduction_and_fit/     patch-space (input) rank reduction, chosen in
+    patch-space (input) rank reduction, a companion stage not part of this
+    repository, chose its rank in
                                 the logit-pullback metric (N1_jacobian)
 
 -- are the same two methods that produced the MLP results in `../compression_mlp` and

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: >-
-  What Structured Pruning Actually Buys: A Decomposition, and Why
-  Selection Criteria Stop Mattering
+  What Structured Pruning Actually Buys: Why Selection Criteria Stop
+  Mattering
 message: Please cite the paper if you use this artifact.
 type: software
 authors:

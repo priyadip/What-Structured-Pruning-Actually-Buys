@@ -49,7 +49,7 @@ Convolutional models get SGD at 0.1 with warmup; everything else gets Adam at
 ### One checkpoint departs from these defaults
 
 `imagenet32_resnet50` was trained by a separate one-off runner, preserved at
-`trainer/one_off/_resnet50_runner.py`, after the
+`trainer/one_off/resnet50_imagenet32.py`, after the
 original run was interrupted. Its settings differ:
 
 | Setting | Default | `imagenet32_resnet50` |

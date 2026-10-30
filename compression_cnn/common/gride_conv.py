@@ -25,7 +25,7 @@ and logged:
 
 `patch`         the *input* manifold: one point per `C_in*k*k` patch. This is not
                 a neuron cloud at all; it is the intrinsic dimension of what the
-                layer reads, and it is what `../data_reduction_and_fit` budgets
+                layer reads, and it is what the patch-space stage budgets
                 against. For the first conv layer this cloud is the RGB patch
                 manifold -- see `rgb_patch_id`.
 

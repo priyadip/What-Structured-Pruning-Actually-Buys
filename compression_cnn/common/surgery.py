@@ -29,7 +29,7 @@ compressing `p` scales the entire block; only the 1x1 shortcut convs and the ste
 are out of reach. On a ResNet18 that is ~172k of 11.2M parameters -- **98% is
 reachable** without ever touching a stream. Stage-level stream surgery was
 therefore not built: it would add complexity for at most a two-percent ceiling,
-and `../data_reduction_and_fit` attacks the same weights from the other side.
+and the patch-space stage attacks the same weights from the other side.
 
 The walk
 --------

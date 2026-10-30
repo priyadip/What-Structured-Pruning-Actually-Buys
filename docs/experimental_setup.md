@@ -106,7 +106,6 @@ a8                     imports build_bench and load_ref from a7
 a9                     needs DistilBERT and compression_transformer/scripts/core.py
 a10                    needs a7's output
 make_tables.py         needs a2 a3 a4 a6 a7 a9, plus attention.csv and e3_thinet.csv
-make_figures.py        needs a4 a6
 make_fig_mechanism.py  needs a8
 make_fig_extra.py      needs a6 a7 a8
 ```

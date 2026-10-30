@@ -1,6 +1,4 @@
-# What Structured Pruning Actually Buys
-
-*A Decomposition, and Why Selection Criteria Stop Mattering*
+# What Structured Pruning Actually Buys: Why Selection Criteria Stop Mattering
 
 Code, recorded runs and the experimental record for the paper. The repository
 root holds the code and the analysis pipeline, each study keeps the result CSVs
@@ -18,6 +16,30 @@ each ablation changed.
 **Quick start.** `pip install -r requirements.txt && ./reproduce.sh tables`
 regenerates every table and figure in the paper in about a minute, with no GPU,
 no datasets and no trained weights.
+
+## Every table and figure in the paper
+
+`./reproduce.sh tables` writes all of these. The generated file names predate the
+paper's numbering, so the mapping is given explicitly.
+
+| Paper item | Generated file | Analysis behind it |
+| --- | --- | --- |
+| Table 1, the two residuals over 154 cells | `analysis/tables/t3_mechanism.tex` | `a7_mechanism.py`, `a8_theory.py` |
+| Table 2, every checkpoint at its operating point | `analysis/tables/t7_master.tex` | `a6_at_the_frontier.py` |
+| Table 3, every contrast at the operating point | `analysis/tables/t2_frontier.tex` | `a6_at_the_frontier.py` |
+| Table 4, both effects against the budget | `analysis/tables/t1_regime.tex` | `a2_regime.py`, `a3_component_regime.py` |
+| Table 5, published methods at matched budget | `analysis/tables/t9_comparison.tex` | `a4_who_wins_at_the_frontier.py`, `ablations/e3_thinet.py` |
+| Table 6, the predicted reversal on heads | `analysis/tables/t5_attention.tex` | `compression_transformer/scripts/phase8_attention.py` |
+| Figure 1, the decomposition | `analysis/figures/fig1_mechanism.pdf` | `make_fig_mechanism.py` |
+| Figure 2, Corollary 1 tested directly | `analysis/figures/fig4_tail.pdf` | `make_fig_extra.py` |
+| Figure 3, repair against criterion by budget | `analysis/figures/fig3_budget.pdf` | `make_fig_extra.py` |
+| Figure 4, the same ordering per family | `analysis/figures/fig5_arch.pdf` | `make_fig_extra.py` |
+| Section 6 spectral tails quoted in prose | `analysis/tables/t8_spectra.tex` | `a9_spectra.py` |
+| Every number quoted in the text | `analysis/results/paper_numbers.json` | `make_tables.py` |
+
+`make_tables.py` also writes `t4_perckpt.tex` and `t6_frontiers.tex`, which the
+paper does not print; `t4_perckpt` holds the per-checkpoint contrasts that Table 2
+carries as columns.
 
 ### Where to start
 
@@ -90,11 +112,11 @@ evaluation in it at all; and checking the paper's arithmetic requires no GPU.
 ├── compression_mlp/           STUDY 1  fully connected      2760 runs
 ├── compression_cnn/           STUDY 2  convolutional          677 runs
 ├── compression_transformer/   STUDY 3  DistilBERT MNLI        485 runs
-├── compression_input_space/   supports one Section 7 claim only
-├── ablations/                 targeted experiments e1 to e7
+├── compression_input_space/   the frozen arm of the Section 7 metric claim
+├── ablations/                 targeted experiments e1 to e4
 │
 ├── analysis/              every table, figure and number in the paper
-│   ├── scripts/           a1 to a10, make_tables, make_fig_*
+│   ├── scripts/           a1 to a10, make_tables, make_fig_mechanism, make_fig_extra
 │   ├── results/           analysis outputs as JSON
 │   ├── tables/            generated LaTeX fragments
 │   └── figures/           generated PDF and PNG
@@ -137,7 +159,7 @@ still reports 3922 records over 25 models.
 | `intrinsic_rank/` | The GRIDE estimator. `id_estimator.py` is imported by `compression_transformer/scripts/core.py`; the other estimators are archived. |
 | `trainer/` | `train.py` produced the 24 vision checkpoints. `checkpoint/` holds the manifest with SHA-256 digests. `one_off/` holds the runner that trained `imagenet32_resnet50` under non-default settings. |
 | `compression_mlp/` | Study 1. `run_autonomous_compression.py` is both the driver and, because `analysis/scripts/a7_mechanism.py` imports it, the reference definition of checkpoint loading and BatchNorm folding used in Section 4. |
-| `compression_cnn/` | Study 2. `common/` holds shared conv machinery: patch extraction, BN folding, layer discovery, surgery, rebuild, conv GRIDE, linear algebra. `hidden_layer_compression/` holds the driver and its operators. `data_reduction_and_fit/` holds the patch-rank input stage that `ablations/e5` and `e7` build on; its code and arch specs are here, its saved weights are not. The Transformer study imports `common.linalg` from here. |
+| `compression_cnn/` | Study 2. `common/` holds shared conv machinery: patch extraction, BN folding, layer discovery, surgery, rebuild, conv GRIDE, linear algebra. `hidden_layer_compression/` holds the driver and its operators. The Transformer study imports `common.linalg` from here. |
 | `compression_transformer/` | Study 3. Nine phase scripts, a shared `core.py` carrying all 17 operators, a self-test, and `verify_report.py`, which re-derives every headline number in `REPORT.md` from the raw CSVs. |
 | `compression_input_space/` | Input-space reduction. Supports **only** the frozen-network half of the Section 7 metric claim. Included because that number comes from nowhere else; see the evidence map. |
 | `ablations/` | Seven targeted experiments run to attack the paper's claims after they had formed. `e3` became Table 5. `e4` did not confirm what it was built to confirm, which the evidence map records. |
@@ -166,7 +188,6 @@ still reports 3922 records over 25 models.
 | `make_tables.py` | All nine LaTeX tables plus `paper_numbers.json` | the above |
 | `make_fig_mechanism.py` | Figure 1 | `a8` output |
 | `make_fig_extra.py` | Figures 2, 3 and 4 | `a6`, `a7`, `a8` outputs |
-| `compress_figures.py` | Compressed PNG copies, about 70 percent smaller | figures |
 
 ### Study drivers
 
@@ -262,8 +283,8 @@ the contrasts, not the accuracies.
 
 ```bibtex
 @inproceedings{anonymous2027structured,
-  title     = {What Structured Pruning Actually Buys: A Decomposition,
-               and Why Selection Criteria Stop Mattering},
+  title     = {What Structured Pruning Actually Buys: Why Selection
+               Criteria Stop Mattering},
   author    = {Anonymous},
   booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
   year      = {2027},

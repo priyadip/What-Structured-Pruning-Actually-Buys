@@ -1,6 +1,6 @@
 # One-off training runner
 
-`_resnet50_runner.py` trained `imagenet32_resnet50`, one of the sixteen
+`resnet50_imagenet32.py` trained `imagenet32_resnet50`, one of the sixteen
 convolutional checkpoints in the paper. It exists separately from
 `trainer/train.py` because that run was restarted from a partial state after an
 interruption, rather than launched cleanly.

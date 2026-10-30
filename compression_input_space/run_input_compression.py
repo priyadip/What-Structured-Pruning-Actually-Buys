@@ -644,7 +644,7 @@ def main():
     RESULTS.mkdir(parents=True, exist_ok=True)
     if not PROGRESS.exists():
         PROGRESS.write_text(
-            "# explore_data_reduction_and_fit — run log\n\n"
+            "# compression_input_space — run log\n\n"
             "One line per experiment. `r` is always `round(multiplier × GRIDE d_input)`,\n"
             "with `d_input` measured on the raw data at runtime. Hidden layers frozen.\n\n")
 

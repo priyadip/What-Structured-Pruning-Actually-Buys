@@ -11,8 +11,6 @@ python3 e2_calibration.py                          # calibration-size sensitivit
 python3 e3_thinet.py                               # faithful ThiNet control
 python3 e3_thinet.py --selftest                    # batched kernel == production
 python3 e4_metric_norefit.py                       # the decisive metric experiment
-python3 e5_joint_budget.py                         # joint (channel, rank) search
-python3 e7_walltime.py --iters 100                 # do MAC cuts become speedups?
 ```
 
 Results land in `results/*.csv`; findings are written up in

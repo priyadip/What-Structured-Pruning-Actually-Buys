@@ -19,7 +19,6 @@ run_tables() {
     done
     echo "== tables and figures"
     python3 make_tables.py > /dev/null
-    python3 make_figures.py > /dev/null
     python3 make_fig_mechanism.py > /dev/null
     python3 make_fig_extra.py > /dev/null )
   echo "   tables -> analysis/tables/   figures -> analysis/figures/"

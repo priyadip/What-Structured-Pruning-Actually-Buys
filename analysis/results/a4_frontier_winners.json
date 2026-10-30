@@ -27,14 +27,14 @@
       "N09_fisher_omp_e2": 1,
       "omp_ls": 18,
       "span_ls": 1,
-      "magnitude": 0,
+      "fisher_omp": 0,
+      "omp_ls_noint": 0,
       "N05_omp_transport": 0,
+      "ot_then_ls": 0,
+      "magnitude": 0,
       "omp_ls_lowridge": 0,
       "magnitude_ls": 0,
-      "omp_ls_noint": 0,
-      "thinet_lsfull": 0,
-      "ot_then_ls": 0,
-      "fisher_omp": 0
+      "thinet_lsfull": 0
     },
     "n_inside": 71,
     "n_outside": 84

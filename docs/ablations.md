@@ -2,25 +2,21 @@
 
 Two families of ablation sit behind the paper. The first is built into the
 studies themselves, since every operator comparison at matched width is already a
-component ablation. The second is a set of seven targeted experiments, `e1`
-through `e7`, run specifically to attack the paper's claims after they had been
+component ablation. The second is a set of four targeted experiments, `e1`
+through `e4`, run specifically to attack the paper's claims after they had been
 formed.
 
-The second family is the more interesting one, because six of the eight follow-ups
-run changed the paper. A supplement should say which.
+The second family is the more interesting one, because each of the four changed
+something in the paper. This page says what.
 
-## The seven targeted experiments
+## The four targeted experiments
 
 | Id | Question | Outcome | Effect on the paper |
 | --- | --- | --- | --- |
 | `e1` | How much does the seed move the frontier? | Non-trivially | Qualified the window claim; the noise band in Figure 3 exists because of this |
-| `e1b` | What does the frontier look like at a 2 sigma robust threshold? | Shifts, ordering holds | Supported reporting the robust reduction alongside the tight frontier |
 | `e2` | Does calibration size change the answer? | Stops mattering past about 8k samples | Justified the protocol sentence on calibration sizing |
 | `e3` | What does ThiNet actually cost, reimplemented properly? | 41.3 points, of which a full re-solve recovers 36.3 | Became Table 5 and the paper's clearest single decomposition |
 | `e4` | Does the Gauss-Newton metric help when no refit follows? | **Indistinguishable from zero on convolutions** | Contradicted the project's standing explanation; see below |
-| `e5` | Does a joint search over per-layer budgets beat a global multiplier? | Yes, in some cells | **Overturned an earlier claim that chaining does not help** |
-| `e6` | Does intrinsic dimension move during training? | Mildly | Withdrew a metric explanation that had relied on it being static |
-| `e7` | Does MAC reduction predict wall-clock speedup? | **No** | Forced the paper to distinguish parameters, MACs and time |
 
 ## The one that did not go the paper's way
 
